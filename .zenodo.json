@@ -1,0 +1,23 @@
+{
+  "title": "Lifespan variation and premature mortality from malignant CNS neoplasms in Europe: analysis code",
+  "description": "<p>Analysis code and derived data for a study of the effect of mortality from malignant central nervous system neoplasms (ICD-10 C70-C72) on life expectancy and life disparity across 28 European countries over the common period 2012 to 2018, and of the dependence of cross-country comparisons of years of life lost on the reference life table.</p><p>The pipeline combines Eurostat cause-of-death data with Human Mortality Database exposures, all-cause deaths and period life tables. It computes age-standardised mortality and years of life lost rates, years of life lost under national and two common reference life tables, cause-deleted life tables giving the change in life expectancy at birth and in life disparity, numerically identified threshold ages, an exactly additive age decomposition of the life-disparity effect, and percentile intervals from 10,000 Poisson resampling replicates.</p><p>Human Mortality Database source files are not redistributable and are not included; an authenticated retrieval script and a manifest of series vintages and SHA-256 digests are provided instead. RESULTS_SUMMARY.md records the design and every headline result.</p>",
+  "upload_type": "software",
+  "license": "MIT",
+  "access_right": "open",
+  "version": "1.0.0",
+  "language": "eng",
+  "creators": [
+    {"name": "Lawson McLean, Aaron", "orcid": "0000-0001-5528-6905",
+     "affiliation": "Department of Neurosurgery, Jena University Hospital, Friedrich Schiller University Jena"},
+    {"name": "Senft, Christian",
+     "affiliation": "Department of Neurosurgery, Jena University Hospital, Friedrich Schiller University Jena"},
+    {"name": "McLean, Colin W.",
+     "affiliation": "Adam Smith Business School, University of Glasgow"}
+  ],
+  "keywords": ["lifespan variation", "life disparity", "years of life lost",
+               "cause-deleted life table", "threshold age", "central nervous system neoplasms",
+               "burden of disease", "Human Mortality Database", "Eurostat"],
+  "related_identifiers": [
+    {"identifier": "10.6069/6HTR-RB51", "relation": "references", "scheme": "doi"}
+  ]
+}

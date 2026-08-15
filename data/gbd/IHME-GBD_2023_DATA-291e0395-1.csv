@@ -1,0 +1,651 @@
+population_group_id,population_group_name,measure_id,measure_name,location_id,location_name,sex_id,sex_name,age_id,age_name,cause_id,cause_name,metric_id,metric_name,year,val,upper,lower
+1,All Population,1,Deaths,1,Global,3,Both,6,5-9 years,477,Brain and central nervous system cancer,1,Number,2011,6760.8076268630475,8498.976235803004,5546.176979660919
+1,All Population,1,Deaths,1,Global,3,Both,7,10-14 years,477,Brain and central nervous system cancer,1,Number,2011,4996.59892309712,6240.686672428983,4135.759297702006
+1,All Population,1,Deaths,1,Global,3,Both,8,15-19 years,477,Brain and central nervous system cancer,1,Number,2011,3949.8993303513626,4972.5272011652,3239.3296156085257
+1,All Population,1,Deaths,1,Global,3,Both,9,20-24 years,477,Brain and central nervous system cancer,1,Number,2011,4318.536701799315,5499.463941200919,3645.5020632262913
+1,All Population,1,Deaths,1,Global,3,Both,10,25-29 years,477,Brain and central nervous system cancer,1,Number,2011,5128.010734202361,6273.575734978192,4189.741165685735
+1,All Population,1,Deaths,1,Global,3,Both,11,30-34 years,477,Brain and central nervous system cancer,1,Number,2011,6397.390405716773,7856.43908961365,5506.633865732477
+1,All Population,1,Deaths,1,Global,3,Both,12,35-39 years,477,Brain and central nervous system cancer,1,Number,2011,8030.380266707628,9934.686431180264,6863.832495085641
+1,All Population,1,Deaths,1,Global,3,Both,13,40-44 years,477,Brain and central nervous system cancer,1,Number,2011,10811.59890465163,13019.014966276849,9421.695649460928
+1,All Population,1,Deaths,1,Global,3,Both,14,45-49 years,477,Brain and central nervous system cancer,1,Number,2011,14077.160957970687,16795.32231585961,12373.040379175352
+1,All Population,1,Deaths,1,Global,3,Both,15,50-54 years,477,Brain and central nervous system cancer,1,Number,2011,16721.18092201039,19215.28714249451,14644.377130492325
+1,All Population,1,Deaths,1,Global,3,Both,16,55-59 years,477,Brain and central nervous system cancer,1,Number,2011,20933.651528832706,24449.42897037602,18513.958496349485
+1,All Population,1,Deaths,1,Global,3,Both,17,60-64 years,477,Brain and central nervous system cancer,1,Number,2011,23083.675943599417,26894.977067353313,20420.82103816024
+1,All Population,1,Deaths,1,Global,3,Both,18,65-69 years,477,Brain and central nervous system cancer,1,Number,2011,21241.741385349735,25266.362992897884,18618.663588720814
+1,All Population,1,Deaths,1,Global,3,Both,19,70-74 years,477,Brain and central nervous system cancer,1,Number,2011,20293.414543956173,24010.023536275352,17876.88493466434
+1,All Population,1,Deaths,1,Global,3,Both,20,75-79 years,477,Brain and central nervous system cancer,1,Number,2011,17096.383704972286,19764.966138531072,15112.385077792285
+1,All Population,1,Deaths,1,Global,3,Both,23,5-14 years,477,Brain and central nervous system cancer,1,Number,2011,11757.406549960173,14646.136688106379,9758.529260880572
+1,All Population,1,Deaths,1,Global,3,Both,25,50-69 years,477,Brain and central nervous system cancer,1,Number,2011,81980.2497797923,95592.30800611757,72438.44623745311
+1,All Population,1,Deaths,1,Global,3,Both,28,<1 year,477,Brain and central nervous system cancer,1,Number,2011,1582.8638300702028,2028.3093889485103,1266.3085919357445
+1,All Population,1,Deaths,1,Global,3,Both,30,80-84 years,477,Brain and central nervous system cancer,1,Number,2011,11582.450213080598,13387.379706259007,9850.81029258264
+1,All Population,1,Deaths,1,Global,3,Both,31,85-89 years,477,Brain and central nervous system cancer,1,Number,2011,5707.895872936312,6588.27577693608,4721.054973385708
+1,All Population,1,Deaths,1,Global,3,Both,32,90-94 years,477,Brain and central nervous system cancer,1,Number,2011,1754.5234720749297,2063.012154460573,1397.9833421480987
+1,All Population,1,Deaths,1,Global,3,Both,34,2-4 years,477,Brain and central nervous system cancer,1,Number,2011,4307.4187069302225,5475.966339885095,3508.831912495127
+1,All Population,1,Deaths,1,Global,3,Both,41,50-74 years,477,Brain and central nervous system cancer,1,Number,2011,102273.66432374838,118736.36608346074,90622.51397526241
+1,All Population,1,Deaths,1,Global,3,Both,232,65-74 years,477,Brain and central nervous system cancer,1,Number,2011,41535.15592930588,49646.82198121445,36350.79569563218
+1,All Population,1,Deaths,1,Global,3,Both,235,95+ years,477,Brain and central nervous system cancer,1,Number,2011,526.5211886686338,635.6150244315445,405.882634748259
+1,All Population,1,Deaths,1,Global,3,Both,6,5-9 years,477,Brain and central nervous system cancer,1,Number,2012,6800.365156136063,8507.190920222049,5593.743976134348
+1,All Population,1,Deaths,1,Global,3,Both,7,10-14 years,477,Brain and central nervous system cancer,1,Number,2012,4941.607168394049,6208.302883586107,4090.029389812568
+1,All Population,1,Deaths,1,Global,3,Both,8,15-19 years,477,Brain and central nervous system cancer,1,Number,2012,3866.2785971330354,4852.083356498465,3172.7487817592196
+1,All Population,1,Deaths,1,Global,3,Both,9,20-24 years,477,Brain and central nervous system cancer,1,Number,2012,4215.911548212925,5383.284819756689,3616.9429123024506
+1,All Population,1,Deaths,1,Global,3,Both,10,25-29 years,477,Brain and central nervous system cancer,1,Number,2012,5194.656980851586,6487.294254305779,4284.338830062996
+1,All Population,1,Deaths,1,Global,3,Both,11,30-34 years,477,Brain and central nervous system cancer,1,Number,2012,6379.172966694869,7808.573003969748,5513.324660715894
+1,All Population,1,Deaths,1,Global,3,Both,12,35-39 years,477,Brain and central nervous system cancer,1,Number,2012,7925.778020663468,9756.68247767326,6846.797901122596
+1,All Population,1,Deaths,1,Global,3,Both,13,40-44 years,477,Brain and central nervous system cancer,1,Number,2012,10752.778463207982,12868.543492207986,9426.653708902742
+1,All Population,1,Deaths,1,Global,3,Both,14,45-49 years,477,Brain and central nervous system cancer,1,Number,2012,14284.36762593719,17334.37867219491,12685.331588780173
+1,All Population,1,Deaths,1,Global,3,Both,15,50-54 years,477,Brain and central nervous system cancer,1,Number,2012,17027.13634928384,19788.930927951256,14898.378141197578
+1,All Population,1,Deaths,1,Global,3,Both,16,55-59 years,477,Brain and central nervous system cancer,1,Number,2012,21393.865562622057,25209.1440983077,18908.178963492435
+1,All Population,1,Deaths,1,Global,3,Both,17,60-64 years,477,Brain and central nervous system cancer,1,Number,2012,23869.32415836616,28034.131269836224,21124.937451950675
+1,All Population,1,Deaths,1,Global,3,Both,18,65-69 years,477,Brain and central nervous system cancer,1,Number,2012,22325.961057278426,26815.56443964329,19647.082651130873
+1,All Population,1,Deaths,1,Global,3,Both,19,70-74 years,477,Brain and central nervous system cancer,1,Number,2012,20598.97388737895,24545.410371703238,18286.3617203429
+1,All Population,1,Deaths,1,Global,3,Both,20,75-79 years,477,Brain and central nervous system cancer,1,Number,2012,17582.22523898856,20441.95968347511,15435.044043978392
+1,All Population,1,Deaths,1,Global,3,Both,23,5-14 years,477,Brain and central nervous system cancer,1,Number,2012,11741.972324530105,14540.018226054639,9859.315769084873
+1,All Population,1,Deaths,1,Global,3,Both,25,50-69 years,477,Brain and central nervous system cancer,1,Number,2012,84616.2871275504,98842.94312711054,75211.04155665902
+1,All Population,1,Deaths,1,Global,3,Both,28,<1 year,477,Brain and central nervous system cancer,1,Number,2012,1583.8822948419324,2035.4541616840793,1279.6532846707573
+1,All Population,1,Deaths,1,Global,3,Both,30,80-84 years,477,Brain and central nervous system cancer,1,Number,2012,12052.885420360908,13986.170873670262,10297.523644258144
+1,All Population,1,Deaths,1,Global,3,Both,31,85-89 years,477,Brain and central nervous system cancer,1,Number,2012,6068.649203606094,7035.27627545141,5000.654981368392
+1,All Population,1,Deaths,1,Global,3,Both,32,90-94 years,477,Brain and central nervous system cancer,1,Number,2012,1962.4095572952856,2305.6986965697365,1556.09772804987
+1,All Population,1,Deaths,1,Global,3,Both,34,2-4 years,477,Brain and central nervous system cancer,1,Number,2012,4301.101612811373,5442.441769576412,3447.303854818009
+1,All Population,1,Deaths,1,Global,3,Both,41,50-74 years,477,Brain and central nervous system cancer,1,Number,2012,105215.2610149294,122601.8234917294,93377.85845989341
+1,All Population,1,Deaths,1,Global,3,Both,232,65-74 years,477,Brain and central nervous system cancer,1,Number,2012,42924.93494465735,51290.71671394704,37551.43235965428
+1,All Population,1,Deaths,1,Global,3,Both,235,95+ years,477,Brain and central nervous system cancer,1,Number,2012,561.1319480981285,673.6090870363969,435.7165100448028
+1,All Population,1,Deaths,1,Global,3,Both,6,5-9 years,477,Brain and central nervous system cancer,1,Number,2013,6906.930247101173,8689.095349514382,5721.080343807992
+1,All Population,1,Deaths,1,Global,3,Both,7,10-14 years,477,Brain and central nervous system cancer,1,Number,2013,4936.489048914484,6210.635769912249,4099.896811914911
+1,All Population,1,Deaths,1,Global,3,Both,8,15-19 years,477,Brain and central nervous system cancer,1,Number,2013,3806.202386050258,4759.284627174622,3124.7401219051876
+1,All Population,1,Deaths,1,Global,3,Both,9,20-24 years,477,Brain and central nervous system cancer,1,Number,2013,4125.185433923445,5310.05558969814,3543.6725589557454
+1,All Population,1,Deaths,1,Global,3,Both,10,25-29 years,477,Brain and central nervous system cancer,1,Number,2013,5253.112278718352,6614.901626313056,4364.141420314233
+1,All Population,1,Deaths,1,Global,3,Both,11,30-34 years,477,Brain and central nervous system cancer,1,Number,2013,6414.305206939166,7859.623227610334,5560.003194075578
+1,All Population,1,Deaths,1,Global,3,Both,12,35-39 years,477,Brain and central nervous system cancer,1,Number,2013,7859.850449361496,9704.599605885795,6869.746346650487
+1,All Population,1,Deaths,1,Global,3,Both,13,40-44 years,477,Brain and central nervous system cancer,1,Number,2013,10664.832286061004,12747.908354621377,9410.980453996228
+1,All Population,1,Deaths,1,Global,3,Both,14,45-49 years,477,Brain and central nervous system cancer,1,Number,2013,14235.01362946502,17413.948747677707,12716.087394843398
+1,All Population,1,Deaths,1,Global,3,Both,15,50-54 years,477,Brain and central nervous system cancer,1,Number,2013,17348.364752354286,20295.79859159855,15255.199383403375
+1,All Population,1,Deaths,1,Global,3,Both,16,55-59 years,477,Brain and central nervous system cancer,1,Number,2013,21329.45378012756,25187.819389009175,18966.072661098682
+1,All Population,1,Deaths,1,Global,3,Both,17,60-64 years,477,Brain and central nervous system cancer,1,Number,2013,24434.48979798426,28767.647743633115,21435.80054066851
+1,All Population,1,Deaths,1,Global,3,Both,18,65-69 years,477,Brain and central nervous system cancer,1,Number,2013,22969.830109908464,27620.167186937102,20192.492842541174
+1,All Population,1,Deaths,1,Global,3,Both,19,70-74 years,477,Brain and central nervous system cancer,1,Number,2013,20633.79016827088,24623.58095595559,18336.11582687006
+1,All Population,1,Deaths,1,Global,3,Both,20,75-79 years,477,Brain and central nervous system cancer,1,Number,2013,17826.61197464165,20948.442148952654,15670.128850826004
+1,All Population,1,Deaths,1,Global,3,Both,23,5-14 years,477,Brain and central nervous system cancer,1,Number,2013,11843.419296015654,14770.99779293221,9980.4236820051
+1,All Population,1,Deaths,1,Global,3,Both,25,50-69 years,477,Brain and central nervous system cancer,1,Number,2013,86082.13844037466,100175.38409645419,76363.62513724504
+1,All Population,1,Deaths,1,Global,3,Both,28,<1 year,477,Brain and central nervous system cancer,1,Number,2013,1595.7918489289273,2088.7537556321804,1265.317469085958
+1,All Population,1,Deaths,1,Global,3,Both,30,80-84 years,477,Brain and central nervous system cancer,1,Number,2013,12282.71574810282,14143.959860821555,10421.547434540598
+1,All Population,1,Deaths,1,Global,3,Both,31,85-89 years,477,Brain and central nervous system cancer,1,Number,2013,6345.6678096533615,7390.721504676669,5214.811130225382
+1,All Population,1,Deaths,1,Global,3,Both,32,90-94 years,477,Brain and central nervous system cancer,1,Number,2013,2124.87713726168,2493.8069501742048,1680.4611211042256
+1,All Population,1,Deaths,1,Global,3,Both,34,2-4 years,477,Brain and central nervous system cancer,1,Number,2013,4320.026017569426,5494.367620527947,3462.2325380456
+1,All Population,1,Deaths,1,Global,3,Both,41,50-74 years,477,Brain and central nervous system cancer,1,Number,2013,106715.9286086455,124780.77962316532,94232.80511560633
+1,All Population,1,Deaths,1,Global,3,Both,232,65-74 years,477,Brain and central nervous system cancer,1,Number,2013,43603.620278179274,52018.108976217845,38203.64748701786
+1,All Population,1,Deaths,1,Global,3,Both,235,95+ years,477,Brain and central nervous system cancer,1,Number,2013,575.5351809971701,690.8902585487987,448.01673964104793
+1,All Population,1,Deaths,1,Global,3,Both,6,5-9 years,477,Brain and central nervous system cancer,1,Number,2014,6934.5111799177685,8681.431685481397,5824.003731393651
+1,All Population,1,Deaths,1,Global,3,Both,7,10-14 years,477,Brain and central nervous system cancer,1,Number,2014,4974.82133494703,6171.605035090628,4189.271952440156
+1,All Population,1,Deaths,1,Global,3,Both,8,15-19 years,477,Brain and central nervous system cancer,1,Number,2014,3782.012611302911,4732.996681190918,3119.794703719603
+1,All Population,1,Deaths,1,Global,3,Both,9,20-24 years,477,Brain and central nervous system cancer,1,Number,2014,4055.886591957255,5201.75305251634,3444.2279935502197
+1,All Population,1,Deaths,1,Global,3,Both,10,25-29 years,477,Brain and central nervous system cancer,1,Number,2014,5285.343930136288,6718.747693388443,4386.746405455038
+1,All Population,1,Deaths,1,Global,3,Both,11,30-34 years,477,Brain and central nervous system cancer,1,Number,2014,6512.075485313121,7942.977788857224,5674.694134419073
+1,All Population,1,Deaths,1,Global,3,Both,12,35-39 years,477,Brain and central nervous system cancer,1,Number,2014,7893.62017931293,9729.616345700757,6856.438416205353
+1,All Population,1,Deaths,1,Global,3,Both,13,40-44 years,477,Brain and central nervous system cancer,1,Number,2014,10679.442601575798,12849.725208113277,9367.53317502395
+1,All Population,1,Deaths,1,Global,3,Both,14,45-49 years,477,Brain and central nervous system cancer,1,Number,2014,14165.31120008063,17354.430341192598,12752.871543134714
+1,All Population,1,Deaths,1,Global,3,Both,15,50-54 years,477,Brain and central nervous system cancer,1,Number,2014,17983.6815999427,21129.3726771465,15804.201544613408
+1,All Population,1,Deaths,1,Global,3,Both,16,55-59 years,477,Brain and central nervous system cancer,1,Number,2014,21562.687177658147,25159.900817581478,19295.608553325914
+1,All Population,1,Deaths,1,Global,3,Both,17,60-64 years,477,Brain and central nervous system cancer,1,Number,2014,25101.764769469086,29358.125323172542,22311.713828570933
+1,All Population,1,Deaths,1,Global,3,Both,18,65-69 years,477,Brain and central nervous system cancer,1,Number,2014,24470.847481686444,29186.68418898057,21562.662132749156
+1,All Population,1,Deaths,1,Global,3,Both,19,70-74 years,477,Brain and central nervous system cancer,1,Number,2014,20945.050122745917,24938.701540207872,18689.92680095906
+1,All Population,1,Deaths,1,Global,3,Both,20,75-79 years,477,Brain and central nervous system cancer,1,Number,2014,18371.988785213256,21635.146653419975,16302.713214730591
+1,All Population,1,Deaths,1,Global,3,Both,23,5-14 years,477,Brain and central nervous system cancer,1,Number,2014,11909.332514864793,14637.368049023502,10023.041940525005
+1,All Population,1,Deaths,1,Global,3,Both,25,50-69 years,477,Brain and central nervous system cancer,1,Number,2014,89118.98102875642,103513.15403125407,79216.66640921147
+1,All Population,1,Deaths,1,Global,3,Both,28,<1 year,477,Brain and central nervous system cancer,1,Number,2014,1596.7876494139139,2110.085405777166,1260.9932206014523
+1,All Population,1,Deaths,1,Global,3,Both,30,80-84 years,477,Brain and central nervous system cancer,1,Number,2014,12773.628082040448,14599.888165335618,10729.124683490832
+1,All Population,1,Deaths,1,Global,3,Both,31,85-89 years,477,Brain and central nervous system cancer,1,Number,2014,6728.193384377405,7799.711990713681,5519.413484646535
+1,All Population,1,Deaths,1,Global,3,Both,32,90-94 years,477,Brain and central nervous system cancer,1,Number,2014,2319.756557609226,2727.5803948171324,1843.1998449601767
+1,All Population,1,Deaths,1,Global,3,Both,34,2-4 years,477,Brain and central nervous system cancer,1,Number,2014,4342.840573578974,5462.174143066798,3477.997116383458
+1,All Population,1,Deaths,1,Global,3,Both,41,50-74 years,477,Brain and central nervous system cancer,1,Number,2014,110064.03115150233,128842.9327042694,98033.04162441034
+1,All Population,1,Deaths,1,Global,3,Both,232,65-74 years,477,Brain and central nervous system cancer,1,Number,2014,45415.89760443234,54103.22303964315,39932.518440771164
+1,All Population,1,Deaths,1,Global,3,Both,235,95+ years,477,Brain and central nervous system cancer,1,Number,2014,588.4393124641665,711.9697133918108,454.5291859116256
+1,All Population,1,Deaths,1,Global,3,Both,6,5-9 years,477,Brain and central nervous system cancer,1,Number,2015,6933.116453313729,8657.787302622086,5782.444817091327
+1,All Population,1,Deaths,1,Global,3,Both,7,10-14 years,477,Brain and central nervous system cancer,1,Number,2015,4987.217717303022,6126.508919357321,4227.455311172344
+1,All Population,1,Deaths,1,Global,3,Both,8,15-19 years,477,Brain and central nervous system cancer,1,Number,2015,3747.958568543373,4622.111893330248,3093.042899211247
+1,All Population,1,Deaths,1,Global,3,Both,9,20-24 years,477,Brain and central nervous system cancer,1,Number,2015,3997.6251508833925,5148.787788391983,3384.3469971069044
+1,All Population,1,Deaths,1,Global,3,Both,10,25-29 years,477,Brain and central nervous system cancer,1,Number,2015,5278.588163422538,6741.658682001788,4379.701952180602
+1,All Population,1,Deaths,1,Global,3,Both,11,30-34 years,477,Brain and central nervous system cancer,1,Number,2015,6614.819429394049,8092.894076459199,5776.896041437876
+1,All Population,1,Deaths,1,Global,3,Both,12,35-39 years,477,Brain and central nervous system cancer,1,Number,2015,7976.59450897408,9859.974736218457,6891.853975707493
+1,All Population,1,Deaths,1,Global,3,Both,13,40-44 years,477,Brain and central nervous system cancer,1,Number,2015,10677.355567272365,12828.106827842203,9357.303169728046
+1,All Population,1,Deaths,1,Global,3,Both,14,45-49 years,477,Brain and central nervous system cancer,1,Number,2015,14211.72913665304,17310.82866891641,12633.45643606925
+1,All Population,1,Deaths,1,Global,3,Both,15,50-54 years,477,Brain and central nervous system cancer,1,Number,2015,18667.876743080426,21768.663458364343,16472.69767574574
+1,All Population,1,Deaths,1,Global,3,Both,16,55-59 years,477,Brain and central nervous system cancer,1,Number,2015,21876.067068101413,25710.051767877405,19659.16399538626
+1,All Population,1,Deaths,1,Global,3,Both,17,60-64 years,477,Brain and central nervous system cancer,1,Number,2015,26204.124184451342,30442.96229439132,23395.61226627473
+1,All Population,1,Deaths,1,Global,3,Both,18,65-69 years,477,Brain and central nervous system cancer,1,Number,2015,25990.290027470688,30662.91964840034,23014.288102852595
+1,All Population,1,Deaths,1,Global,3,Both,19,70-74 years,477,Brain and central nervous system cancer,1,Number,2015,21389.846227045236,25507.041355379002,19124.88668532304
+1,All Population,1,Deaths,1,Global,3,Both,20,75-79 years,477,Brain and central nervous system cancer,1,Number,2015,18995.07909623084,22070.422106432714,16834.949566199208
+1,All Population,1,Deaths,1,Global,3,Both,23,5-14 years,477,Brain and central nervous system cancer,1,Number,2015,11920.33417061675,14616.067138714083,10026.621593561065
+1,All Population,1,Deaths,1,Global,3,Both,25,50-69 years,477,Brain and central nervous system cancer,1,Number,2015,92738.3580231038,107889.43116872307,82447.87808582385
+1,All Population,1,Deaths,1,Global,3,Both,28,<1 year,477,Brain and central nervous system cancer,1,Number,2015,1597.8573214961887,2143.13311617109,1250.8295709394856
+1,All Population,1,Deaths,1,Global,3,Both,30,80-84 years,477,Brain and central nervous system cancer,1,Number,2015,13262.543021017738,15194.044288759336,11130.019146185788
+1,All Population,1,Deaths,1,Global,3,Both,31,85-89 years,477,Brain and central nervous system cancer,1,Number,2015,7138.622458383997,8208.924211969996,5839.327216867163
+1,All Population,1,Deaths,1,Global,3,Both,32,90-94 years,477,Brain and central nervous system cancer,1,Number,2015,2551.260155668644,3007.0674342095645,2037.8330980534422
+1,All Population,1,Deaths,1,Global,3,Both,34,2-4 years,477,Brain and central nervous system cancer,1,Number,2015,4347.389721872287,5479.441925166697,3462.363075494077
+1,All Population,1,Deaths,1,Global,3,Both,41,50-74 years,477,Brain and central nervous system cancer,1,Number,2015,114128.20425014911,133795.0880761091,101901.60650533673
+1,All Population,1,Deaths,1,Global,3,Both,232,65-74 years,477,Brain and central nervous system cancer,1,Number,2015,47380.13625451592,56293.778966535894,41887.5637948867
+1,All Population,1,Deaths,1,Global,3,Both,235,95+ years,477,Brain and central nervous system cancer,1,Number,2015,658.7539685593649,793.8573730720996,505.68540175579625
+1,All Population,1,Deaths,1,Global,3,Both,6,5-9 years,477,Brain and central nervous system cancer,1,Number,2016,6910.595334882489,8629.09743329864,5819.543395953502
+1,All Population,1,Deaths,1,Global,3,Both,7,10-14 years,477,Brain and central nervous system cancer,1,Number,2016,5011.626827349577,6154.345025989512,4218.190353673382
+1,All Population,1,Deaths,1,Global,3,Both,8,15-19 years,477,Brain and central nervous system cancer,1,Number,2016,3713.490512335545,4576.3309733286915,3075.2387718668538
+1,All Population,1,Deaths,1,Global,3,Both,9,20-24 years,477,Brain and central nervous system cancer,1,Number,2016,3956.003878394887,5056.621953707577,3329.9551168785415
+1,All Population,1,Deaths,1,Global,3,Both,10,25-29 years,477,Brain and central nervous system cancer,1,Number,2016,5277.778985018206,6735.550321190675,4328.440582883531
+1,All Population,1,Deaths,1,Global,3,Both,11,30-34 years,477,Brain and central nervous system cancer,1,Number,2016,6754.781073530983,8338.704772555917,5899.093667138782
+1,All Population,1,Deaths,1,Global,3,Both,12,35-39 years,477,Brain and central nervous system cancer,1,Number,2016,8083.083378509527,9938.763728822223,6938.322356440504
+1,All Population,1,Deaths,1,Global,3,Both,13,40-44 years,477,Brain and central nervous system cancer,1,Number,2016,10690.934042320616,12866.551723199229,9369.36919400669
+1,All Population,1,Deaths,1,Global,3,Both,14,45-49 years,477,Brain and central nervous system cancer,1,Number,2016,14364.207401113797,17352.841645450488,12682.447403320619
+1,All Population,1,Deaths,1,Global,3,Both,15,50-54 years,477,Brain and central nervous system cancer,1,Number,2016,19132.912131725006,22619.06201502038,16815.29014832163
+1,All Population,1,Deaths,1,Global,3,Both,16,55-59 years,477,Brain and central nervous system cancer,1,Number,2016,22207.362560189784,26208.713356505385,19960.39812085196
+1,All Population,1,Deaths,1,Global,3,Both,17,60-64 years,477,Brain and central nervous system cancer,1,Number,2016,27101.942455894143,31683.93490297304,24191.360420445413
+1,All Population,1,Deaths,1,Global,3,Both,18,65-69 years,477,Brain and central nervous system cancer,1,Number,2016,27615.285514902665,32701.62336600608,24393.138860376486
+1,All Population,1,Deaths,1,Global,3,Both,19,70-74 years,477,Brain and central nervous system cancer,1,Number,2016,22094.935065711834,26368.174242716945,19540.18341233116
+1,All Population,1,Deaths,1,Global,3,Both,20,75-79 years,477,Brain and central nervous system cancer,1,Number,2016,19564.984849072032,22603.327258413534,17243.67248003087
+1,All Population,1,Deaths,1,Global,3,Both,23,5-14 years,477,Brain and central nervous system cancer,1,Number,2016,11922.222162232072,14661.1606692804,10118.16594292635
+1,All Population,1,Deaths,1,Global,3,Both,25,50-69 years,477,Brain and central nervous system cancer,1,Number,2016,96057.50266271166,111983.18547216954,85405.64117416616
+1,All Population,1,Deaths,1,Global,3,Both,28,<1 year,477,Brain and central nervous system cancer,1,Number,2016,1590.3155051236445,2158.3898312123197,1251.119318671678
+1,All Population,1,Deaths,1,Global,3,Both,30,80-84 years,477,Brain and central nervous system cancer,1,Number,2016,13712.531980951688,15683.514671526018,11468.154803928597
+1,All Population,1,Deaths,1,Global,3,Both,31,85-89 years,477,Brain and central nervous system cancer,1,Number,2016,7464.586673832756,8510.672559493254,6086.876730839176
+1,All Population,1,Deaths,1,Global,3,Both,32,90-94 years,477,Brain and central nervous system cancer,1,Number,2016,2650.886399449279,3126.782169967759,2114.5138907001224
+1,All Population,1,Deaths,1,Global,3,Both,34,2-4 years,477,Brain and central nervous system cancer,1,Number,2016,4353.135956231742,5479.808039169022,3480.9039925075194
+1,All Population,1,Deaths,1,Global,3,Both,41,50-74 years,477,Brain and central nervous system cancer,1,Number,2016,118152.43772842351,139015.77489059386,105368.08691118113
+1,All Population,1,Deaths,1,Global,3,Both,232,65-74 years,477,Brain and central nervous system cancer,1,Number,2016,49710.22058061453,59383.575245357206,43943.61263712494
+1,All Population,1,Deaths,1,Global,3,Both,235,95+ years,477,Brain and central nervous system cancer,1,Number,2016,720.1709863793631,861.9816125380244,550.4796842934651
+1,All Population,1,Deaths,1,Global,3,Both,6,5-9 years,477,Brain and central nervous system cancer,1,Number,2017,6869.140149244708,8580.673037884197,5776.048912933995
+1,All Population,1,Deaths,1,Global,3,Both,7,10-14 years,477,Brain and central nervous system cancer,1,Number,2017,5064.4976464867805,6195.547519243993,4320.384722952128
+1,All Population,1,Deaths,1,Global,3,Both,8,15-19 years,477,Brain and central nervous system cancer,1,Number,2017,3715.3634477706346,4555.5204627848025,3072.6925363317814
+1,All Population,1,Deaths,1,Global,3,Both,9,20-24 years,477,Brain and central nervous system cancer,1,Number,2017,3938.3157509469725,4988.531162948671,3296.4742826446386
+1,All Population,1,Deaths,1,Global,3,Both,10,25-29 years,477,Brain and central nervous system cancer,1,Number,2017,5262.8196518888935,6665.7061136727925,4336.504481415155
+1,All Population,1,Deaths,1,Global,3,Both,11,30-34 years,477,Brain and central nervous system cancer,1,Number,2017,6886.106407890471,8490.571577564122,6001.678504708075
+1,All Population,1,Deaths,1,Global,3,Both,12,35-39 years,477,Brain and central nervous system cancer,1,Number,2017,8219.028108768334,10135.603379627535,7027.647137610298
+1,All Population,1,Deaths,1,Global,3,Both,13,40-44 years,477,Brain and central nervous system cancer,1,Number,2017,10698.31124751693,12876.405255282221,9427.605705128119
+1,All Population,1,Deaths,1,Global,3,Both,14,45-49 years,477,Brain and central nervous system cancer,1,Number,2017,14339.767942313172,17368.806232059578,12685.84958692638
+1,All Population,1,Deaths,1,Global,3,Both,15,50-54 years,477,Brain and central nervous system cancer,1,Number,2017,19388.924785457013,23174.83947508666,16953.69632600127
+1,All Population,1,Deaths,1,Global,3,Both,16,55-59 years,477,Brain and central nervous system cancer,1,Number,2017,22583.790953441556,26721.593890729677,20376.44493989595
+1,All Population,1,Deaths,1,Global,3,Both,17,60-64 years,477,Brain and central nervous system cancer,1,Number,2017,27612.517132819103,32624.432167421928,24606.19028816591
+1,All Population,1,Deaths,1,Global,3,Both,18,65-69 years,477,Brain and central nervous system cancer,1,Number,2017,28535.95787593915,34090.22032623497,25063.359206453384
+1,All Population,1,Deaths,1,Global,3,Both,19,70-74 years,477,Brain and central nervous system cancer,1,Number,2017,23298.7976070333,27953.88061549109,20434.477709778614
+1,All Population,1,Deaths,1,Global,3,Both,20,75-79 years,477,Brain and central nervous system cancer,1,Number,2017,19940.06267544729,23054.039753885598,17421.534982053578
+1,All Population,1,Deaths,1,Global,3,Both,23,5-14 years,477,Brain and central nervous system cancer,1,Number,2017,11933.637795731485,14776.340085446673,10192.232144640651
+1,All Population,1,Deaths,1,Global,3,Both,25,50-69 years,477,Brain and central nervous system cancer,1,Number,2017,98121.1907476568,115111.83399404524,87351.0905419236
+1,All Population,1,Deaths,1,Global,3,Both,28,<1 year,477,Brain and central nervous system cancer,1,Number,2017,1552.0413814154292,2120.580867318066,1223.063646018184
+1,All Population,1,Deaths,1,Global,3,Both,30,80-84 years,477,Brain and central nervous system cancer,1,Number,2017,14190.47372059922,16243.966554014598,11902.132366373895
+1,All Population,1,Deaths,1,Global,3,Both,31,85-89 years,477,Brain and central nervous system cancer,1,Number,2017,7720.797707161296,8845.584401137605,6271.616181254976
+1,All Population,1,Deaths,1,Global,3,Both,32,90-94 years,477,Brain and central nervous system cancer,1,Number,2017,2830.7855909873642,3323.4803929857203,2270.5128154658864
+1,All Population,1,Deaths,1,Global,3,Both,34,2-4 years,477,Brain and central nervous system cancer,1,Number,2017,4357.255315373742,5464.655775679925,3513.0108319841434
+1,All Population,1,Deaths,1,Global,3,Both,41,50-74 years,477,Brain and central nervous system cancer,1,Number,2017,121419.9883546902,142934.23058140985,108291.32080728801
+1,All Population,1,Deaths,1,Global,3,Both,232,65-74 years,477,Brain and central nervous system cancer,1,Number,2017,51834.75548297248,61972.56736620561,45821.276265552966
+1,All Population,1,Deaths,1,Global,3,Both,235,95+ years,477,Brain and central nervous system cancer,1,Number,2017,792.9199088404807,955.2698813976992,601.5551532904861
+1,All Population,1,Deaths,1,Global,3,Both,6,5-9 years,477,Brain and central nervous system cancer,1,Number,2018,6765.569996046819,8388.056174205976,5649.544793954027
+1,All Population,1,Deaths,1,Global,3,Both,7,10-14 years,477,Brain and central nervous system cancer,1,Number,2018,5110.129182856344,6261.26011754057,4338.043745051312
+1,All Population,1,Deaths,1,Global,3,Both,8,15-19 years,477,Brain and central nervous system cancer,1,Number,2018,3700.221955900591,4454.6403306142,3036.9339807408373
+1,All Population,1,Deaths,1,Global,3,Both,9,20-24 years,477,Brain and central nervous system cancer,1,Number,2018,3883.2468502430875,4840.945943672978,3265.9091912808267
+1,All Population,1,Deaths,1,Global,3,Both,10,25-29 years,477,Brain and central nervous system cancer,1,Number,2018,5154.081965861135,6492.822069040369,4223.116293640011
+1,All Population,1,Deaths,1,Global,3,Both,11,30-34 years,477,Brain and central nervous system cancer,1,Number,2018,6959.573830643292,8602.756214587525,6091.777835620151
+1,All Population,1,Deaths,1,Global,3,Both,12,35-39 years,477,Brain and central nervous system cancer,1,Number,2018,8308.381625591615,10177.626379971727,7096.041128323594
+1,All Population,1,Deaths,1,Global,3,Both,13,40-44 years,477,Brain and central nervous system cancer,1,Number,2018,10688.606544744645,12815.582140718012,9427.915487253165
+1,All Population,1,Deaths,1,Global,3,Both,14,45-49 years,477,Brain and central nervous system cancer,1,Number,2018,14341.034082558634,17376.27377111653,12660.438851815015
+1,All Population,1,Deaths,1,Global,3,Both,15,50-54 years,477,Brain and central nervous system cancer,1,Number,2018,19505.36580964494,23381.63467371133,16987.7730184609
+1,All Population,1,Deaths,1,Global,3,Both,16,55-59 years,477,Brain and central nervous system cancer,1,Number,2018,23247.221889039087,27539.221765439303,20937.46310333011
+1,All Population,1,Deaths,1,Global,3,Both,17,60-64 years,477,Brain and central nervous system cancer,1,Number,2018,27997.82823088423,33089.018440494234,24955.81805220564
+1,All Population,1,Deaths,1,Global,3,Both,18,65-69 years,477,Brain and central nervous system cancer,1,Number,2018,29661.506348975818,35540.599114978875,25980.081121529045
+1,All Population,1,Deaths,1,Global,3,Both,19,70-74 years,477,Brain and central nervous system cancer,1,Number,2018,24528.789103314113,29189.34536558197,21537.030117823026
+1,All Population,1,Deaths,1,Global,3,Both,20,75-79 years,477,Brain and central nervous system cancer,1,Number,2018,20350.100183606253,23440.699131147838,17814.177780578022
+1,All Population,1,Deaths,1,Global,3,Both,23,5-14 years,477,Brain and central nervous system cancer,1,Number,2018,11875.699178903156,14570.753689746876,10085.661015791837
+1,All Population,1,Deaths,1,Global,3,Both,25,50-69 years,477,Brain and central nervous system cancer,1,Number,2018,100411.92227854405,118224.94284676993,89571.2515571706
+1,All Population,1,Deaths,1,Global,3,Both,28,<1 year,477,Brain and central nervous system cancer,1,Number,2018,1488.56746590679,2029.2126442686908,1156.12639133969
+1,All Population,1,Deaths,1,Global,3,Both,30,80-84 years,477,Brain and central nervous system cancer,1,Number,2018,14579.948543396344,16723.291525875753,12181.5159163593
+1,All Population,1,Deaths,1,Global,3,Both,31,85-89 years,477,Brain and central nervous system cancer,1,Number,2018,7954.388192485302,9037.053953862616,6410.41042782208
+1,All Population,1,Deaths,1,Global,3,Both,32,90-94 years,477,Brain and central nervous system cancer,1,Number,2018,2955.4053251169817,3466.334493851493,2361.7162030969107
+1,All Population,1,Deaths,1,Global,3,Both,34,2-4 years,477,Brain and central nervous system cancer,1,Number,2018,4316.5389217362135,5387.591770897889,3469.9932821196267
+1,All Population,1,Deaths,1,Global,3,Both,41,50-74 years,477,Brain and central nervous system cancer,1,Number,2018,124940.7113818582,146931.3332680731,111137.26690923134
+1,All Population,1,Deaths,1,Global,3,Both,232,65-74 years,477,Brain and central nervous system cancer,1,Number,2018,54190.29545228991,64444.66198629066,47525.94645815307
+1,All Population,1,Deaths,1,Global,3,Both,235,95+ years,477,Brain and central nervous system cancer,1,Number,2018,849.514711286935,1027.192773425032,637.7815894550521
+1,All Population,1,Deaths,1,Global,3,Both,6,5-9 years,477,Brain and central nervous system cancer,1,Number,2019,6690.002190743011,8337.06937340896,5645.561796965398
+1,All Population,1,Deaths,1,Global,3,Both,7,10-14 years,477,Brain and central nervous system cancer,1,Number,2019,5149.134970437042,6366.898445257189,4370.255811738304
+1,All Population,1,Deaths,1,Global,3,Both,8,15-19 years,477,Brain and central nervous system cancer,1,Number,2019,3701.535869954087,4484.082505769151,3038.096624951867
+1,All Population,1,Deaths,1,Global,3,Both,9,20-24 years,477,Brain and central nervous system cancer,1,Number,2019,3832.725616560476,4780.27442628046,3188.5554341877023
+1,All Population,1,Deaths,1,Global,3,Both,10,25-29 years,477,Brain and central nervous system cancer,1,Number,2019,5008.968472783132,6302.334029336585,4073.819297453755
+1,All Population,1,Deaths,1,Global,3,Both,11,30-34 years,477,Brain and central nervous system cancer,1,Number,2019,7003.463467957755,8662.550748217203,6081.751436941961
+1,All Population,1,Deaths,1,Global,3,Both,12,35-39 years,477,Brain and central nervous system cancer,1,Number,2019,8379.092538274848,10347.745063435035,7085.391664159824
+1,All Population,1,Deaths,1,Global,3,Both,13,40-44 years,477,Brain and central nervous system cancer,1,Number,2019,10616.51010533958,12755.868516806873,9349.810633264678
+1,All Population,1,Deaths,1,Global,3,Both,14,45-49 years,477,Brain and central nervous system cancer,1,Number,2019,14291.046940127586,17397.893627328198,12668.628951191493
+1,All Population,1,Deaths,1,Global,3,Both,15,50-54 years,477,Brain and central nervous system cancer,1,Number,2019,19543.988450844055,23454.27572773436,17028.24115378636
+1,All Population,1,Deaths,1,Global,3,Both,16,55-59 years,477,Brain and central nervous system cancer,1,Number,2019,23964.687752508304,28412.53064851591,21480.05956821704
+1,All Population,1,Deaths,1,Global,3,Both,17,60-64 years,477,Brain and central nervous system cancer,1,Number,2019,28111.959185725176,33074.7650683923,24891.62338442147
+1,All Population,1,Deaths,1,Global,3,Both,18,65-69 years,477,Brain and central nervous system cancer,1,Number,2019,30375.84948445402,36555.87246295624,26700.78689452084
+1,All Population,1,Deaths,1,Global,3,Both,19,70-74 years,477,Brain and central nervous system cancer,1,Number,2019,26118.234368289235,30771.404830571333,22872.992237048013
+1,All Population,1,Deaths,1,Global,3,Both,20,75-79 years,477,Brain and central nervous system cancer,1,Number,2019,20731.861919253977,23806.29147364484,18140.35729154202
+1,All Population,1,Deaths,1,Global,3,Both,23,5-14 years,477,Brain and central nervous system cancer,1,Number,2019,11839.13716118006,14685.65881466144,10072.971434668272
+1,All Population,1,Deaths,1,Global,3,Both,25,50-69 years,477,Brain and central nervous system cancer,1,Number,2019,101996.48487353155,120357.45624718716,90582.97040388775
+1,All Population,1,Deaths,1,Global,3,Both,28,<1 year,477,Brain and central nervous system cancer,1,Number,2019,1441.8860743397618,1966.8319031012875,1116.0480556147297
+1,All Population,1,Deaths,1,Global,3,Both,30,80-84 years,477,Brain and central nervous system cancer,1,Number,2019,14993.08022518405,17045.242184336767,12513.203563353954
+1,All Population,1,Deaths,1,Global,3,Both,31,85-89 years,477,Brain and central nervous system cancer,1,Number,2019,8219.69952059193,9400.662104215833,6578.120059012817
+1,All Population,1,Deaths,1,Global,3,Both,32,90-94 years,477,Brain and central nervous system cancer,1,Number,2019,3103.2711558308547,3652.279622303111,2464.9291709925833
+1,All Population,1,Deaths,1,Global,3,Both,34,2-4 years,477,Brain and central nervous system cancer,1,Number,2019,4299.059599032704,5379.121365122045,3471.1598774694194
+1,All Population,1,Deaths,1,Global,3,Both,41,50-74 years,477,Brain and central nervous system cancer,1,Number,2019,128114.7192418208,151115.90470222043,113616.00324555735
+1,All Population,1,Deaths,1,Global,3,Both,232,65-74 years,477,Brain and central nervous system cancer,1,Number,2019,56494.08385274324,67112.04024025182,49317.75576206712
+1,All Population,1,Deaths,1,Global,3,Both,235,95+ years,477,Brain and central nervous system cancer,1,Number,2019,918.9416833758605,1106.2090422224198,683.5144186620698
+1,All Population,1,Deaths,1,Global,3,Both,6,5-9 years,477,Brain and central nervous system cancer,1,Number,2020,6828.010317369516,8432.813388279437,5696.346253924201
+1,All Population,1,Deaths,1,Global,3,Both,7,10-14 years,477,Brain and central nervous system cancer,1,Number,2020,5315.066633176476,6508.4422650488805,4462.972416089351
+1,All Population,1,Deaths,1,Global,3,Both,8,15-19 years,477,Brain and central nervous system cancer,1,Number,2020,3856.8101137467706,4692.648209982683,3144.6538300798247
+1,All Population,1,Deaths,1,Global,3,Both,9,20-24 years,477,Brain and central nervous system cancer,1,Number,2020,3954.5818557457733,4949.393366218333,3243.190504824273
+1,All Population,1,Deaths,1,Global,3,Both,10,25-29 years,477,Brain and central nervous system cancer,1,Number,2020,5085.062281224848,6341.785578166754,4099.559767230442
+1,All Population,1,Deaths,1,Global,3,Both,11,30-34 years,477,Brain and central nervous system cancer,1,Number,2020,7290.491038044128,8911.025045295219,6289.5670374155125
+1,All Population,1,Deaths,1,Global,3,Both,12,35-39 years,477,Brain and central nervous system cancer,1,Number,2020,8726.994111238268,10760.030484411767,7347.233422677123
+1,All Population,1,Deaths,1,Global,3,Both,13,40-44 years,477,Brain and central nervous system cancer,1,Number,2020,10912.85148069572,13074.628172831914,9567.488907742361
+1,All Population,1,Deaths,1,Global,3,Both,14,45-49 years,477,Brain and central nervous system cancer,1,Number,2020,14386.689115239053,17485.553645951324,12779.35073507744
+1,All Population,1,Deaths,1,Global,3,Both,15,50-54 years,477,Brain and central nervous system cancer,1,Number,2020,19637.176749810893,23564.504327018214,17068.254539504047
+1,All Population,1,Deaths,1,Global,3,Both,16,55-59 years,477,Brain and central nervous system cancer,1,Number,2020,24658.31305067552,29263.179984599778,21869.719947271693
+1,All Population,1,Deaths,1,Global,3,Both,17,60-64 years,477,Brain and central nervous system cancer,1,Number,2020,28094.391624409003,32718.106657920285,24892.85563250949
+1,All Population,1,Deaths,1,Global,3,Both,18,65-69 years,477,Brain and central nervous system cancer,1,Number,2020,31191.948678190383,37496.6504140548,27223.354973144593
+1,All Population,1,Deaths,1,Global,3,Both,19,70-74 years,477,Brain and central nervous system cancer,1,Number,2020,27243.901397759495,32180.089303140205,23875.681680998623
+1,All Population,1,Deaths,1,Global,3,Both,20,75-79 years,477,Brain and central nervous system cancer,1,Number,2020,20879.926515009025,24360.11986497728,18290.736574664956
+1,All Population,1,Deaths,1,Global,3,Both,23,5-14 years,477,Brain and central nervous system cancer,1,Number,2020,12143.076950545985,14814.122489328933,10172.221270150963
+1,All Population,1,Deaths,1,Global,3,Both,25,50-69 years,477,Brain and central nervous system cancer,1,Number,2020,103581.83010308586,122874.603927077,91957.5936222869
+1,All Population,1,Deaths,1,Global,3,Both,28,<1 year,477,Brain and central nervous system cancer,1,Number,2020,1470.97708845967,2021.3104699025039,1146.3932844714368
+1,All Population,1,Deaths,1,Global,3,Both,30,80-84 years,477,Brain and central nervous system cancer,1,Number,2020,15195.29242547154,17370.383678520928,12750.901382690594
+1,All Population,1,Deaths,1,Global,3,Both,31,85-89 years,477,Brain and central nervous system cancer,1,Number,2020,8369.78006190879,9668.05782887904,6780.599128625457
+1,All Population,1,Deaths,1,Global,3,Both,32,90-94 years,477,Brain and central nervous system cancer,1,Number,2020,3236.953501534418,3778.0385697144457,2608.8173172502184
+1,All Population,1,Deaths,1,Global,3,Both,34,2-4 years,477,Brain and central nervous system cancer,1,Number,2020,4472.571264612233,5610.143558976161,3520.9807440396125
+1,All Population,1,Deaths,1,Global,3,Both,41,50-74 years,477,Brain and central nervous system cancer,1,Number,2020,130825.7315008453,153916.25824638098,116376.27759669189
+1,All Population,1,Deaths,1,Global,3,Both,232,65-74 years,477,Brain and central nervous system cancer,1,Number,2020,58435.85007594988,69911.391456154,51337.805840303794
+1,All Population,1,Deaths,1,Global,3,Both,235,95+ years,477,Brain and central nervous system cancer,1,Number,2020,953.2504419492307,1138.4687636976835,715.3388891036033
+1,All Population,1,Deaths,1,Global,3,Both,6,5-9 years,477,Brain and central nervous system cancer,1,Number,2021,6967.482191522542,8720.281092994175,5739.987321857194
+1,All Population,1,Deaths,1,Global,3,Both,7,10-14 years,477,Brain and central nervous system cancer,1,Number,2021,5474.326052641038,6883.185165733751,4587.449954474587
+1,All Population,1,Deaths,1,Global,3,Both,8,15-19 years,477,Brain and central nervous system cancer,1,Number,2021,3985.9469837734873,4972.742451521317,3233.669573361185
+1,All Population,1,Deaths,1,Global,3,Both,9,20-24 years,477,Brain and central nervous system cancer,1,Number,2021,4069.711024376463,5107.326031318272,3337.2542725881967
+1,All Population,1,Deaths,1,Global,3,Both,10,25-29 years,477,Brain and central nervous system cancer,1,Number,2021,5171.490905329719,6477.025958025795,4139.566202699967
+1,All Population,1,Deaths,1,Global,3,Both,11,30-34 years,477,Brain and central nervous system cancer,1,Number,2021,7557.369816725915,9264.654759531846,6451.713233057346
+1,All Population,1,Deaths,1,Global,3,Both,12,35-39 years,477,Brain and central nervous system cancer,1,Number,2021,9251.64865670141,11512.440777262178,7724.956923611279
+1,All Population,1,Deaths,1,Global,3,Both,13,40-44 years,477,Brain and central nervous system cancer,1,Number,2021,11285.872330120837,13531.415033374553,9864.435725862924
+1,All Population,1,Deaths,1,Global,3,Both,14,45-49 years,477,Brain and central nervous system cancer,1,Number,2021,14503.18149155151,17717.874026534024,12737.825136335137
+1,All Population,1,Deaths,1,Global,3,Both,15,50-54 years,477,Brain and central nervous system cancer,1,Number,2021,19936.366976513025,24006.17835081603,17306.89061238378
+1,All Population,1,Deaths,1,Global,3,Both,16,55-59 years,477,Brain and central nervous system cancer,1,Number,2021,25584.918534077504,30469.092574192764,22529.116093949786
+1,All Population,1,Deaths,1,Global,3,Both,17,60-64 years,477,Brain and central nervous system cancer,1,Number,2021,28563.911883459554,33599.44586205158,25078.32657889844
+1,All Population,1,Deaths,1,Global,3,Both,18,65-69 years,477,Brain and central nervous system cancer,1,Number,2021,32222.7077873896,38636.46987885994,28118.558971382517
+1,All Population,1,Deaths,1,Global,3,Both,19,70-74 years,477,Brain and central nervous system cancer,1,Number,2021,28664.06894393572,33694.55266101907,25127.209197776054
+1,All Population,1,Deaths,1,Global,3,Both,20,75-79 years,477,Brain and central nervous system cancer,1,Number,2021,21363.916339473304,25111.351028935747,18613.685065526504
+1,All Population,1,Deaths,1,Global,3,Both,23,5-14 years,477,Brain and central nervous system cancer,1,Number,2021,12441.808244163574,15424.327610610173,10275.612591347908
+1,All Population,1,Deaths,1,Global,3,Both,25,50-69 years,477,Brain and central nervous system cancer,1,Number,2021,106307.90518143971,126937.24748805384,93988.74489023838
+1,All Population,1,Deaths,1,Global,3,Both,28,<1 year,477,Brain and central nervous system cancer,1,Number,2021,1430.507829056899,1944.878402447045,1111.6655499084632
+1,All Population,1,Deaths,1,Global,3,Both,30,80-84 years,477,Brain and central nervous system cancer,1,Number,2021,15407.96282444256,17833.76828350633,12863.317566219886
+1,All Population,1,Deaths,1,Global,3,Both,31,85-89 years,477,Brain and central nervous system cancer,1,Number,2021,8562.678870683882,9884.870270823614,6916.885064184177
+1,All Population,1,Deaths,1,Global,3,Both,32,90-94 years,477,Brain and central nervous system cancer,1,Number,2021,3293.9774062318775,3871.7524154979624,2677.29965720008
+1,All Population,1,Deaths,1,Global,3,Both,34,2-4 years,477,Brain and central nervous system cancer,1,Number,2021,4499.011474979606,5825.031436307475,3519.669016505879
+1,All Population,1,Deaths,1,Global,3,Both,41,50-74 years,477,Brain and central nervous system cancer,1,Number,2021,134971.97412537545,159417.45443034836,119618.74850035225
+1,All Population,1,Deaths,1,Global,3,Both,232,65-74 years,477,Brain and central nervous system cancer,1,Number,2021,60886.77673132531,72438.30041685612,53156.19131953036
+1,All Population,1,Deaths,1,Global,3,Both,235,95+ years,477,Brain and central nervous system cancer,1,Number,2021,972.0730280285029,1176.7544599761443,725.6277469931916
+1,All Population,1,Deaths,1,Global,3,Both,6,5-9 years,477,Brain and central nervous system cancer,1,Number,2022,7021.087458507644,8977.641131616307,5693.160584554045
+1,All Population,1,Deaths,1,Global,3,Both,7,10-14 years,477,Brain and central nervous system cancer,1,Number,2022,5545.772580426463,6940.653854274526,4617.327044819321
+1,All Population,1,Deaths,1,Global,3,Both,8,15-19 years,477,Brain and central nervous system cancer,1,Number,2022,4020.6472667205094,5148.609162808481,3249.3988654775067
+1,All Population,1,Deaths,1,Global,3,Both,9,20-24 years,477,Brain and central nervous system cancer,1,Number,2022,4015.6396748996717,5113.6530812832225,3428.6250572111026
+1,All Population,1,Deaths,1,Global,3,Both,10,25-29 years,477,Brain and central nervous system cancer,1,Number,2022,5074.5257442736,6375.041852149996,4135.8096915716005
+1,All Population,1,Deaths,1,Global,3,Both,11,30-34 years,477,Brain and central nervous system cancer,1,Number,2022,7279.868067028195,9093.28625661693,6212.188150325456
+1,All Population,1,Deaths,1,Global,3,Both,12,35-39 years,477,Brain and central nervous system cancer,1,Number,2022,9134.876918687209,11409.699036481546,7666.208327468273
+1,All Population,1,Deaths,1,Global,3,Both,13,40-44 years,477,Brain and central nervous system cancer,1,Number,2022,11202.989063945586,13281.52870736851,9747.323763458604
+1,All Population,1,Deaths,1,Global,3,Both,14,45-49 years,477,Brain and central nervous system cancer,1,Number,2022,14233.267928415347,17289.3391596755,12502.256493095323
+1,All Population,1,Deaths,1,Global,3,Both,15,50-54 years,477,Brain and central nervous system cancer,1,Number,2022,19912.542034960064,24201.858424015285,17433.136646786923
+1,All Population,1,Deaths,1,Global,3,Both,16,55-59 years,477,Brain and central nervous system cancer,1,Number,2022,26161.597833797256,31420.20125045151,22970.936598819313
+1,All Population,1,Deaths,1,Global,3,Both,17,60-64 years,477,Brain and central nervous system cancer,1,Number,2022,29120.442723846736,35084.865428014156,25234.50076261316
+1,All Population,1,Deaths,1,Global,3,Both,18,65-69 years,477,Brain and central nervous system cancer,1,Number,2022,33322.66510446048,40120.33339541807,28697.705263456046
+1,All Population,1,Deaths,1,Global,3,Both,19,70-74 years,477,Brain and central nervous system cancer,1,Number,2022,30263.01129935811,35971.69930530048,26544.224669379713
+1,All Population,1,Deaths,1,Global,3,Both,20,75-79 years,477,Brain and central nervous system cancer,1,Number,2022,23015.234082951334,27334.2186216843,19610.59051212917
+1,All Population,1,Deaths,1,Global,3,Both,23,5-14 years,477,Brain and central nervous system cancer,1,Number,2022,12566.86003893411,15511.168315073284,10362.705937273158
+1,All Population,1,Deaths,1,Global,3,Both,25,50-69 years,477,Brain and central nervous system cancer,1,Number,2022,108517.24769706464,129903.7163663372,95463.73575578153
+1,All Population,1,Deaths,1,Global,3,Both,28,<1 year,477,Brain and central nervous system cancer,1,Number,2022,1373.5343424327084,1877.1638224814717,1073.9927128839518
+1,All Population,1,Deaths,1,Global,3,Both,30,80-84 years,477,Brain and central nervous system cancer,1,Number,2022,16104.003220645482,18828.48252246216,13438.046769881532
+1,All Population,1,Deaths,1,Global,3,Both,31,85-89 years,477,Brain and central nervous system cancer,1,Number,2022,9109.454323207168,10769.304522334662,7369.75984782654
+1,All Population,1,Deaths,1,Global,3,Both,32,90-94 years,477,Brain and central nervous system cancer,1,Number,2022,3554.516430745797,4199.5425004330455,2808.443752684339
+1,All Population,1,Deaths,1,Global,3,Both,34,2-4 years,477,Brain and central nervous system cancer,1,Number,2022,4099.982517173922,5396.835282996171,3162.578273928831
+1,All Population,1,Deaths,1,Global,3,Both,41,50-74 years,477,Brain and central nervous system cancer,1,Number,2022,138780.25899642266,165917.74273322197,122342.64837394378
+1,All Population,1,Deaths,1,Global,3,Both,232,65-74 years,477,Brain and central nervous system cancer,1,Number,2022,63585.67640381864,76219.75232453855,55217.71817080213
+1,All Population,1,Deaths,1,Global,3,Both,235,95+ years,477,Brain and central nervous system cancer,1,Number,2022,1081.3173407692227,1308.303767417921,809.3949400892252
+1,All Population,1,Deaths,1,Global,3,Both,6,5-9 years,477,Brain and central nervous system cancer,1,Number,2023,6984.378111337531,8921.88540312797,5746.6160716019385
+1,All Population,1,Deaths,1,Global,3,Both,7,10-14 years,477,Brain and central nervous system cancer,1,Number,2023,5550.958703960155,6962.894266945658,4594.9522984120695
+1,All Population,1,Deaths,1,Global,3,Both,8,15-19 years,477,Brain and central nervous system cancer,1,Number,2023,4030.0198662742278,5099.025684884014,3227.255509240104
+1,All Population,1,Deaths,1,Global,3,Both,9,20-24 years,477,Brain and central nervous system cancer,1,Number,2023,3948.2101403012766,5052.983686122406,3303.621644476664
+1,All Population,1,Deaths,1,Global,3,Both,10,25-29 years,477,Brain and central nervous system cancer,1,Number,2023,4997.726308894198,6375.079279924091,4085.8053620256883
+1,All Population,1,Deaths,1,Global,3,Both,11,30-34 years,477,Brain and central nervous system cancer,1,Number,2023,7138.989066669498,8753.905337339585,6006.352975278636
+1,All Population,1,Deaths,1,Global,3,Both,12,35-39 years,477,Brain and central nervous system cancer,1,Number,2023,9149.390982660749,11281.235147665355,7721.31556548694
+1,All Population,1,Deaths,1,Global,3,Both,13,40-44 years,477,Brain and central nervous system cancer,1,Number,2023,11227.576501394928,13375.473574848656,9838.98439034979
+1,All Population,1,Deaths,1,Global,3,Both,14,45-49 years,477,Brain and central nervous system cancer,1,Number,2023,13912.502971043625,16631.38123059593,12156.581349565082
+1,All Population,1,Deaths,1,Global,3,Both,15,50-54 years,477,Brain and central nervous system cancer,1,Number,2023,19350.114026373285,22940.584481636884,16785.244471332004
+1,All Population,1,Deaths,1,Global,3,Both,16,55-59 years,477,Brain and central nervous system cancer,1,Number,2023,25346.997563795267,30309.485220510665,22314.123696821505
+1,All Population,1,Deaths,1,Global,3,Both,17,60-64 years,477,Brain and central nervous system cancer,1,Number,2023,29065.962329709568,34917.768714114514,25229.414107260567
+1,All Population,1,Deaths,1,Global,3,Both,18,65-69 years,477,Brain and central nervous system cancer,1,Number,2023,32784.68496232593,39239.5455616715,28542.8910055242
+1,All Population,1,Deaths,1,Global,3,Both,19,70-74 years,477,Brain and central nervous system cancer,1,Number,2023,30400.563348183277,36286.94387401681,26430.895417880547
+1,All Population,1,Deaths,1,Global,3,Both,20,75-79 years,477,Brain and central nervous system cancer,1,Number,2023,23436.363375731704,27024.043632101835,19894.616053194866
+1,All Population,1,Deaths,1,Global,3,Both,23,5-14 years,477,Brain and central nervous system cancer,1,Number,2023,12535.33681529768,15593.112345748897,10269.221635396558
+1,All Population,1,Deaths,1,Global,3,Both,25,50-69 years,477,Brain and central nervous system cancer,1,Number,2023,106547.75888220403,123990.34062592307,93292.54431300984
+1,All Population,1,Deaths,1,Global,3,Both,28,<1 year,477,Brain and central nervous system cancer,1,Number,2023,1346.1965361668858,1828.002164279486,1046.7501665320563
+1,All Population,1,Deaths,1,Global,3,Both,30,80-84 years,477,Brain and central nervous system cancer,1,Number,2023,16215.299311744962,18681.515591332594,13445.532600882138
+1,All Population,1,Deaths,1,Global,3,Both,31,85-89 years,477,Brain and central nervous system cancer,1,Number,2023,9144.717798542028,10535.76609639162,7209.124251485996
+1,All Population,1,Deaths,1,Global,3,Both,32,90-94 years,477,Brain and central nervous system cancer,1,Number,2023,3496.647231916141,4119.691312712742,2755.432015467762
+1,All Population,1,Deaths,1,Global,3,Both,34,2-4 years,477,Brain and central nervous system cancer,1,Number,2023,3988.770470753444,5119.566688297704,3153.1668176827143
+1,All Population,1,Deaths,1,Global,3,Both,41,50-74 years,477,Brain and central nervous system cancer,1,Number,2023,136948.32223038736,160460.2629955035,119802.81268748481
+1,All Population,1,Deaths,1,Global,3,Both,232,65-74 years,477,Brain and central nervous system cancer,1,Number,2023,63185.248310509225,75211.90118195415,54810.129772460634
+1,All Population,1,Deaths,1,Global,3,Both,235,95+ years,477,Brain and central nervous system cancer,1,Number,2023,1083.4547282505614,1299.8224644231277,805.5251022436221
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,6,5-9 years,477,Brain and central nervous system cancer,1,Number,2011,560309.7585613914,704460.2343893206,459583.98139658134
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,7,10-14 years,477,Brain and central nervous system cancer,1,Number,2011,387578.58675968973,484128.021089729,320745.03562646644
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,8,15-19 years,477,Brain and central nervous system cancer,1,Number,2011,286177.8122506527,360289.93173558806,234669.33220407405
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,9,20-24 years,477,Brain and central nervous system cancer,1,Number,2011,291898.5715273908,371721.7926462242,246389.677108686
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,10,25-29 years,477,Brain and central nervous system cancer,1,Number,2011,321566.4616292477,393435.32547007053,262721.47655444493
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,11,30-34 years,477,Brain and central nervous system cancer,1,Number,2011,369270.48228467174,453483.3004071876,317825.2023720256
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,12,35-39 years,477,Brain and central nervous system cancer,1,Number,2011,423420.77030142647,523790.64647707395,361903.20897322905
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,13,40-44 years,477,Brain and central nervous system cancer,1,Number,2011,516694.33370997204,622162.0080183744,450241.909881245
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,14,45-49 years,477,Brain and central nervous system cancer,1,Number,2011,604620.1501557083,721477.000846397,531360.8004647236
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,15,50-54 years,477,Brain and central nervous system cancer,1,Number,2011,638283.8822268561,733505.1658083653,558996.8084948534
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,16,55-59 years,477,Brain and central nervous system cancer,1,Number,2011,701343.1649999983,819191.1515395612,620248.031460212
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,17,60-64 years,477,Brain and central nervous system cancer,1,Number,2011,666107.1785139213,776095.616732236,589271.3209889164
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,18,65-69 years,477,Brain and central nervous system cancer,1,Number,2011,515762.75052071887,613574.3642314648,452061.8352916357
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,19,70-74 years,477,Brain and central nervous system cancer,1,Number,2011,404508.4533851845,478571.6339050803,356333.35897248966
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,20,75-79 years,477,Brain and central nervous system cancer,1,Number,2011,272357.9438119988,314988.30562373454,240722.8822190368
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,23,5-14 years,477,Brain and central nervous system cancer,1,Number,2011,947888.3453210802,1180605.8248769573,786469.7870897885
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,25,50-69 years,477,Brain and central nervous system cancer,1,Number,2011,2521496.9762614947,2945115.137086744,2216971.6092361524
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,28,<1 year,477,Brain and central nervous system cancer,1,Number,2011,141813.13772999836,181714.54173202516,113451.95604631498
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,30,80-84 years,477,Brain and central nervous system cancer,1,Number,2011,144299.58341481496,166829.85131440937,122715.22908001902
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,31,85-89 years,477,Brain and central nervous system cancer,1,Number,2011,56470.08205014138,65194.380295182236,46709.859437371044
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,32,90-94 years,477,Brain and central nervous system cancer,1,Number,2011,15126.877824549445,17786.486728808275,12053.14018124456
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,34,2-4 years,477,Brain and central nervous system cancer,1,Number,2011,373927.21991823695,475377.5914061522,304603.02169785026
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,41,50-74 years,477,Brain and central nervous system cancer,1,Number,2011,2926005.4296466815,3399318.11130621,2580282.9627623325
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,232,65-74 years,477,Brain and central nervous system cancer,1,Number,2011,920271.2039059035,1098772.6384647607,805433.8458816998
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,235,95+ years,477,Brain and central nervous system cancer,1,Number,2011,4246.835085951023,5121.369666948123,3274.8526888397446
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,6,5-9 years,477,Brain and central nervous system cancer,1,Number,2012,563596.3591638375,705132.8049247563,463558.2599903996
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,7,10-14 years,477,Brain and central nervous system cancer,1,Number,2012,383319.5358011555,481628.6548529777,317222.0449527087
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,8,15-19 years,477,Brain and central nervous system cancer,1,Number,2012,280134.34354515787,351588.3838758295,229856.3217647984
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,9,20-24 years,477,Brain and central nervous system cancer,1,Number,2012,284904.44858558296,363788.3125530598,244401.68213914495
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,10,25-29 years,477,Brain and central nervous system cancer,1,Number,2012,325717.9811465037,406795.54473059013,268632.23315280775
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,11,30-34 years,477,Brain and central nervous system cancer,1,Number,2012,368217.26648895635,450726.6862817615,318210.2121754294
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,12,35-39 years,477,Brain and central nervous system cancer,1,Number,2012,417919.3197976288,514414.433512055,361011.98684632743
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,13,40-44 years,477,Brain and central nervous system cancer,1,Number,2012,513860.58228525595,614948.027339612,450455.33958832396
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,14,45-49 years,477,Brain and central nervous system cancer,1,Number,2012,613212.213757741,744213.1035621129,544529.09083174
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,15,50-54 years,477,Brain and central nervous system cancer,1,Number,2012,650294.7667099878,755872.9867211925,568936.1557599629
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,16,55-59 years,477,Brain and central nervous system cancer,1,Number,2012,716361.1863892756,844111.2083086385,633126.4101095579
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,17,60-64 years,477,Brain and central nervous system cancer,1,Number,2012,688709.2501351223,808877.7082864587,609509.1875370935
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,18,65-69 years,477,Brain and central nervous system cancer,1,Number,2012,543127.3572447789,652348.796608707,477992.17436343036
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,19,70-74 years,477,Brain and central nervous system cancer,1,Number,2012,410448.1898791611,489122.59280233213,364332.92695037293
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,20,75-79 years,477,Brain and central nervous system cancer,1,Number,2012,280092.6494763631,325745.02302155265,245938.17136177982
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,23,5-14 years,477,Brain and central nervous system cancer,1,Number,2012,946915.8949649936,1174862.1165689905,794109.1350902873
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,25,50-69 years,477,Brain and central nervous system cancer,1,Number,2012,2598492.560479164,3043149.2038647947,2297811.583944218
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,28,<1 year,477,Brain and central nervous system cancer,1,Number,2012,141907.65812587616,182372.30419672764,114659.18279966516
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,30,80-84 years,477,Brain and central nervous system cancer,1,Number,2012,150010.8136435924,174117.7958096358,128154.79593095166
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,31,85-89 years,477,Brain and central nervous system cancer,1,Number,2012,60024.62898164497,69598.81861544451,49446.098464292394
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,32,90-94 years,477,Brain and central nervous system cancer,1,Number,2012,16920.11175807477,19879.562058455533,13417.039921841706
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,34,2-4 years,477,Brain and central nervous system cancer,1,Number,2012,373351.5588433119,472423.46628742,299240.47564769536
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,41,50-74 years,477,Brain and central nervous system cancer,1,Number,2012,3008940.7503583217,3506047.31619432,2666700.1613490405
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,232,65-74 years,477,Brain and central nervous system cancer,1,Number,2012,953575.5471239397,1137227.9483282948,835243.0122081797
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,235,95+ years,477,Brain and central nervous system cancer,1,Number,2012,4523.615757290029,5426.272228375339,3512.1102910223603
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,6,5-9 years,477,Brain and central nervous system cancer,1,Number,2013,572418.6563745487,720163.6227347568,474102.77695511136
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,7,10-14 years,477,Brain and central nervous system cancer,1,Number,2013,382935.9021110706,481834.61558787955,317999.0248349061
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,8,15-19 years,477,Brain and central nervous system cancer,1,Number,2013,275799.9843486278,344867.1599865921,226393.60376564236
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,9,20-24 years,477,Brain and central nervous system cancer,1,Number,2013,278746.66862799,358786.42782309855,239424.72028875575
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,10,25-29 years,477,Brain and central nervous system cancer,1,Number,2013,329320.56666918856,414711.49933091155,273580.7873225949
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,11,30-34 years,477,Brain and central nervous system cancer,1,Number,2013,370243.13721663493,453676.41151989286,320914.4905982576
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,12,35-39 years,477,Brain and central nervous system cancer,1,Number,2013,414500.1337143181,511760.0522162312,362264.5372005356
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,13,40-44 years,477,Brain and central nervous system cancer,1,Number,2013,509620.18736235116,609146.4866411005,449672.5494723764
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,14,45-49 years,477,Brain and central nervous system cancer,1,Number,2013,610924.2116780502,747393.4259490332,545712.7642554533
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,15,50-54 years,477,Brain and central nervous system cancer,1,Number,2013,662814.5493070396,775615.6599640345,582753.1128341586
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,16,55-59 years,477,Brain and central nervous system cancer,1,Number,2013,713790.7074140847,842788.5175455272,634749.3082474985
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,17,60-64 years,477,Brain and central nervous system cancer,1,Number,2013,704733.0229995584,829667.6905657271,618254.9743641758
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,18,65-69 years,477,Brain and central nervous system cancer,1,Number,2013,559298.2847704575,672469.0324977965,491731.80253323726
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,19,70-74 years,477,Brain and central nervous system cancer,1,Number,2013,411088.06244200794,490625.1964174115,365259.2679765545
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,20,75-79 years,477,Brain and central nervous system cancer,1,Number,2013,283914.1583457975,333732.7034607786,249574.20676787765
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,23,5-14 years,477,Brain and central nervous system cancer,1,Number,2013,955354.5584856191,1194037.4435639246,804980.7688023987
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,25,50-69 years,477,Brain and central nervous system cancer,1,Number,2013,2640636.5644911416,3081972.570459607,2337536.5386990192
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,28,<1 year,477,Brain and central nervous system cancer,1,Number,2013,142972.10086217377,187141.73456029437,113372.52809969657
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,30,80-84 years,477,Brain and central nervous system cancer,1,Number,2013,152766.7383924648,175959.50425278934,129565.54514424606
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,31,85-89 years,477,Brain and central nervous system cancer,1,Number,2013,62751.03748933966,73106.00406938593,51565.232442720706
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,32,90-94 years,477,Brain and central nervous system cancer,1,Number,2013,18316.38685109414,21496.32611750743,14485.588880704621
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,34,2-4 years,477,Brain and central nervous system cancer,1,Number,2013,374976.2574463625,476901.9929022126,300520.7703705249
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,41,50-74 years,477,Brain and central nervous system cancer,1,Number,2013,3051724.626933152,3568635.1846860535,2697712.0702080205
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,232,65-74 years,477,Brain and central nervous system cancer,1,Number,2013,970386.3472124658,1155832.105140484,849927.4476559295
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,235,95+ years,477,Brain and central nervous system cancer,1,Number,2013,4636.188608658684,5564.196165321677,3608.957666435172
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,6,5-9 years,477,Brain and central nervous system cancer,1,Number,2014,574669.8969524123,719531.3076785068,482646.28610892186
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,7,10-14 years,477,Brain and central nervous system cancer,1,Number,2014,385916.7537724452,478812.50590120006,324946.42175884574
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,8,15-19 years,477,Brain and central nervous system cancer,1,Number,2014,274064.8780382194,343003.55269716063,226046.85456538954
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,9,20-24 years,477,Brain and central nervous system cancer,1,Number,2014,274070.57915453345,351491.6094263512,232718.88044981787
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,10,25-29 years,477,Brain and central nervous system cancer,1,Number,2014,331263.7930609718,421108.4001478363,274928.6764537827
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,11,30-34 years,477,Brain and central nervous system cancer,1,Number,2014,375912.03359031706,458527.98718570586,327553.31736282184
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,12,35-39 years,477,Brain and central nervous system cancer,1,Number,2014,416358.8732268416,513181.66851912247,361627.1536672862
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,13,40-44 years,477,Brain and central nervous system cancer,1,Number,2014,510237.4086622804,613904.0956544513,447525.3844378684
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,14,45-49 years,477,Brain and central nervous system cancer,1,Number,2014,607891.1440950284,744754.9244987194,547257.694844196
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,15,50-54 years,477,Brain and central nervous system cancer,1,Number,2014,687121.2276152757,807509.2796129417,603741.8810645713
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,16,55-59 years,477,Brain and central nervous system cancer,1,Number,2014,721353.3243703322,841574.3079396184,645470.875570701
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,17,60-64 years,477,Brain and central nervous system cancer,1,Number,2014,724430.0354346889,847317.3850073247,643814.3842994425
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,18,65-69 years,477,Brain and central nervous system cancer,1,Number,2014,596288.9885359227,711194.5140015502,525472.9996305397
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,19,70-74 years,477,Brain and central nervous system cancer,1,Number,2014,417297.00546949817,496972.862310092,372243.71169506403
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,20,75-79 years,477,Brain and central nervous system cancer,1,Number,2014,292489.7030177193,344542.36248981167,259546.75978444947
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,23,5-14 years,477,Brain and central nervous system cancer,1,Number,2014,960586.6507248579,1180503.3285957503,808623.8815548765
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,25,50-69 years,477,Brain and central nervous system cancer,1,Number,2014,2729193.575956219,3175238.9689661786,2414544.325586676
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,28,<1 year,477,Brain and central nervous system cancer,1,Number,2014,143059.7593534477,189058.41038168222,112981.7156599448
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,30,80-84 years,477,Brain and central nervous system cancer,1,Number,2014,158831.38809624198,181589.18306368656,133353.3339691535
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,31,85-89 years,477,Brain and central nervous system cancer,1,Number,2014,66512.3309697631,77118.22053246014,54552.98730628946
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,32,90-94 years,477,Brain and central nervous system cancer,1,Number,2014,19991.61686245944,23505.338446369446,15884.781588924794
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,34,2-4 years,477,Brain and central nervous system cancer,1,Number,2014,376971.9994244973,474138.3906692621,301903.3123448083
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,41,50-74 years,477,Brain and central nervous system cancer,1,Number,2014,3146490.581425716,3674991.089361878,2796530.3314482486
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,232,65-74 years,477,Brain and central nervous system cancer,1,Number,2014,1013585.9940054202,1207852.5111581674,889897.8976773487
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,235,95+ years,477,Brain and central nervous system cancer,1,Number,2014,4737.546300944704,5730.176021724416,3661.817185088737
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,6,5-9 years,477,Brain and central nervous system cancer,1,Number,2015,574470.8416132195,717407.9742686623,479068.9402465255
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,7,10-14 years,477,Brain and central nervous system cancer,1,Number,2015,386884.02723027515,475314.5986257594,327911.7783167528
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,8,15-19 years,477,Brain and central nervous system cancer,1,Number,2015,271607.78407765314,334977.2289765205,224115.85690304998
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,9,20-24 years,477,Brain and central nervous system cancer,1,Number,2015,270163.7081147304,347948.6972022545,228704.71353397262
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,10,25-29 years,477,Brain and central nervous system cancer,1,Number,2015,330759.2485245441,422409.08751176397,274414.5286997588
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,11,30-34 years,477,Brain and central nervous system cancer,1,Number,2015,381893.054153102,467262.0816574496,333502.6441546379
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,12,35-39 years,477,Brain and central nervous system cancer,1,Number,2015,420817.8722472415,520159.53379519243,363579.4789690131
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,13,40-44 years,477,Brain and central nervous system cancer,1,Number,2015,510058.80180866446,612799.7589790969,446973.70782014343
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,14,45-49 years,477,Brain and central nervous system cancer,1,Number,2015,609920.0072422118,742892.7125484654,542189.7390762256
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,15,50-54 years,477,Brain and central nervous system cancer,1,Number,2015,713096.34839387,831723.9753358848,629159.653209232
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,16,55-59 years,477,Brain and central nervous system cancer,1,Number,2015,731949.3089202447,860092.0899335443,657731.9263743664
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,17,60-64 years,477,Brain and central nervous system cancer,1,Number,2015,755970.8220832627,878218.1975173755,674901.6402820591
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,18,65-69 years,477,Brain and central nervous system cancer,1,Number,2015,632416.0911256855,746075.7184376405,560053.7632542385
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,19,70-74 years,477,Brain and central nervous system cancer,1,Number,2015,426283.46551769174,508427.4882371469,380998.2027175558
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,20,75-79 years,477,Brain and central nervous system cancer,1,Number,2015,302306.76468270476,351357.99875350675,267913.10108670406
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,23,5-14 years,477,Brain and central nervous system cancer,1,Number,2015,961354.8688434943,1179345.8844760503,808353.0543839564
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,25,50-69 years,477,Brain and central nervous system cancer,1,Number,2015,2833432.570523062,3293902.3077733214,2506409.537656958
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,28,<1 year,477,Brain and central nervous system cancer,1,Number,2015,143156.2635653083,192020.57713720505,112075.61030307767
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,30,80-84 years,477,Brain and central nervous system cancer,1,Number,2015,164933.13844544205,189013.40176045624,138368.22625175453
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,31,85-89 years,477,Brain and central nervous system cancer,1,Number,2015,70566.38951113456,81164.49872665967,57710.3838700542
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,32,90-94 years,477,Brain and central nervous system cancer,1,Number,2015,21985.582223479658,25914.084564846053,17562.15436207222
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,34,2-4 years,477,Brain and central nervous system cancer,1,Number,2015,377381.39757587516,475648.80047197227,300559.37201117276
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,41,50-74 years,477,Brain and central nervous system cancer,1,Number,2015,3259716.036040756,3810317.253008897,2899096.754160372
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,232,65-74 years,477,Brain and central nervous system cancer,1,Number,2015,1058699.5566433782,1261349.2321834108,935701.8307183711
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,235,95+ years,477,Brain and central nervous system cancer,1,Number,2015,5306.125787371482,6387.8995909510195,4075.642933121933
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,6,5-9 years,477,Brain and central nervous system cancer,1,Number,2016,572508.6181770724,714976.4068356777,482116.52279613196
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,7,10-14 years,477,Brain and central nervous system cancer,1,Number,2016,388779.7276184351,477470.4761179972,327189.0729501669
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,8,15-19 years,477,Brain and central nervous system cancer,1,Number,2016,269119.1446289521,331666.53211400344,222832.87554251193
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,9,20-24 years,477,Brain and central nervous system cancer,1,Number,2016,267377.438734878,341776.37731382885,225051.69570990696
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,10,25-29 years,477,Brain and central nervous system cancer,1,Number,2016,330626.6900435527,421907.6742907872,271135.0064842907
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,11,30-34 years,477,Brain and central nervous system cancer,1,Number,2016,389996.9117178848,481491.1197812536,340577.5131787452
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,12,35-39 years,477,Brain and central nervous system cancer,1,Number,2016,426458.92239923525,524360.494919163,366041.60444892384
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,13,40-44 years,477,Brain and central nervous system cancer,1,Number,2016,510669.4516767936,614518.0476322462,447516.1236819852
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,14,45-49 years,477,Brain and central nervous system cancer,1,Number,2016,616475.0094464949,744696.3310705646,544307.1322139342
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,15,50-54 years,477,Brain and central nervous system cancer,1,Number,2016,730494.784118519,863757.7439658201,641927.180491242
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,16,55-59 years,477,Brain and central nervous system cancer,1,Number,2016,743336.2683203764,877244.729013273,668104.9672580275
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,17,60-64 years,477,Brain and central nervous system cancer,1,Number,2016,781669.6837799612,913790.702763572,697685.8465210365
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,18,65-69 years,477,Brain and central nervous system cancer,1,Number,2016,671159.194140318,794932.9035506394,592804.6272010849
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,19,70-74 years,477,Brain and central nervous system cancer,1,Number,2016,440817.5574056092,526198.2711984141,389704.35609597096
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,20,75-79 years,477,Brain and central nervous system cancer,1,Number,2016,311301.03008265886,359764.66741911805,274345.4584577065
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,23,5-14 years,477,Brain and central nervous system cancer,1,Number,2016,961288.3457955084,1182933.1432897106,816071.8919507868
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,25,50-69 years,477,Brain and central nervous system cancer,1,Number,2016,2926659.9303591736,3414432.1695420966,2599048.710946299
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,28,<1 year,477,Brain and central nervous system cancer,1,Number,2016,142479.26532085825,193374.59645747187,112098.75551222025
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,30,80-84 years,477,Brain and central nervous system cancer,1,Number,2016,170625.11816497447,195201.53991964937,142713.50802658137
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,31,85-89 years,477,Brain and central nervous system cancer,1,Number,2016,73760.81678811034,84098.85360613905,60152.43883990399
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,32,90-94 years,477,Brain and central nervous system cancer,1,Number,2016,22842.114806285346,26942.60620053287,18221.156179729638
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,34,2-4 years,477,Brain and central nervous system cancer,1,Number,2016,377870.6232018167,475663.01612809324,302160.424948228
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,41,50-74 years,477,Brain and central nervous system cancer,1,Number,2016,3367477.487764785,3949610.19542169,3002723.3288096683
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,232,65-74 years,477,Brain and central nervous system cancer,1,Number,2016,1111976.7515459266,1329677.3240625206,984112.7151171012
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,235,95+ years,477,Brain and central nervous system cancer,1,Number,2016,5802.835604844699,6938.9650494814,4437.820761409872
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,6,5-9 years,477,Brain and central nervous system cancer,1,Number,2017,569033.675242007,710856.838845042,478470.8023899823
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,7,10-14 years,477,Brain and central nervous system cancer,1,Number,2017,392881.7618236912,480624.6984351883,335124.0757431201
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,8,15-19 years,477,Brain and central nervous system cancer,1,Number,2017,269269.6145924484,330178.89647948835,222658.0502009131
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,9,20-24 years,477,Brain and central nervous system cancer,1,Number,2017,266197.89654647943,337199.31351197,222798.63871988305
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,10,25-29 years,477,Brain and central nervous system cancer,1,Number,2017,329620.240213926,417431.9196049904,271574.6819283165
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,11,30-34 years,477,Brain and central nervous system cancer,1,Number,2017,397548.1217465683,490219.52916830615,346472.4124210484
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,12,35-39 years,477,Brain and central nervous system cancer,1,Number,2017,433605.96923841495,534696.0495306279,370732.97044475074
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,13,40-44 years,477,Brain and central nervous system cancer,1,Number,2017,511034.9383993256,615001.6871923305,450308.34974342247
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,14,45-49 years,477,Brain and central nervous system cancer,1,Number,2017,615424.6922627742,745411.0941332942,544441.3716096531
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,15,50-54 years,477,Brain and central nervous system cancer,1,Number,2017,739895.822158416,884491.5629683831,646902.6120436456
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,16,55-59 years,477,Brain and central nervous system cancer,1,Number,2017,756298.4206038526,895014.1476085695,682344.6833374882
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,17,60-64 years,477,Brain and central nervous system cancer,1,Number,2017,795871.9637529214,940147.5006822227,709282.116008938
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,18,65-69 years,477,Brain and central nervous system cancer,1,Number,2017,693465.4354088892,828690.4971264602,609072.6341997423
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,19,70-74 years,477,Brain and central nervous system cancer,1,Number,2017,465803.56753988494,558834.1096715034,408489.28309418657
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,20,75-79 years,477,Brain and central nervous system cancer,1,Number,2017,317088.2534275194,366752.8352009281,276989.49046183925
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,23,5-14 years,477,Brain and central nervous system cancer,1,Number,2017,961915.437065699,1192048.9526313376,821038.5717192291
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,25,50-69 years,477,Brain and central nervous system cancer,1,Number,2017,2985531.641924078,3506881.518639736,2661197.5149311367
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,28,<1 year,477,Brain and central nervous system cancer,1,Number,2017,139047.82598559218,189982.65716828802,109579.28619576748
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,30,80-84 years,477,Brain and central nervous system cancer,1,Number,2017,176574.29227238326,202239.81688789476,148074.45063314404
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,31,85-89 years,477,Brain and central nervous system cancer,1,Number,2017,76248.95261026677,87385.73237350241,61918.38169903511
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,32,90-94 years,477,Brain and central nervous system cancer,1,Number,2017,24390.967173466648,28637.698330292504,19564.439922055557
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,34,2-4 years,477,Brain and central nervous system cancer,1,Number,2017,378217.5497664437,474342.55432597495,304937.15812463296
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,41,50-74 years,477,Brain and central nervous system cancer,1,Number,2017,3451335.2094639656,4070197.094650971,3082102.439254022
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,232,65-74 years,477,Brain and central nervous system cancer,1,Number,2017,1159269.0029487736,1384446.0029138378,1025462.3383337385
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,235,95+ years,477,Brain and central nervous system cancer,1,Number,2017,6388.968283574163,7695.735928620933,4850.523553410967
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,6,5-9 years,477,Brain and central nervous system cancer,1,Number,2019,554224.6454629296,690692.8628572413,467694.1269913624
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,7,10-14 years,477,Brain and central nervous system cancer,1,Number,2019,399383.48591872136,493859.6333429774,338942.22891607985
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,8,15-19 years,477,Brain and central nervous system cancer,1,Number,2019,268283.2299861248,325006.11306778615,220165.04724821332
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,9,20-24 years,477,Brain and central nervous system cancer,1,Number,2019,259084.4030250679,323156.18430286256,215530.1796764677
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,10,25-29 years,477,Brain and central nervous system cancer,1,Number,2019,313700.2700088868,394671.15559003846,255109.71446356934
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,11,30-34 years,477,Brain and central nervous system cancer,1,Number,2019,404137.8322506847,499874.99996489903,350929.5755321903
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,12,35-39 years,477,Brain and central nervous system cancer,1,Number,2019,442045.10602790676,545904.9607514607,373773.1274086666
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,13,40-44 years,477,Brain and central nervous system cancer,1,Number,2019,507337.70187108876,609537.8692630146,446771.1742809103
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,14,45-49 years,477,Brain and central nervous system cancer,1,Number,2019,613274.8616061956,746592.0856797617,543622.6898439262
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,15,50-54 years,477,Brain and central nervous system cancer,1,Number,2019,745590.4567185855,894796.9862960159,649583.2618879084
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,16,55-59 years,477,Brain and central nervous system cancer,1,Number,2019,802904.4473022702,952242.1986337435,719583.6570090326
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,17,60-64 years,477,Brain and central nervous system cancer,1,Number,2019,809485.0364318509,952120.5887565508,716804.8878749002
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,18,65-69 years,477,Brain and central nervous system cancer,1,Number,2019,738491.9902121405,888937.2260602447,649112.2332991834
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,19,70-74 years,477,Brain and central nervous system cancer,1,Number,2019,522966.1351121908,616100.260765748,458009.78408555384
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,20,75-79 years,477,Brain and central nervous system cancer,1,Number,2019,329621.4084246252,378597.37953792914,288338.10292260576
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,23,5-14 years,477,Brain and central nervous system cancer,1,Number,2019,953608.1313816507,1184114.6859774357,811240.1220874821
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,25,50-69 years,477,Brain and central nervous system cancer,1,Number,2019,3096471.9306648457,3671900.635638727,2754395.5222749775
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,28,<1 year,477,Brain and central nervous system cancer,1,Number,2019,129176.39886560151,176194.83665012356,99989.86658188853
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,30,80-84 years,477,Brain and central nervous system cancer,1,Number,2019,186473.68176141352,212068.31211671393,155654.12198019325
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,31,85-89 years,477,Brain and central nervous system cancer,1,Number,2019,81120.62935760997,92789.86338062507,64895.467222025945
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,32,90-94 years,477,Brain and central nervous system cancer,1,Number,2019,26735.83006111576,31466.156444835262,21237.223729250654
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,34,2-4 years,477,Brain and central nervous system cancer,1,Number,2019,373147.04854177637,466904.78073530726,301289.1791842775
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,41,50-74 years,477,Brain and central nervous system cancer,1,Number,2019,3619438.0657770354,4277837.921492887,3216810.7525754613
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,232,65-74 years,477,Brain and central nervous system cancer,1,Number,2019,1261458.1253243312,1495503.9977069316,1101140.4083883825
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,235,95+ years,477,Brain and central nervous system cancer,1,Number,2019,7392.187869403578,8887.902130467788,5502.436525606427
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,6,5-9 years,477,Brain and central nervous system cancer,1,Number,2018,560472.4048582445,694929.2091491311,468011.30287062714
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,7,10-14 years,477,Brain and central nervous system cancer,1,Number,2018,396402.6602809499,485737.0822072432,336478.69965492975
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,8,15-19 years,477,Brain and central nervous system cancer,1,Number,2018,268178.44784388895,322865.9314902091,220069.20836635257
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,9,20-24 years,477,Brain and central nervous system cancer,1,Number,2018,262486.2520836997,327227.437321436,220742.00572234116
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,10,25-29 years,477,Brain and central nervous system cancer,1,Number,2018,322775.56722210476,406567.59642662434,264478.7052143609
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,11,30-34 years,477,Brain and central nervous system cancer,1,Number,2018,401711.16974936856,496584.1467714912,351604.1384447201
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,12,35-39 years,477,Brain and central nervous system cancer,1,Number,2018,438295.0338682452,536894.5276791323,374314.5246070156
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,13,40-44 years,477,Brain and central nervous system cancer,1,Number,2018,510644.3238373067,612203.8310770568,450389.0322156048
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,14,45-49 years,477,Brain and central nervous system cancer,1,Number,2018,615469.4366623746,745727.9371276048,543337.6561975554
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,15,50-54 years,477,Brain and central nervous system cancer,1,Number,2018,744144.0558906513,892107.2901034704,648048.125625148
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,16,55-59 years,477,Brain and central nervous system cancer,1,Number,2018,778807.548987027,922883.7842056679,701345.9020033737
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,17,60-64 years,477,Brain and central nervous system cancer,1,Number,2018,806447.9090536754,952830.9524768834,718868.7852185777
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,18,65-69 years,477,Brain and central nervous system cancer,1,Number,2018,720570.7057199316,863608.0519205848,631077.4123647839
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,19,70-74 years,477,Brain and central nervous system cancer,1,Number,2018,490826.3459394086,584004.6226657863,430974.1694763113
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,20,75-79 years,477,Brain and central nervous system cancer,1,Number,2018,323552.0441724484,372798.6637106119,283164.8022237357
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,23,5-14 years,477,Brain and central nervous system cancer,1,Number,2018,956875.0651391946,1175178.936210134,812236.6635941768
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,25,50-69 years,477,Brain and central nervous system cancer,1,Number,2018,3049970.219651284,3613194.5645171828,2721666.2949674395
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,28,<1 year,477,Brain and central nervous system cancer,1,Number,2018,133360.6260796311,181809.99510478813,103582.80910407972
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,30,80-84 years,477,Brain and central nervous system cancer,1,Number,2018,181406.6105192489,208150.3109097128,151558.36222151562
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,31,85-89 years,477,Brain and central nervous system cancer,1,Number,2018,78520.73592665701,89232.42230478046,63258.09287762591
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,32,90-94 years,477,Brain and central nervous system cancer,1,Number,2018,25463.328669203973,29866.119328566383,20349.169496412764
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,34,2-4 years,477,Brain and central nervous system cancer,1,Number,2018,374686.75228329666,467641.8821158676,301204.16618548695
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,41,50-74 years,477,Brain and central nervous system cancer,1,Number,2018,3540796.565590693,4186258.631275128,3156235.510784753
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,232,65-74 years,477,Brain and central nervous system cancer,1,Number,2018,1211397.0516593396,1439296.7083884347,1063235.6041547223
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,235,95+ years,477,Brain and central nervous system cancer,1,Number,2018,6841.157496943549,8266.069014453216,5139.599829969164
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,6,5-9 years,477,Brain and central nervous system cancer,1,Number,2020,565655.8238482928,698623.7010495401,471872.76873332716
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,7,10-14 years,477,Brain and central nervous system cancer,1,Number,2020,412158.741752873,504746.2693682326,346041.28770155314
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,8,15-19 years,477,Brain and central nervous system cancer,1,Number,2020,279529.5850191803,340120.5233621879,227887.1050825453
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,9,20-24 years,477,Brain and central nervous system cancer,1,Number,2020,267307.6977455506,334557.5766951248,219208.59108222
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,10,25-29 years,477,Brain and central nervous system cancer,1,Number,2020,318483.5166441926,397188.84581796156,256741.66245559035
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,11,30-34 years,477,Brain and central nervous system cancer,1,Number,2020,420550.42476429814,514012.65410246816,362790.1049917755
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,12,35-39 years,477,Brain and central nervous system cancer,1,Number,2020,460430.2471660884,567717.0738580895,387611.9405692113
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,13,40-44 years,477,Brain and central nervous system cancer,1,Number,2020,521610.10384531546,624906.5859955131,457281.1574115118
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,14,45-49 years,477,Brain and central nervous system cancer,1,Number,2020,617290.2007319125,750236.1585065366,548307.7088296323
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,15,50-54 years,477,Brain and central nervous system cancer,1,Number,2020,749197.7761798528,899033.5249760092,651182.1868282742
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,16,55-59 years,477,Brain and central nervous system cancer,1,Number,2020,825940.2609886123,980448.9967683079,732438.9308292165
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,17,60-64 years,477,Brain and central nervous system cancer,1,Number,2020,809256.7103990049,942334.3792475149,717094.0545827564
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,18,65-69 years,477,Brain and central nervous system cancer,1,Number,2020,757967.0440646596,911312.5563128815,661558.2462635234
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,19,70-74 years,477,Brain and central nervous system cancer,1,Number,2020,544530.2858222973,643164.3418378736,477243.06378049834
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,20,75-79 years,477,Brain and central nervous system cancer,1,Number,2020,332078.7356210008,387538.89877362264,290808.656910599
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,23,5-14 years,477,Brain and central nervous system cancer,1,Number,2020,977814.565601166,1192910.0257920946,818927.1626437745
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,25,50-69 years,477,Brain and central nervous system cancer,1,Number,2020,3142361.7916321293,3734851.0109463055,2798337.295128569
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,28,<1 year,477,Brain and central nervous system cancer,1,Number,2020,131776.48276310877,181085.8922320319,102703.26125391653
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,30,80-84 years,477,Brain and central nervous system cancer,1,Number,2020,188961.43324607034,216131.0216145531,158546.24589125533
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,31,85-89 years,477,Brain and central nervous system cancer,1,Number,2020,82623.16367189397,95451.10748232208,66912.66621414143
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,32,90-94 years,477,Brain and central nervous system cancer,1,Number,2020,27886.847260551134,32549.285230533445,22475.780789855722
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,34,2-4 years,477,Brain and central nervous system cancer,1,Number,2020,388177.45229636854,486912.1393031167,305583.89015000244
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,41,50-74 years,477,Brain and central nervous system cancer,1,Number,2020,3686892.077454428,4348163.454926347,3286432.229529439
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,232,65-74 years,477,Brain and central nervous system cancer,1,Number,2020,1302497.3298869564,1555340.3758768984,1144416.1234638803
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,235,95+ years,477,Brain and central nervous system cancer,1,Number,2020,7703.68814305819,9188.306108254004,5786.189658710512
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,6,5-9 years,477,Brain and central nervous system cancer,1,Number,2021,577153.1300963061,722369.9574361295,475436.2695779302
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,7,10-14 years,477,Brain and central nervous system cancer,1,Number,2021,424401.64247929037,533631.7332277595,355602.99074736115
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,8,15-19 years,477,Brain and central nervous system cancer,1,Number,2021,288893.53129137744,360451.0837464596,234342.2662425181
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,9,20-24 years,477,Brain and central nervous system cancer,1,Number,2021,275076.7397450268,345237.7813115767,225556.88860617823
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,10,25-29 years,477,Brain and central nervous system cancer,1,Number,2021,323885.9062932795,405644.10389353835,259247.49584564613
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,11,30-34 years,477,Brain and central nervous system cancer,1,Number,2021,435752.6414224436,534184.5046533427,371966.4259943387
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,12,35-39 years,477,Brain and central nervous system cancer,1,Number,2021,488104.11996236135,607405.1400199998,407539.24167404993
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,13,40-44 years,477,Brain and central nervous system cancer,1,Number,2021,539506.3874815895,646837.7734981057,471535.258087358
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,14,45-49 years,477,Brain and central nervous system cancer,1,Number,2021,622265.7277053517,760174.2943710531,546525.9162488844
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,15,50-54 years,477,Brain and central nervous system cancer,1,Number,2021,760595.140438264,915793.7011483434,660277.7432621911
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,16,55-59 years,477,Brain and central nervous system cancer,1,Number,2021,856547.1104139208,1020250.0841935825,754154.9423145031
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,17,60-64 years,477,Brain and central nervous system cancer,1,Number,2021,823519.1599811402,968690.0452122,723060.7397481337
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,18,65-69 years,477,Brain and central nervous system cancer,1,Number,2021,782803.2133108096,938688.9494365405,683134.5753863446
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,19,70-74 years,477,Brain and central nervous system cancer,1,Number,2021,572199.2376104639,672789.9542993725,501530.2619193293
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,20,75-79 years,477,Brain and central nervous system cancer,1,Number,2021,340309.0749602616,400086.44157858787,296391.65248587274
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,23,5-14 years,477,Brain and central nervous system cancer,1,Number,2021,1001554.7725755965,1240098.9103861072,826888.6367096024
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,25,50-69 years,477,Brain and central nervous system cancer,1,Number,2021,3223464.624144136,3850468.2835060502,2858822.0043237717
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,28,<1 year,477,Brain and central nervous system cancer,1,Number,2021,128151.79333616822,174231.87437197412,99590.32830652432
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,30,80-84 years,477,Brain and central nervous system cancer,1,Number,2021,191605.4048050138,221890.00856318077,159939.8141396592
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,31,85-89 years,477,Brain and central nervous system cancer,1,Number,2021,84547.40558128529,97664.33414588908,68284.99074603901
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,32,90-94 years,477,Brain and central nervous system cancer,1,Number,2021,28376.88299797874,33355.39865906063,23064.80085838847
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,34,2-4 years,477,Brain and central nervous system cancer,1,Number,2021,390445.7514205635,505525.28529073816,305455.2691836507
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,41,50-74 years,477,Brain and central nervous system cancer,1,Number,2021,3795663.861754598,4497528.180718225,3371294.5628114506
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,232,65-74 years,477,Brain and central nervous system cancer,1,Number,2021,1355002.450921272,1613618.906370976,1183901.3529642452
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,235,95+ years,477,Brain and central nervous system cancer,1,Number,2021,7864.509490722014,9505.14737844316,5875.879913203585
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,6,5-9 years,477,Brain and central nervous system cancer,1,Number,2022,581485.7182855312,743619.6281613944,471471.4575281064
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,7,10-14 years,477,Brain and central nervous system cancer,1,Number,2022,429964.4111140443,538104.944836175,357962.23645818926
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,8,15-19 years,477,Brain and central nervous system cancer,1,Number,2022,291475.1740244809,373299.60161305696,235532.547974597
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,9,20-24 years,477,Brain and central nervous system cancer,1,Number,2022,271473.29255143565,345713.25507845357,231778.51779875514
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,10,25-29 years,477,Brain and central nervous system cancer,1,Number,2022,317901.77785521786,399374.3770608386,259078.5793609225
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,11,30-34 years,477,Brain and central nervous system cancer,1,Number,2022,419736.1369145554,524185.96463296795,358166.56104530534
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,12,35-39 years,477,Brain and central nervous system cancer,1,Number,2022,482013.3976536989,602070.457618782,404497.1260274031
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,13,40-44 years,477,Brain and central nervous system cancer,1,Number,2022,535595.3987702867,634948.1860547548,465985.37728307454
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,14,45-49 years,477,Brain and central nervous system cancer,1,Number,2022,610754.0595945164,741754.0444903605,536502.8208123839
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,15,50-54 years,477,Brain and central nervous system cancer,1,Number,2022,759578.3509723289,923132.930735261,664979.3741830254
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,16,55-59 years,477,Brain and central nervous system cancer,1,Number,2022,875343.8379758162,1051439.2092223805,768513.5245847437
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,17,60-64 years,477,Brain and central nervous system cancer,1,Number,2022,840233.4959086202,1012571.4092369837,728052.8830392828
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,18,65-69 years,477,Brain and central nervous system cancer,1,Number,2022,808697.4691500651,973719.9104079806,696419.6597502099
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,19,70-74 years,477,Brain and central nervous system cancer,1,Number,2022,604025.4349180254,718089.7036440701,529693.5156861433
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,20,75-79 years,477,Brain and central nervous system cancer,1,Number,2022,367404.2847259042,436533.4569306858,312996.4404160335
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,23,5-14 years,477,Brain and central nervous system cancer,1,Number,2022,1011450.1293995755,1249068.75815186,834543.5899342207
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,25,50-69 years,477,Brain and central nervous system cancer,1,Number,2022,3283853.15400683,3928523.2071723035,2890685.3377036783
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,28,<1 year,477,Brain and central nervous system cancer,1,Number,2022,123054.93348794975,168164.18183314407,96212.36437787751
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,30,80-84 years,477,Brain and central nervous system cancer,1,Number,2022,200071.7892224952,233995.1041942707,166893.63353012287
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,31,85-89 years,477,Brain and central nervous system cancer,1,Number,2022,89941.40265235244,106352.47426293237,72778.44767479827
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,32,90-94 years,477,Brain and central nervous system cancer,1,Number,2022,30620.888808948486,36176.364323029695,24194.551239180848
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,34,2-4 years,477,Brain and central nervous system cancer,1,Number,2022,355785.9380620497,468331.44940377213,274440.02211032104
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,41,50-74 years,477,Brain and central nervous system cancer,1,Number,2022,3887878.588924857,4645735.228566031,3432115.726425452
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,232,65-74 years,477,Brain and central nervous system cancer,1,Number,2022,1412722.9040680903,1695978.8938911117,1225279.2116151424
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,235,95+ years,477,Brain and central nervous system cancer,1,Number,2022,8725.310070414926,10542.551572640588,6538.322202910841
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,6,5-9 years,477,Brain and central nervous system cancer,1,Number,2023,578338.5953049342,738822.3470157465,475808.77758593665
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,7,10-14 years,477,Brain and central nervous system cancer,1,Number,2023,430441.5083211093,539931.8832361756,356279.988008019
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,8,15-19 years,477,Brain and central nervous system cancer,1,Number,2023,292191.4048305149,369737.91089993046,233953.1860061821
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,9,20-24 years,477,Brain and central nervous system cancer,1,Number,2023,266924.8439206442,341637.1557796751,223338.0624632833
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,10,25-29 years,477,Brain and central nervous system cancer,1,Number,2023,313098.812576909,399401.66365264583,255965.05265522303
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,11,30-34 years,477,Brain and central nervous system cancer,1,Number,2023,411602.4798476136,504697.7177265793,346254.53638504975
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,12,35-39 years,477,Brain and central nervous system cancer,1,Number,2023,482745.5075635623,595249.3846435165,407372.8110896952
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,13,40-44 years,477,Brain and central nervous system cancer,1,Number,2023,536787.761095249,639456.2831876386,470396.52735701064
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,14,45-49 years,477,Brain and central nervous system cancer,1,Number,2023,597113.2781623336,713748.3376413756,521709.6468015057
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,15,50-54 years,477,Brain and central nervous system cancer,1,Number,2023,738214.3932069992,875227.7510406707,640334.3054273833
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,16,55-59 years,477,Brain and central nervous system cancer,1,Number,2023,848012.8111276004,1014164.702309921,746480.430836103
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,17,60-64 years,477,Brain and central nervous system cancer,1,Number,2023,838828.2994007317,1007960.5209990366,728006.0249341608
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,18,65-69 years,477,Brain and central nervous system cancer,1,Number,2023,795092.3100214481,951382.748318529,692391.5251067721
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,19,70-74 years,477,Brain and central nervous system cancer,1,Number,2023,606692.4445661594,724238.7890984098,527525.2930247489
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,20,75-79 years,477,Brain and central nervous system cancer,1,Number,2023,374400.1501334399,431756.353679742,317860.9493526069
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,23,5-14 years,477,Brain and central nervous system cancer,1,Number,2023,1008780.1036260433,1255248.7818129829,827030.1606344592
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,25,50-69 years,477,Brain and central nervous system cancer,1,Number,2023,3220147.813756778,3740242.8998124977,2820868.8562816926
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,28,<1 year,477,Brain and central nervous system cancer,1,Number,2023,120605.7384471781,163770.45819103555,93804.49379283664
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,30,80-84 years,477,Brain and central nervous system cancer,1,Number,2023,201404.2500813451,232070.63510856812,166989.0864872993
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,31,85-89 years,477,Brain and central nervous system cancer,1,Number,2023,90292.72990346889,104046.42599086746,71185.2419083297
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,32,90-94 years,477,Brain and central nervous system cancer,1,Number,2023,30119.178475611006,35487.05175089619,23735.275292951366
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,34,2-4 years,477,Brain and central nervous system cancer,1,Number,2023,346134.63072820636,444260.02310628834,273631.81559894735
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,41,50-74 years,477,Brain and central nervous system cancer,1,Number,2023,3826840.2583229365,4473670.946479676,3349867.8327820348
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,232,65-74 years,477,Brain and central nervous system cancer,1,Number,2023,1401784.7545876075,1667090.5562965467,1216454.7927452577
+1,All Population,4,YLLs (Years of Life Lost),1,Global,3,Both,235,95+ years,477,Brain and central nervous system cancer,1,Number,2023,8719.793777983956,10451.160608954448,6486.862125602373

@@ -1,0 +1,14 @@
+{
+ "n_causes": 9,
+ "pearson_mad_infl": 0.843,
+ "spearman_mad_infl": 0.983,
+ "cns_infl": 35.3,
+ "cns_mad": 65.0,
+ "min_infl_cause": "Perinatal conditions",
+ "min_infl": 12.9,
+ "max_infl_cause": "Dementia",
+ "max_infl": 84.8,
+ "mad_lo": 1.1,
+ "mad_hi": 87.7,
+ "total_deaths": 10434037
+}

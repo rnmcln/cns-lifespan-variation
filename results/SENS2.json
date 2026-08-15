@@ -1,0 +1,73 @@
+{
+ "bp_e0": 84.76,
+ "bp_monotone_ex": true,
+ "bp_qx_valid": true,
+ "bp_schedule": {
+  "0": 84.63,
+  "1-4": 82.21,
+  "5-9": 77.44,
+  "10-14": 72.1,
+  "15-19": 66.96,
+  "20-24": 62.35,
+  "25-29": 57.4,
+  "30-34": 52.43,
+  "35-39": 47.49,
+  "40-44": 42.58,
+  "45-49": 37.74,
+  "50-54": 33.0,
+  "55-59": 28.43,
+  "60-64": 24.0,
+  "65-69": 19.76,
+  "70-74": 15.76,
+  "75-79": 12.06,
+  "80-84": 8.82,
+  "85-89": 6.25,
+  "90-94": 4.48,
+  "95+": 3.71
+ },
+ "bp_ratio_mean": 1.134,
+ "bp_pct_lo": 3.2,
+ "bp_pct_hi": 32.3,
+ "bp_pct_mean": 13.4,
+ "rank_shift_ge2_gbd": 17,
+ "rank_shift_max_gbd": 12,
+ "rank_shift_ge2_bp": 19,
+ "rank_shift_max_bp": 12,
+ "rho_gbd_bp": 0.998,
+ "src_d_edag_hmd": 0.0575,
+ "src_d_edag_es": 0.0588,
+ "src_gain_hmd": 0.117,
+ "src_gain_es": 0.118,
+ "src_n_countries_es": 27,
+ "src_max_abs_diff_edag": 0.0056,
+ "src_lowdisc_n": 18,
+ "src_lowdisc_d_edag": 0.0573,
+ "src_lowdisc_positive": 18,
+ "threshold_by_delta": {
+  "0.01": {
+   "median": 80.0,
+   "min": 70.0,
+   "max": 80.0
+  },
+  "0.001": {
+   "median": 80.0,
+   "min": 70.0,
+   "max": 80.0
+  },
+  "0.0001": {
+   "median": 80.0,
+   "min": 70.0,
+   "max": 80.0
+  }
+ },
+ "threshold_identical_across_delta": true,
+ "sym_vs_fwd_max_diff": 4.9e-05,
+ "ident_max_resid": 5.929284840888727e-15,
+ "var_total": 2.431,
+ "var_shapley_age": 1.21,
+ "var_shapley_ref": 2.043,
+ "cov_shapley": -0.822,
+ "var_sum_check": 2.431,
+ "sd_shapley_age": 1.1,
+ "sd_shapley_ref": 1.429
+}

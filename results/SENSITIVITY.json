@@ -1,0 +1,27 @@
+{
+ "rev_sign_agreement_pct": 99.97,
+ "rev_max_abs_diff": 9.74377411377958e-05,
+ "rev_total_max_diff": 0.0,
+ "openage_max_change_96": 0.0083,
+ "openage_max_change_100": 0.0138,
+ "suppressed_T": 156,
+ "suppressed_M": 296,
+ "suppressed_F": 296,
+ "suppressed_countries_T": [
+  "CY",
+  "IS",
+  "LI",
+  "LU",
+  "MT"
+ ],
+ "suppressed_countries_sexspec_extra": [
+  "EE",
+  "LV",
+  "NO",
+  "SI"
+ ],
+ "sexspec_min_country_years_M": 1,
+ "sexspec_min_country_years_F": 1,
+ "sexspec_min_country_M": "EE",
+ "sexspec_min_country_F": "SI"
+}

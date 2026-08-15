@@ -1,0 +1,112 @@
+{
+ "panel_potential": 196,
+ "panel_actual": 190,
+ "panel_missing": [
+  {
+   "country": "Iceland",
+   "year": 2018
+  },
+  {
+   "country": "Luxembourg",
+   "year": 2013
+  },
+  {
+   "country": "Luxembourg",
+   "year": 2014
+  },
+  {
+   "country": "Luxembourg",
+   "year": 2015
+  },
+  {
+   "country": "Luxembourg",
+   "year": 2017
+  },
+  {
+   "country": "Luxembourg",
+   "year": 2018
+  }
+ ],
+ "years_per_country": {
+  "Austria": 7,
+  "Belgium": 7,
+  "Bulgaria": 7,
+  "Switzerland": 7,
+  "Czechia": 7,
+  "Germany": 7,
+  "Denmark": 7,
+  "Estonia": 7,
+  "Greece": 7,
+  "Spain": 7,
+  "Finland": 7,
+  "France": 7,
+  "Croatia": 7,
+  "Hungary": 7,
+  "Ireland": 7,
+  "Iceland": 6,
+  "Italy": 7,
+  "Lithuania": 7,
+  "Luxembourg": 2,
+  "Latvia": 7,
+  "Netherlands": 7,
+  "Norway": 7,
+  "Poland": 7,
+  "Portugal": 7,
+  "Sweden": 7,
+  "Slovenia": 7,
+  "Slovakia": 7,
+  "United Kingdom": 7
+ },
+ "balanced_countries": [
+  "Austria",
+  "Belgium",
+  "Bulgaria",
+  "Switzerland",
+  "Czechia",
+  "Germany",
+  "Denmark",
+  "Estonia",
+  "Greece",
+  "Spain",
+  "Finland",
+  "France",
+  "Croatia",
+  "Hungary",
+  "Ireland",
+  "Italy",
+  "Lithuania",
+  "Latvia",
+  "Netherlands",
+  "Norway",
+  "Poland",
+  "Portugal",
+  "Sweden",
+  "Slovenia",
+  "Slovakia",
+  "United Kingdom"
+ ],
+ "n_balanced": 26,
+ "later_period_countries": [
+  "Austria",
+  "Belgium",
+  "Bulgaria",
+  "Switzerland",
+  "Czechia",
+  "Denmark",
+  "Estonia",
+  "Spain",
+  "Finland",
+  "France",
+  "Croatia",
+  "Ireland",
+  "Lithuania",
+  "Netherlands",
+  "Norway",
+  "Poland",
+  "Portugal",
+  "Sweden",
+  "Slovakia"
+ ],
+ "n_later": 19,
+ "later_period_years": "2012-2021"
+}

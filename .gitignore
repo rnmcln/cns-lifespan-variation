@@ -1,0 +1,6 @@
+data/raw_hmd/*
+!data/raw_hmd/README.md
+code/.hmdenv
+__pycache__/
+*.pyc
+.DS_Store

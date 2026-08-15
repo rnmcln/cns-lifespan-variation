@@ -1,0 +1,30 @@
+cff-version: 1.2.0
+message: "If you use this software or the derived data, please cite the archived release."
+title: "Lifespan variation and premature mortality from malignant CNS neoplasms in Europe: analysis code"
+abstract: >-
+  Analysis code and derived data for a study of the effect of mortality from malignant central
+  nervous system neoplasms (ICD-10 C70-C72) on life expectancy and life disparity across 28
+  European countries, 2012-2018, and of the dependence of cross-country comparisons of years of
+  life lost on the reference life table.
+type: software
+version: 1.0.0
+license: MIT
+repository-code: "https://github.com/rnmcln/cns-lifespan-variation"
+authors:
+  - family-names: "Lawson McLean"
+    given-names: "Aaron"
+    orcid: "https://orcid.org/0000-0001-5528-6905"
+    affiliation: "Department of Neurosurgery, Jena University Hospital, Friedrich Schiller University Jena"
+  - family-names: "Senft"
+    given-names: "Christian"
+    affiliation: "Department of Neurosurgery, Jena University Hospital, Friedrich Schiller University Jena"
+  - family-names: "McLean"
+    given-names: "Colin W."
+    affiliation: "Adam Smith Business School, University of Glasgow"
+keywords:
+  - lifespan variation
+  - life disparity
+  - years of life lost
+  - cause-deleted life table
+  - central nervous system neoplasms
+  - burden of disease

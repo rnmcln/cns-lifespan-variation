@@ -1,0 +1,118 @@
+{
+ "name": "cns-lifespan-variation",
+ "env": {
+  "PYTHONHASHSEED": "0",
+  "TZ": "UTC",
+  "OMP_NUM_THREADS": "1",
+  "MPLBACKEND": "Agg"
+ },
+ "stop_on_failure": true,
+ "steps": [
+  {
+   "cmd": "python3 stage_a.py",
+   "timeout": 1800
+  },
+  {
+   "cmd": "python3 stage_b.py",
+   "timeout": 900
+  },
+  {
+   "cmd": "python3 stage_c.py",
+   "timeout": 2400
+  },
+  {
+   "cmd": "python3 stage_d.py",
+   "timeout": 600
+  },
+  {
+   "cmd": "python3 stage_e.py",
+   "timeout": 2400
+  },
+  {
+   "cmd": "python3 stage_f.py",
+   "timeout": 1800
+  },
+  {
+   "cmd": "python3 stage_g.py",
+   "timeout": 600
+  },
+  {
+   "cmd": "python3 stage_h.py",
+   "timeout": 2400
+  },
+  {
+   "cmd": "python3 stage_i.py",
+   "timeout": 900
+  },
+  {
+   "cmd": "python3 stage_j.py",
+   "timeout": 1200
+  },
+  {
+   "cmd": "python3 stage_k.py",
+   "timeout": 600
+  },
+  {
+   "cmd": "python3 stage_m.py",
+   "timeout": 600
+  },
+  {
+   "cmd": "python3 stage_p.py",
+   "timeout": 900
+  },
+  {
+   "cmd": "python3 results_json.py",
+   "timeout": 600
+  },
+  {
+   "cmd": "python3 stage_n.py",
+   "timeout": 600
+  },
+  {
+   "cmd": "python3 figs2.py",
+   "timeout": 900
+  },
+  {
+   "cmd": "python3 make_summary.py",
+   "timeout": 600
+  }
+ ],
+ "outputs": [
+  "RESULTS.json",
+  "SENSITIVITY.json",
+  "SENS3.json",
+  "PANEL.json",
+  "SENS2.json",
+  "OFFICIAL.json",
+  "GENERALISATION.json",
+  "MS_TABLES.csv",
+  "MS_TABLES_ASYR.csv",
+  "results_countryyear.csv",
+  "country_summary_all.csv",
+  "uncertainty_country.csv",
+  "uncertainty_countryyear.csv",
+  "sensitivity_countryyear.csv",
+  "contrib_symmetric.csv",
+  "contrib_age.csv",
+  "generalisation_causes.csv",
+  "shares_primary.csv",
+  "exclusions.csv",
+  "reconciliation_allcause.csv",
+  "official_reference_country.csv",
+  "hmd_file_manifest.csv",
+  "reference_schedules.csv",
+  "data_dictionary_countryyear.csv",
+  "fig1_life_disparity.pdf",
+  "fig2_age_contributions.pdf",
+  "fig3_reference_dependence.pdf",
+  "figS1_orderings.pdf",
+  "figS2_reference_gradient.pdf",
+  "CLOSURE.json",
+  "closure_countryyear.csv",
+  "agedist_primary.csv",
+  "allcause_yll.csv",
+  "eurostat_full.csv",
+  "eurostat_cns_totals.csv",
+  "RESULTS_SUMMARY.md"
+ ]
+}

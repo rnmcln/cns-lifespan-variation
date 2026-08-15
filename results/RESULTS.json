@@ -1,0 +1,362 @@
+{
+ "frame": {
+  "countries": 28,
+  "country_years": 190,
+  "deaths": 242586,
+  "allcause_deaths": 34651958,
+  "period": "2012-2018",
+  "excl_unreconciled": 12,
+  "excl_nototal": 4
+ },
+ "shares": {
+  "deaths_pct": 0.7,
+  "yll_pct": 1.227,
+  "ratio": 1.75,
+  "ratio_min": 1.46,
+  "ratio_max": 2.04,
+  "ratio_min_c": "PL",
+  "ratio_max_c": "SE"
+ },
+ "asmr": {
+  "lo": 5.91,
+  "hi": 10.09,
+  "lo_c": "NL",
+  "hi_c": "HR"
+ },
+ "asyr": {
+  "nat_lo": 126.0,
+  "nat_hi": 195.0,
+  "gbd_lo": 167.0,
+  "gbd_hi": 269.0,
+  "nat_lo_c": "LU",
+  "nat_hi_c": "EL"
+ },
+ "ypd": {
+  "nat_lo": 18.0,
+  "nat_hi": 23.5,
+  "nat_lo_c": "BG",
+  "nat_hi_c": "NO",
+  "ratio_mean": 1.353,
+  "ratio_lo": 1.231,
+  "ratio_hi": 1.577,
+  "ratio_lo_c": "FR",
+  "ratio_hi_c": "BG",
+  "pct_mean": 35.3,
+  "pct_lo": 23.1,
+  "pct_hi": 57.7
+ },
+ "gain_e0": {
+  "mean": 0.117,
+  "lo": 0.093,
+  "hi": 0.156,
+  "lo_c": "HU",
+  "hi_c": "EL",
+  "ci_excl_zero": 28
+ },
+ "d_edag": {
+  "mean": 0.0575,
+  "lo": 0.0401,
+  "hi": 0.0757,
+  "lo_c": "HU",
+  "hi_c": "EL",
+  "positive": 28,
+  "ci_excl_zero": 28,
+  "edag_mean": 10.39
+ },
+ "threshold": {
+  "median": 80.0,
+  "lo": 70.0,
+  "hi": 80.0,
+  "mad_lo": 62.1,
+  "mad_hi": 67.5,
+  "mad_lo_c": "IE",
+  "mad_hi_c": "EL",
+  "below_lo": 68.0,
+  "below_hi": 90.0
+ },
+ "frames": {
+  "rho_prim_max": 0.977,
+  "rho_prim_excl": 0.982,
+  "max_shift": 5
+ },
+ "ranks": {
+  "shift_ge2": 17,
+  "max_shift": 12
+ },
+ "reconciliation": {
+  "median_abs": 0.458,
+  "p95": 2.368,
+  "max": 5.19,
+  "max_c": "LU",
+  "max_y": 2018
+ },
+ "male": {
+  "asmr_lo": 7.22,
+  "asmr_hi": 12.23,
+  "ypd_lo": 17.0,
+  "ypd_hi": 22.9,
+  "gain": 0.122,
+  "ded": 0.0541,
+  "ded_pos": 28,
+  "n": 28,
+  "thresh": 75.0,
+  "mad": 62.8
+ },
+ "female": {
+  "asmr_lo": 4.7,
+  "asmr_hi": 8.41,
+  "ypd_lo": 16.6,
+  "ypd_hi": 24.7,
+  "gain": 0.105,
+  "ded": 0.0573,
+  "ded_pos": 28,
+  "n": 28,
+  "thresh": 80.0,
+  "mad": 66.2
+ },
+ "decomp": {
+  "var_obs": 2.431,
+  "var_ref": 2.014,
+  "var_age": 1.19,
+  "pct_ref": 83.0,
+  "pct_age": 49.0
+ },
+ "panel": {
+  "panel_potential": 196,
+  "panel_actual": 190,
+  "panel_missing": [
+   {
+    "country": "Iceland",
+    "year": 2018
+   },
+   {
+    "country": "Luxembourg",
+    "year": 2013
+   },
+   {
+    "country": "Luxembourg",
+    "year": 2014
+   },
+   {
+    "country": "Luxembourg",
+    "year": 2015
+   },
+   {
+    "country": "Luxembourg",
+    "year": 2017
+   },
+   {
+    "country": "Luxembourg",
+    "year": 2018
+   }
+  ],
+  "years_per_country": {
+   "Austria": 7,
+   "Belgium": 7,
+   "Bulgaria": 7,
+   "Switzerland": 7,
+   "Czechia": 7,
+   "Germany": 7,
+   "Denmark": 7,
+   "Estonia": 7,
+   "Greece": 7,
+   "Spain": 7,
+   "Finland": 7,
+   "France": 7,
+   "Croatia": 7,
+   "Hungary": 7,
+   "Ireland": 7,
+   "Iceland": 6,
+   "Italy": 7,
+   "Lithuania": 7,
+   "Luxembourg": 2,
+   "Latvia": 7,
+   "Netherlands": 7,
+   "Norway": 7,
+   "Poland": 7,
+   "Portugal": 7,
+   "Sweden": 7,
+   "Slovenia": 7,
+   "Slovakia": 7,
+   "United Kingdom": 7
+  },
+  "balanced_countries": [
+   "Austria",
+   "Belgium",
+   "Bulgaria",
+   "Switzerland",
+   "Czechia",
+   "Germany",
+   "Denmark",
+   "Estonia",
+   "Greece",
+   "Spain",
+   "Finland",
+   "France",
+   "Croatia",
+   "Hungary",
+   "Ireland",
+   "Italy",
+   "Lithuania",
+   "Latvia",
+   "Netherlands",
+   "Norway",
+   "Poland",
+   "Portugal",
+   "Sweden",
+   "Slovenia",
+   "Slovakia",
+   "United Kingdom"
+  ],
+  "n_balanced": 26,
+  "later_period_countries": [
+   "Austria",
+   "Belgium",
+   "Bulgaria",
+   "Switzerland",
+   "Czechia",
+   "Denmark",
+   "Estonia",
+   "Spain",
+   "Finland",
+   "France",
+   "Croatia",
+   "Ireland",
+   "Lithuania",
+   "Netherlands",
+   "Norway",
+   "Poland",
+   "Portugal",
+   "Sweden",
+   "Slovakia"
+  ],
+  "n_later": 19,
+  "later_period_years": "2012-2021"
+ },
+ "sens": {
+  "bp_e0": 84.76,
+  "bp_monotone_ex": true,
+  "bp_qx_valid": true,
+  "bp_schedule": {
+   "0": 84.63,
+   "1-4": 82.21,
+   "5-9": 77.44,
+   "10-14": 72.1,
+   "15-19": 66.96,
+   "20-24": 62.35,
+   "25-29": 57.4,
+   "30-34": 52.43,
+   "35-39": 47.49,
+   "40-44": 42.58,
+   "45-49": 37.74,
+   "50-54": 33.0,
+   "55-59": 28.43,
+   "60-64": 24.0,
+   "65-69": 19.76,
+   "70-74": 15.76,
+   "75-79": 12.06,
+   "80-84": 8.82,
+   "85-89": 6.25,
+   "90-94": 4.48,
+   "95+": 3.71
+  },
+  "bp_ratio_mean": 1.134,
+  "bp_pct_lo": 3.2,
+  "bp_pct_hi": 32.3,
+  "bp_pct_mean": 13.4,
+  "rank_shift_ge2_gbd": 17,
+  "rank_shift_max_gbd": 12,
+  "rank_shift_ge2_bp": 19,
+  "rank_shift_max_bp": 12,
+  "rho_gbd_bp": 0.998,
+  "src_d_edag_hmd": 0.0575,
+  "src_d_edag_es": 0.0588,
+  "src_gain_hmd": 0.117,
+  "src_gain_es": 0.118,
+  "src_n_countries_es": 27,
+  "src_max_abs_diff_edag": 0.0056,
+  "src_lowdisc_n": 18,
+  "src_lowdisc_d_edag": 0.0573,
+  "src_lowdisc_positive": 18,
+  "threshold_by_delta": {
+   "0.01": {
+    "median": 80.0,
+    "min": 70.0,
+    "max": 80.0
+   },
+   "0.001": {
+    "median": 80.0,
+    "min": 70.0,
+    "max": 80.0
+   },
+   "0.0001": {
+    "median": 80.0,
+    "min": 70.0,
+    "max": 80.0
+   }
+  },
+  "threshold_identical_across_delta": true,
+  "sym_vs_fwd_max_diff": 4.9e-05,
+  "ident_max_resid": 5.929284840888727e-15,
+  "var_total": 2.431,
+  "var_shapley_age": 1.21,
+  "var_shapley_ref": 2.043,
+  "cov_shapley": -0.822,
+  "var_sum_check": 2.431,
+  "sd_shapley_age": 1.1,
+  "sd_shapley_ref": 1.429
+ },
+ "off": {
+  "off_e0": 89.96,
+  "off_e95": 8.49,
+  "d2019_e0": 1.09,
+  "d2019_e95": 2.57,
+  "d2019_e90": 1.35,
+  "max_age": 110,
+  "e110": 4.49,
+  "off_pct_mean": 35.3,
+  "off_pct_lo": 23.1,
+  "off_pct_hi": 57.8,
+  "off_pct_lo_c": "FR",
+  "off_pct_hi_c": "BG",
+  "ypd_off_lo": 25.3,
+  "ypd_off_hi": 30.0,
+  "asyr_off_lo": 169,
+  "asyr_off_hi": 269,
+  "rank_shift_ge2_off": 17,
+  "rank_shift_max_off": 12,
+  "rho_off_der": 1.0,
+  "rho_off_bp": 0.998,
+  "approx_err_mean_yrs": 0.13,
+  "approx_err_max_yrs": 2.23,
+  "approx_err_ypd_mean_pct": 0.0,
+  "approx_err_ypd_maxabs_pct": 0.1
+ },
+ "gen": {
+  "n_causes": 9,
+  "pearson_mad_infl": 0.843,
+  "spearman_mad_infl": 0.983,
+  "cns_infl": 35.3,
+  "cns_mad": 65.0,
+  "min_infl_cause": "Perinatal conditions",
+  "min_infl": 12.9,
+  "max_infl_cause": "Dementia",
+  "max_infl": 84.8,
+  "mad_lo": 1.1,
+  "mad_hi": 87.7,
+  "total_deaths": 10434037
+ },
+ "round": {
+  "deaths_pct": "0.70",
+  "yll_pct": "1.23",
+  "gain_yr": "0.12",
+  "gain_days": 43,
+  "ded_yr": "0.058",
+  "ded_days": 21,
+  "gain_lo": "0.09",
+  "gain_hi": "0.16",
+  "ded_lo": "0.040",
+  "ded_hi": "0.076",
+  "edag": "10.4"
+ }
+}
