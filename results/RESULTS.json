@@ -344,7 +344,23 @@
   "max_infl": 84.8,
   "mad_lo": 1.1,
   "mad_hi": 87.7,
-  "total_deaths": 10434037
+  "total_deaths": 10434037,
+  "n_common_countries": 26,
+  "common_excluded": [
+   "IS",
+   "LU"
+  ],
+  "common_spearman_mad_infl": 0.983,
+  "common_min_infl": 12.9,
+  "common_max_infl": 85.1,
+  "common_min_infl_cause": "Perinatal conditions",
+  "common_max_infl_cause": "Dementia",
+  "common_mad_lo": 1.1,
+  "common_mad_hi": 87.7,
+  "common_cns_infl": 35.7,
+  "common_cns_mad": 65.0,
+  "common_total_deaths": 10427421,
+  "common_order_matches_full": true
  },
  "round": {
   "deaths_pct": "0.70",

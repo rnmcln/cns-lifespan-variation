@@ -24,7 +24,11 @@ these the pipeline computes, for each country-year and sex:
   disparity when the cause is set to zero;
 - threshold ages, obtained numerically;
 - an exactly additive decomposition of the life-disparity effect by age;
-- percentile intervals from 10 000 Poisson resampling replicates.
+- percentile intervals from 10 000 Poisson perturbation replicates;
+- rank agreement between reference life tables, by rank correlation, absolute rank displacement
+  and the number of pairwise country orderings that reverse;
+- the same comparison with one fixed open-interval reference value applied to every country-year,
+  so that the common reference is common at every age.
 
 The primary analysis frame is the common period 2012 to 2018 for all 28 countries. Sensitivity
 frames cover a balanced 26-country panel, the 19 countries with complete coverage to 2021, all
@@ -50,7 +54,8 @@ pip install -r requirements.txt
 printf 'HMD_USER=you@example.org\nHMD_PASS=...\n' > code/.hmdenv
 cd code
 python3 fetch_hmd.py          # retrieves the 140 Human Mortality Database files
-for s in a b c d e f g h i j k m n p; do python3 stage_$s.py; done
+for s in a b c d e f g h i j k m p q; do python3 stage_$s.py; done
+python3 stage_n.py
 python3 results_json.py
 python3 figs2.py
 ```
@@ -65,11 +70,12 @@ API; re-running it on 15 August 2026 reproduced the committed extract byte for b
 Mortality Database series are not redistributable, so `hmd_all.csv` is absent and every stage
 that reads it requires a prior `fetch_hmd.py`. Stages `d`, `g`, `k`, `n`, `results_json.py` and
 the figure and summary scripts run from the shipped files alone; `b`, `c`, `e`, `f`, `h`, `i`,
-`j`, `m` and `p` need the raw series.
+`j`, `m`, `p` and `q` need the raw series.
 
-The full pipeline has been run end to end from the raw series and verified: all 36 declared
+The full pipeline has been run end to end from the raw series and verified: all declared
 outputs are produced, are identical between two independent runs, and match the committed
-versions byte for byte.
+versions byte for byte. `stage_q.py` was added after that gate run and has been checked
+separately: it reproduces `hmd_open_interval_deaths.csv` byte for byte from the raw series.
 
 ## Data sources and licensing
 

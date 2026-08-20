@@ -165,3 +165,38 @@ cause-specific death counts. They do not represent uncertainty in coding practic
 reconciliation between the two data sources, or in the Human Mortality Database series.
 Resampling was performed for the primary frame only; results for other frames are point
 estimates.
+
+## Rank agreement between reference life tables
+
+| Comparison | Spearman rho | Kendall tau-b | Median abs. shift | Max shift | Pairs reversed |
+|---|---|---|---|---|---|
+| national vs GBD 2023 | 0.858 | 0.661 | 2.5 | 12 | 64 of 378 (16.9%) |
+| national vs minimum-mortality | 0.857 | 0.656 | 2.5 | 12 | 65 of 378 (17.2%) |
+| GBD 2023 vs minimum-mortality | 0.998 | 0.984 | 0.0 | 1 | 3 of 378 (0.8%) |
+| national vs GBD 2023, later frame | 0.835 | 0.626 | 2.0 | 7 | 32 of 171 (18.7%) |
+
+## Literally common open interval
+
+Share of C70-C72 deaths in the 95+ interval: 0.28%.
+Country-year reference values span 7.860 to 8.074 years.
+Fixed at exact age 97.5 years: 8.136. Pooled death-weighted: 7.967.
+Largest change in YLL per death: 0.0009 years (fixed), 0.0001 (pooled).
+Largest change in the age-standardised rate: 0.010 per 100 000 (fixed).
+Country ordering identical under both: True.
+
+## Reference effect by cause
+
+Common frame of 26 countries (IS, LU excluded, absent for perinatal conditions). Spearman rho between
+mean age at death and the mean increase: 0.983. Cause ordering identical to the full-coverage frame: True.
+
+| Cause | Countries | Deaths | Mean age at death | Increase % | Range % |
+|---|---|---|---|---|---|
+| Perinatal conditions | 26 | 63553 | 1.1 | 12.9 | 8.2 to 20.8 |
+| Transport accidents | 26 | 181810 | 49.9 | 25.5 | 16.2 to 40.5 |
+| Intentional self-harm | 26 | 366401 | 54.2 | 28.3 | 18.8 to 49.1 |
+| Chronic liver disease | 26 | 456240 | 63.7 | 36.5 | 24.4 to 57.2 |
+| Malignant CNS neoplasms | 26 | 242393 | 65.0 | 35.7 | 23.1 to 57.8 |
+| Lung cancer | 26 | 1839736 | 71.3 | 44.7 | 27.2 to 65.3 |
+| Ischaemic heart disease | 26 | 3655522 | 80.2 | 59.0 | 40.1 to 80.9 |
+| Cerebrovascular disease | 26 | 2323028 | 82.0 | 63.9 | 45.6 to 89.9 |
+| Dementia | 26 | 1298738 | 87.7 | 85.1 | 59.4 to 111.0 |

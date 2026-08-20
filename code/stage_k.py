@@ -106,6 +106,17 @@ r_lnat = L.asyr_nat.rank(ascending=False)
 r_lgbd = L.asyr_gbd.rank(ascending=False)
 G["lat_ref_shift_ge2"] = int(((r_lnat - r_lgbd).abs() >= 2).sum())
 G["lat_ref_max_shift"] = int((r_lnat - r_lgbd).abs().max())
+# rank agreement reported without a displacement cut, as in stage_q
+G["lat_ref_rho"] = round(float(stats.spearmanr(L.asyr_nat, L.asyr_gbd).statistic), 3)
+G["lat_ref_tau"] = round(float(stats.kendalltau(L.asyr_nat, L.asyr_gbd).statistic), 3)
+G["lat_ref_median_shift"] = float((r_lnat - r_lgbd).abs().median())
+_n = len(L)
+_a, _b = L.asyr_nat.values, L.asyr_gbd.values
+_disc = sum(1 for i in range(_n) for j in range(i + 1, _n)
+            if (_a[i] - _a[j]) * (_b[i] - _b[j]) < 0)
+G["lat_ref_pairs"] = _n * (_n - 1) // 2
+G["lat_ref_pairs_reversed"] = _disc
+G["lat_ref_pct_pairs_reversed"] = round(100.0 * _disc / G["lat_ref_pairs"], 1)
 G["lat_ypd_ratio_mean"] = round(float((L.yll_gbd / L.yll_nat).mean()), 3)
 G["lat_ref_pct_mean"] = round(100 * (float((L.yll_gbd / L.yll_nat).mean()) - 1), 1)
 

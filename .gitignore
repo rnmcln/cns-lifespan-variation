@@ -1,5 +1,4 @@
-data/raw_hmd/*
-!data/raw_hmd/README.md
+data/raw_hmd/
 code/.hmdenv
 __pycache__/
 *.pyc

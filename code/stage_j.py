@@ -53,7 +53,7 @@ frame=pd.read_csv("results_countryyear.csv")
 frame=frame[(frame.sex=="T")&(frame.year.between(2012,2018))][["geo","year"]].rename(columns={"year":"Year"})
 MID=np.array([0.5,3.0]+[a+2.5 for a in range(5,95,5)]+[97.5])
 
-out=[]
+out=[]; CTY=[]
 for icd,name in CAUSES:
     A=pull(icd,AGES); A["k"]=A.age.map(AMAP); A=A[A.k.notna()]
     T=pull(icd,["TOTAL"]).rename(columns={"deaths":"tot"})[["geo","Year","tot"]]
@@ -75,8 +75,13 @@ for icd,name in CAUSES:
     R=pd.DataFrame(recs,columns=["geo","Year","deaths","yll_nat","yll_off","mad"])
     if R.empty: print("  skipped",name); continue
     cty=R.groupby("geo").apply(lambda z:pd.Series({
-        "ypd_nat":z.yll_nat.sum()/z.deaths.sum(),"ypd_off":z.yll_off.sum()/z.deaths.sum()}),include_groups=False)
+        "ypd_nat":z.yll_nat.sum()/z.deaths.sum(),"ypd_off":z.yll_off.sum()/z.deaths.sum(),
+        "deaths":z.deaths.sum(),
+        "mad":float(np.average(z.mad,weights=z.deaths))}),include_groups=False)
     infl=100*(cty.ypd_off/cty.ypd_nat-1)
+    c2=cty.reset_index(); c2.insert(0,"cause",name); c2.insert(0,"icd",icd)
+    c2["infl_pct"]=infl.values
+    CTY.append(c2)
     out.append(dict(icd=icd,cause=name,n_cy=len(R),n_ctry=R.geo.nunique(),deaths=int(R.deaths.sum()),
         mad=float(np.average(R.mad,weights=R.deaths)),
         ypd_nat=float(R.yll_nat.sum()/R.deaths.sum()),ypd_off=float(R.yll_off.sum()/R.deaths.sum()),
@@ -87,6 +92,24 @@ for icd,name in CAUSES:
         out[-1]["infl_pooled"],out[-1]["infl_lo"],out[-1]["infl_hi"]))
 G=pd.DataFrame(out).sort_values("mad")
 G.to_csv("generalisation_causes.csv",index=False)
+C=pd.concat(CTY,ignore_index=True)
+C.to_csv("generalisation_country.csv",index=False)
+
+# Common country frame: the countries available for every cause, so that the cross-cause
+# comparison is not confounded by differing country coverage.
+sets=[set(g.geo) for _,g in C.groupby("cause")]
+common=sorted(set.intersection(*sets))
+CC=C[C.geo.isin(common)]
+rows=[]
+for icd,name in CAUSES:
+    z=CC[CC.icd==icd]
+    if z.empty: continue
+    rows.append(dict(icd=icd,cause=name,n_ctry=z.geo.nunique(),deaths=int(z.deaths.sum()),
+        mad=float(np.average(z.mad,weights=z.deaths)),
+        infl_mean=float(z.infl_pct.mean()),infl_lo=float(z.infl_pct.min()),
+        infl_hi=float(z.infl_pct.max())))
+GC=pd.DataFrame(rows).sort_values("mad")
+GC.to_csv("generalisation_common.csv",index=False)
 r=np.corrcoef(G.mad,G.infl_mean)[0,1]
 rs=pd.Series(G.mad.values).corr(pd.Series(G.infl_mean.values),method="spearman")
 J={"n_causes":int(len(G)),"pearson_mad_infl":round(float(r),3),"spearman_mad_infl":round(float(rs),3),
@@ -98,5 +121,19 @@ J={"n_causes":int(len(G)),"pearson_mad_infl":round(float(r),3),"spearman_mad_inf
    "max_infl":round(float(G.infl_mean.max()),1),
    "mad_lo":round(float(G.mad.min()),1),"mad_hi":round(float(G.mad.max()),1),
    "total_deaths":int(G.deaths.sum())}
+J["n_common_countries"]=len(common)
+J["common_excluded"]=sorted(set(C.geo)-set(common))
+J["common_spearman_mad_infl"]=round(float(pd.Series(GC.mad.values).corr(
+    pd.Series(GC.infl_mean.values),method="spearman")),3)
+J["common_min_infl"]=round(float(GC.infl_mean.min()),1)
+J["common_max_infl"]=round(float(GC.infl_mean.max()),1)
+J["common_min_infl_cause"]=GC.iloc[GC.infl_mean.values.argmin()]["cause"]
+J["common_max_infl_cause"]=GC.iloc[GC.infl_mean.values.argmax()]["cause"]
+J["common_mad_lo"]=round(float(GC.mad.min()),1)
+J["common_mad_hi"]=round(float(GC.mad.max()),1)
+J["common_cns_infl"]=round(float(GC[GC.icd=="C70-C72"].infl_mean.iloc[0]),1)
+J["common_cns_mad"]=round(float(GC[GC.icd=="C70-C72"].mad.iloc[0]),1)
+J["common_total_deaths"]=int(GC.deaths.sum())
+J["common_order_matches_full"]=bool(list(GC.cause)==list(G.cause))
 json.dump(J,open("GENERALISATION.json","w"),indent=1)
 print("\n"+json.dumps(J,indent=1))

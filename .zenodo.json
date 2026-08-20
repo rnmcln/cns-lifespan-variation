@@ -4,20 +4,39 @@
   "upload_type": "software",
   "license": "MIT",
   "access_right": "open",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "language": "eng",
   "creators": [
-    {"name": "Lawson McLean, Aaron", "orcid": "0000-0001-5528-6905",
-     "affiliation": "Department of Neurosurgery, Jena University Hospital, Friedrich Schiller University Jena"},
-    {"name": "Senft, Christian",
-     "affiliation": "Department of Neurosurgery, Jena University Hospital, Friedrich Schiller University Jena"},
-    {"name": "McLean, Colin W.",
-     "affiliation": "Adam Smith Business School, University of Glasgow"}
+    {
+      "name": "Lawson McLean, Aaron",
+      "orcid": "0000-0001-5528-6905",
+      "affiliation": "Department of Neurosurgery, Jena University Hospital, Friedrich Schiller University Jena"
+    },
+    {
+      "name": "Senft, Christian",
+      "affiliation": "Department of Neurosurgery, Jena University Hospital, Friedrich Schiller University Jena"
+    },
+    {
+      "name": "McLean, Colin W.",
+      "affiliation": "Adam Smith Business School, University of Glasgow"
+    }
   ],
-  "keywords": ["lifespan variation", "life disparity", "years of life lost",
-               "cause-deleted life table", "threshold age", "central nervous system neoplasms",
-               "burden of disease", "Human Mortality Database", "Eurostat"],
+  "keywords": [
+    "lifespan variation",
+    "life disparity",
+    "years of life lost",
+    "cause-deleted life table",
+    "threshold age",
+    "central nervous system neoplasms",
+    "burden of disease",
+    "Human Mortality Database",
+    "Eurostat"
+  ],
   "related_identifiers": [
-    {"identifier": "10.6069/6HTR-RB51", "relation": "references", "scheme": "doi"}
+    {
+      "identifier": "10.6069/6HTR-RB51",
+      "relation": "references",
+      "scheme": "doi"
+    }
   ]
 }

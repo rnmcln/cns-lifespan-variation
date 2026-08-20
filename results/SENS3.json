@@ -41,6 +41,12 @@
  "lat_max_shift": 3,
  "lat_ref_shift_ge2": 12,
  "lat_ref_max_shift": 7,
+ "lat_ref_rho": 0.835,
+ "lat_ref_tau": 0.626,
+ "lat_ref_median_shift": 2.0,
+ "lat_ref_pairs": 171,
+ "lat_ref_pairs_reversed": 32,
+ "lat_ref_pct_pairs_reversed": 18.7,
  "lat_ypd_ratio_mean": 1.355,
  "lat_ref_pct_mean": 35.5
 }
