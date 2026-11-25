@@ -29,8 +29,8 @@ CAUSE_ROWS = "\n".join(
 
 T = f"""# Results summary
 
-Malignant central nervous system neoplasms and premature mortality in Europe: lifespan
-variation and the reference dependence of years of life lost.
+Reference life tables and cross-country comparisons of years of life lost: malignant central
+nervous system neoplasms and lifespan variation in 28 European countries.
 
 Aaron Lawson McLean, Christian Senft, Colin W. McLean.
 
@@ -42,18 +42,20 @@ below are read directly from the analysis outputs in `results/` and `data/derive
 
 ## Question
 
-Life disparity, denoted e†, is the mean remaining life expectancy at death within a life table.
-It measures variation in length of life and is distinct from life expectancy, which measures
-average longevity. Removing a cause of death compresses the distribution of ages at death only
-when those deaths fall below a threshold age a†, and widens it otherwise. The effect of a cause
-on lifespan variation therefore has to be computed rather than inferred from its age profile.
+Years of life lost (YLL) are the usual measure of premature mortality when countries are
+compared, and every YLL estimate depends on a reference life table: national period life tables
+or a common standard such as the Global Burden of Disease (GBD) theoretical minimum risk life
+table. The primary question is how far this choice changes the cross-country ordering of YLL from
+malignant central nervous system neoplasms (ICD-10 C70 to C72), whether the answer depends on
+which common reference is used, and how the size of the reference effect on YLL per death varies
+with the age at which a cause kills.
 
-Two questions are addressed:
-
-1. What are the changes in life expectancy at birth and in life disparity implied by removing
-   mortality from ICD-10 C70 to C72, and what age structure produces them?
-2. How far do cross-country comparisons of years of life lost from this cause depend on the
-   reference life table chosen?
+The secondary question concerns lifespan variation. Life disparity, denoted e†, is the mean
+remaining life expectancy at death within a life table. Removing a cause of death compresses the
+distribution of ages at death only when those deaths fall below a threshold age a†, so the
+effect of a cause on lifespan variation has to be computed rather than inferred from its age
+profile. The analysis estimates the changes in life expectancy at birth and in e† implied by
+removing C70 to C72 mortality, and the age structure that produces them.
 
 ## Design
 
@@ -80,24 +82,6 @@ orderings. Uncertainty is assessed by resampling age-specific death counts from 
 distributions over 10 000 replicates; the resulting 95% Poisson perturbation intervals describe
 the stability of the estimates under perturbation of the counts and are not confidence
 intervals.
-
-## Principal results
-
-| Quantity | Value |
-|---|---|
-| Gain in life expectancy at birth on cause deletion | {J['gain_e0']['mean']} years, about {R['gain_days']} days (range {J['gain_e0']['lo']} to {J['gain_e0']['hi']}) |
-| Reduction in life disparity e† | {J['d_edag']['mean']} years, about {R['ded_days']} days (range {J['d_edag']['lo']} to {J['d_edag']['hi']}) |
-| Observed e† for comparison | about {J['d_edag']['edag_mean']} years |
-| Countries with a positive reduction in e† | {J['d_edag']['positive']} of {J['frame']['countries']} |
-| Countries whose 95% Poisson perturbation interval lies wholly above zero | {J['d_edag']['ci_excl_zero']} of {J['frame']['countries']} |
-| Median threshold boundary a† | {J['threshold']['median']} years |
-| Share of C70 to C72 deaths below a† | {J['threshold']['below_lo']}% to {J['threshold']['below_hi']}% |
-| Mean age at C70 to C72 death | {J['threshold']['mad_lo']} to {J['threshold']['mad_hi']} years |
-| Age-standardised mortality rate | {J['asmr']['lo']} to {J['asmr']['hi']} per 100 000 person-years |
-
-Age-specific contributions to the reduction in e† are positive from childhood to about age 75,
-peak between 50 and 65 years, and are slightly negative above age 80. The positive
-contributions dominate in every country, which is why the net effect is compressive.
 
 ## Reference dependence of years of life lost
 
@@ -127,6 +111,54 @@ rises with the mean age at death, from {GG['common_min_infl']}% for
 {GG['common_min_infl_cause'].lower()} to {GG['common_max_infl']}% for
 {GG['common_max_infl_cause'].lower()} (Spearman ρ = {GG['common_spearman_mad_infl']}, with one
 inversion).
+
+## Rank agreement between reference life tables
+
+| Comparison | Spearman ρ | Kendall τb | Median abs. shift | Max shift | Pairs reversed |
+|---|---|---|---|---|---|
+{RANK_ROWS}
+| national vs GBD 2023 (derived schedule), later frame | {K['lat_ref_rho']} | {K['lat_ref_tau']} | {K['lat_ref_median_shift']:.1f} | {K['lat_ref_max_shift']} | {K['lat_ref_pairs_reversed']} of {K['lat_ref_pairs']} ({K['lat_ref_pct_pairs_reversed']}%) |
+
+## A literally common open interval
+
+The GBD 2023 reference is common at every age below 95 years; for the open interval the four
+sub-interval values are averaged with each country-year's distribution of all-cause deaths above
+95. {RK['open_share_deaths_pct']}% of C70 to C72 deaths fall in that interval, and the
+country-year values span {RK['e_open_countryyear_lo']:.3f} to {RK['e_open_countryyear_hi']:.3f}
+years. Replacing them with one fixed value for every country-year, either the schedule at exact
+age 97.5 years ({RK['e_open_fixed']:.3f}) or the pooled death-weighted mean
+({RK['e_open_pooled']:.3f}), changes YLL per death by at most {RK['ypd_maxabs_diff_fixed']} years
+and the age-standardised rate by at most {RK['asyr_maxabs_diff_fixed']:.2f} per 100 000. Country
+ordering identical under both: {RK['rank_identical_fixed'] and RK['rank_identical_pooled']}.
+
+## Reference effect by cause
+
+Common frame of {GG['n_common_countries']} countries ({', '.join(GG['common_excluded'])} excluded,
+having no retained perinatal stratum). Spearman ρ between mean age at death and the mean
+increase: {GG['common_spearman_mad_infl']}. Cause ordering identical to the full-coverage frame:
+{GG['common_order_matches_full']}.
+
+| Cause | Countries | Deaths | Mean age at death | Increase % | Range % |
+|---|---|---|---|---|---|
+{CAUSE_ROWS}
+
+## Life expectancy and lifespan variation (secondary analysis)
+
+| Quantity | Value |
+|---|---|
+| Gain in life expectancy at birth on cause deletion | {J['gain_e0']['mean']} years, about {R['gain_days']} days (range {J['gain_e0']['lo']} to {J['gain_e0']['hi']}) |
+| Reduction in life disparity e† | {J['d_edag']['mean']} years, about {R['ded_days']} days (range {J['d_edag']['lo']} to {J['d_edag']['hi']}) |
+| Observed e† for comparison | about {J['d_edag']['edag_mean']} years |
+| Countries with a positive reduction in e† | {J['d_edag']['positive']} of {J['frame']['countries']} |
+| Countries whose 95% Poisson perturbation interval lies wholly above zero | {J['d_edag']['ci_excl_zero']} of {J['frame']['countries']} |
+| Median threshold boundary a† | {J['threshold']['median']} years |
+| Share of C70 to C72 deaths below a† | {J['threshold']['below_lo']}% to {J['threshold']['below_hi']}% |
+| Mean age at C70 to C72 death | {J['threshold']['mad_lo']} to {J['threshold']['mad_hi']} years |
+| Age-standardised mortality rate | {J['asmr']['lo']} to {J['asmr']['hi']} per 100 000 person-years |
+
+Age-specific contributions to the reduction in e† are positive from childhood to about age 75,
+peak between 50 and 65 years, and are slightly negative above age 80. The positive
+contributions dominate in every country, which is why the net effect is compressive.
 
 ## Robustness
 
@@ -206,36 +238,6 @@ The cross-country rankings demonstrate that an ordering computed from the same d
 with the reference life table. They are not a comparison of national performance:
 certification and coding practice, completeness of registration and the attribution of deaths
 from brain metastases differ between these countries and all enter the rates.
-
-## Rank agreement between reference life tables
-
-| Comparison | Spearman ρ | Kendall τb | Median abs. shift | Max shift | Pairs reversed |
-|---|---|---|---|---|---|
-{RANK_ROWS}
-| national vs GBD 2023 (derived schedule), later frame | {K['lat_ref_rho']} | {K['lat_ref_tau']} | {K['lat_ref_median_shift']:.1f} | {K['lat_ref_max_shift']} | {K['lat_ref_pairs_reversed']} of {K['lat_ref_pairs']} ({K['lat_ref_pct_pairs_reversed']}%) |
-
-## A literally common open interval
-
-The GBD 2023 reference is common at every age below 95 years; for the open interval the four
-sub-interval values are averaged with each country-year's distribution of all-cause deaths above
-95. {RK['open_share_deaths_pct']}% of C70 to C72 deaths fall in that interval, and the
-country-year values span {RK['e_open_countryyear_lo']:.3f} to {RK['e_open_countryyear_hi']:.3f}
-years. Replacing them with one fixed value for every country-year, either the schedule at exact
-age 97.5 years ({RK['e_open_fixed']:.3f}) or the pooled death-weighted mean
-({RK['e_open_pooled']:.3f}), changes YLL per death by at most {RK['ypd_maxabs_diff_fixed']} years
-and the age-standardised rate by at most {RK['asyr_maxabs_diff_fixed']:.2f} per 100 000. Country
-ordering identical under both: {RK['rank_identical_fixed'] and RK['rank_identical_pooled']}.
-
-## Reference effect by cause
-
-Common frame of {GG['n_common_countries']} countries ({', '.join(GG['common_excluded'])} excluded,
-having no retained perinatal stratum). Spearman ρ between mean age at death and the mean
-increase: {GG['common_spearman_mad_infl']}. Cause ordering identical to the full-coverage frame:
-{GG['common_order_matches_full']}.
-
-| Cause | Countries | Deaths | Mean age at death | Increase % | Range % |
-|---|---|---|---|---|---|
-{CAUSE_ROWS}
 """
 
 open("RESULTS_SUMMARY.md", "w").write(T)

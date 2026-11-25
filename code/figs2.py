@@ -1,5 +1,9 @@
 """Figures 1 to 3 and the two supplementary figures.
 
+Figure 1: years of life lost under national and common references. Figure 2: reduction in life
+disparity by country. Figure 3: age-specific contributions. Figure S1: the reference effect
+across nine causes. Figure S2: age contributions under both removal orderings, by country.
+
 Design: minimal ink, sans-serif type, thin rules, no gridlines, no enclosing boxes, no
 titles inside the plotting area, greyscale with a single muted accent. Vector PDF is the
 primary output; PNG is written at 600 dpi for convenience. Figure widths are set for a
@@ -66,7 +70,7 @@ def save(fig, stem, extra=None, tight=True):
     plt.close(fig)
 
 
-# --------------------------------------------------------- Figure 1: life disparity
+# --------------------------------------------------------- Figure 2: life disparity
 d = U.join(P[["below"]]).sort_values("ded")
 xmax = float(np.ceil(d.dhi.max() * 1000) / 1000) + 0.004
 fig, ax = plt.subplots(figsize=(140 * MM, 150 * MM))
@@ -86,10 +90,10 @@ ax.set_xticks([0, 0.02, 0.04, 0.06, 0.08, 0.10, 0.12])
 ax.set_xlabel("reduction in life disparity $e^{\\dagger}$ (years)")
 for s in ["left", "top", "right"]:
     ax.spines[s].set_visible(False)
-save(fig, "fig1_life_disparity")
+save(fig, "fig2_life_disparity")
 assert d.dhi.max() < xmax, "interval clipped"
 
-# ------------------------------------------------- Figure 2: age-specific contributions
+# ------------------------------------------------- Figure 3: age-specific contributions
 piv = CS.pivot_table(index="geo", columns="k", values="sym", aggfunc="mean").reindex(columns=KEYS)
 x = np.arange(21)
 med, q1, q3 = piv.median(axis=0), piv.quantile(.25), piv.quantile(.75)
@@ -106,9 +110,9 @@ ax.set_xticklabels([KEYS[i] for i in x[::2]], rotation=45, ha="right")
 ax.set_xlabel("age group (years)")
 ax.set_ylabel("contribution to the reduction\nin $e^{\\dagger}$ (years)")
 ax.set_xlim(-0.6, 20.6)
-save(fig, "fig2_age_contributions")
+save(fig, "fig3_age_contributions")
 
-# ------------------------------------------------------- Figure 3: reference dependence
+# ------------------------------------------------------- Figure 1: reference dependence
 d = P.sort_values("asyr_nat")
 fig, ax = plt.subplots(figsize=(140 * MM, 140 * MM))
 y = np.arange(len(d))
@@ -131,9 +135,9 @@ ax.text(d.asyr_nat[top], len(d) - 0.35, "national\nlife table", ha="center", va=
         fontsize=6.2, color=INK, linespacing=1.1)
 ax.text(d.asyr_off[top], len(d) - 0.35, "GBD 2023\nreference", ha="center", va="bottom",
         fontsize=6.2, color=ACC, linespacing=1.1)
-save(fig, "fig3_reference_dependence")
+save(fig, "fig1_reference_dependence")
 
-# --------------------------------- Supplementary: contributions under both orderings
+# --------------------------------- Figure S2: contributions under both orderings
 CA = pd.read_csv("contrib_symmetric.csv")
 geos = sorted(P.index, key=lambda g: NAME[g])   # alphabetical by country name
 fig, axes = plt.subplots(7, 4, figsize=(170 * MM, 200 * MM), sharex=True, sharey=True)
@@ -155,9 +159,9 @@ for a in axes[-1, :]:
 fig.supxlabel("age group (years)", fontsize=7, color=INK)
 fig.supylabel("contribution to the reduction in $e^{\\dagger}$ (years)", fontsize=7, color=INK)
 fig.tight_layout()
-save(fig, "figS1_orderings")
+save(fig, "figS2_orderings")
 
-# ------------------- Supplementary: reference choice across nine causes
+# ------------------- Figure S1: reference choice across nine causes
 # An aligned two-panel graphic table. Ordering the rows by mean age at death carries the age
 # gradient without spending a second spatial dimension on it, and cause names are the row
 # labels, so nothing has to be decoded from a legend.
@@ -213,6 +217,6 @@ for k, r in GC.iterrows():
 axA.set_xlabel("mean age at death (years)", fontsize=7, color=INK)
 axB.set_xlabel("increase in YLL per death under the common reference (%)", fontsize=7,
                color=INK)
-save(fig, "figS2_reference_gradient", tight=False)
+save(fig, "figS1_reference_gradient", tight=False)
 
 print("figures written")

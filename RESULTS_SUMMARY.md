@@ -1,7 +1,7 @@
 # Results summary
 
-Malignant central nervous system neoplasms and premature mortality in Europe: lifespan
-variation and the reference dependence of years of life lost.
+Reference life tables and cross-country comparisons of years of life lost: malignant central
+nervous system neoplasms and lifespan variation in 28 European countries.
 
 Aaron Lawson McLean, Christian Senft, Colin W. McLean.
 
@@ -13,18 +13,20 @@ below are read directly from the analysis outputs in `results/` and `data/derive
 
 ## Question
 
-Life disparity, denoted e†, is the mean remaining life expectancy at death within a life table.
-It measures variation in length of life and is distinct from life expectancy, which measures
-average longevity. Removing a cause of death compresses the distribution of ages at death only
-when those deaths fall below a threshold age a†, and widens it otherwise. The effect of a cause
-on lifespan variation therefore has to be computed rather than inferred from its age profile.
+Years of life lost (YLL) are the usual measure of premature mortality when countries are
+compared, and every YLL estimate depends on a reference life table: national period life tables
+or a common standard such as the Global Burden of Disease (GBD) theoretical minimum risk life
+table. The primary question is how far this choice changes the cross-country ordering of YLL from
+malignant central nervous system neoplasms (ICD-10 C70 to C72), whether the answer depends on
+which common reference is used, and how the size of the reference effect on YLL per death varies
+with the age at which a cause kills.
 
-Two questions are addressed:
-
-1. What are the changes in life expectancy at birth and in life disparity implied by removing
-   mortality from ICD-10 C70 to C72, and what age structure produces them?
-2. How far do cross-country comparisons of years of life lost from this cause depend on the
-   reference life table chosen?
+The secondary question concerns lifespan variation. Life disparity, denoted e†, is the mean
+remaining life expectancy at death within a life table. Removing a cause of death compresses the
+distribution of ages at death only when those deaths fall below a threshold age a†, so the
+effect of a cause on lifespan variation has to be computed rather than inferred from its age
+profile. The analysis estimates the changes in life expectancy at birth and in e† implied by
+removing C70 to C72 mortality, and the age structure that produces them.
 
 ## Design
 
@@ -51,24 +53,6 @@ orderings. Uncertainty is assessed by resampling age-specific death counts from 
 distributions over 10 000 replicates; the resulting 95% Poisson perturbation intervals describe
 the stability of the estimates under perturbation of the counts and are not confidence
 intervals.
-
-## Principal results
-
-| Quantity | Value |
-|---|---|
-| Gain in life expectancy at birth on cause deletion | 0.117 years, about 43 days (range 0.093 to 0.156) |
-| Reduction in life disparity e† | 0.0575 years, about 21 days (range 0.0401 to 0.0757) |
-| Observed e† for comparison | about 10.39 years |
-| Countries with a positive reduction in e† | 28 of 28 |
-| Countries whose 95% Poisson perturbation interval lies wholly above zero | 28 of 28 |
-| Median threshold boundary a† | 80.0 years |
-| Share of C70 to C72 deaths below a† | 68.0% to 90.0% |
-| Mean age at C70 to C72 death | 62.1 to 67.5 years |
-| Age-standardised mortality rate | 5.91 to 10.09 per 100 000 person-years |
-
-Age-specific contributions to the reduction in e† are positive from childhood to about age 75,
-peak between 50 and 65 years, and are slightly negative above age 80. The positive
-contributions dominate in every country, which is why the net effect is compressive.
 
 ## Reference dependence of years of life lost
 
@@ -98,6 +82,64 @@ rises with the mean age at death, from 12.9% for
 perinatal conditions to 85.1% for
 dementia (Spearman ρ = 0.983, with one
 inversion).
+
+## Rank agreement between reference life tables
+
+| Comparison | Spearman ρ | Kendall τb | Median abs. shift | Max shift | Pairs reversed |
+|---|---|---|---|---|---|
+| national vs GBD 2023 | 0.858 | 0.661 | 2.5 | 12 | 64 of 378 (16.9%) |
+| national vs minimum-mortality | 0.857 | 0.661 | 2.5 | 12 | 64 of 378 (16.9%) |
+| GBD 2023 vs minimum-mortality | 0.997 | 0.979 | 0.0 | 2 | 4 of 378 (1.1%) |
+| national vs GBD 2023 (derived schedule), later frame | 0.835 | 0.626 | 2.0 | 7 | 32 of 171 (18.7%) |
+
+## A literally common open interval
+
+The GBD 2023 reference is common at every age below 95 years; for the open interval the four
+sub-interval values are averaged with each country-year's distribution of all-cause deaths above
+95. 0.28% of C70 to C72 deaths fall in that interval, and the
+country-year values span 7.860 to 8.074
+years. Replacing them with one fixed value for every country-year, either the schedule at exact
+age 97.5 years (8.136) or the pooled death-weighted mean
+(7.967), changes YLL per death by at most 0.0009 years
+and the age-standardised rate by at most 0.01 per 100 000. Country
+ordering identical under both: True.
+
+## Reference effect by cause
+
+Common frame of 26 countries (IS, LU excluded,
+having no retained perinatal stratum). Spearman ρ between mean age at death and the mean
+increase: 0.983. Cause ordering identical to the full-coverage frame:
+True.
+
+| Cause | Countries | Deaths | Mean age at death | Increase % | Range % |
+|---|---|---|---|---|---|
+| Perinatal conditions | 26 | 63 553 | 1.1 | 12.9 | 8.2 to 20.8 |
+| Transport accidents | 26 | 181 810 | 49.9 | 25.5 | 16.2 to 40.5 |
+| Intentional self-harm | 26 | 366 401 | 54.2 | 28.3 | 18.8 to 49.1 |
+| Chronic liver disease | 26 | 456 240 | 63.7 | 36.5 | 24.4 to 57.2 |
+| Malignant CNS neoplasms | 26 | 242 393 | 65.0 | 35.7 | 23.1 to 57.8 |
+| Lung cancer | 26 | 1 839 736 | 71.3 | 44.7 | 27.2 to 65.3 |
+| Ischaemic heart disease | 26 | 3 655 522 | 80.2 | 59.0 | 40.1 to 80.9 |
+| Cerebrovascular disease | 26 | 2 323 028 | 82.0 | 63.9 | 45.6 to 89.9 |
+| Dementia | 26 | 1 298 738 | 87.7 | 85.1 | 59.4 to 111.0 |
+
+## Life expectancy and lifespan variation (secondary analysis)
+
+| Quantity | Value |
+|---|---|
+| Gain in life expectancy at birth on cause deletion | 0.117 years, about 43 days (range 0.093 to 0.156) |
+| Reduction in life disparity e† | 0.0575 years, about 21 days (range 0.0401 to 0.0757) |
+| Observed e† for comparison | about 10.39 years |
+| Countries with a positive reduction in e† | 28 of 28 |
+| Countries whose 95% Poisson perturbation interval lies wholly above zero | 28 of 28 |
+| Median threshold boundary a† | 80.0 years |
+| Share of C70 to C72 deaths below a† | 68.0% to 90.0% |
+| Mean age at C70 to C72 death | 62.1 to 67.5 years |
+| Age-standardised mortality rate | 5.91 to 10.09 per 100 000 person-years |
+
+Age-specific contributions to the reduction in e† are positive from childhood to about age 75,
+peak between 50 and 65 years, and are slightly negative above age 80. The positive
+contributions dominate in every country, which is why the net effect is compressive.
 
 ## Robustness
 
@@ -177,43 +219,3 @@ The cross-country rankings demonstrate that an ordering computed from the same d
 with the reference life table. They are not a comparison of national performance:
 certification and coding practice, completeness of registration and the attribution of deaths
 from brain metastases differ between these countries and all enter the rates.
-
-## Rank agreement between reference life tables
-
-| Comparison | Spearman ρ | Kendall τb | Median abs. shift | Max shift | Pairs reversed |
-|---|---|---|---|---|---|
-| national vs GBD 2023 | 0.858 | 0.661 | 2.5 | 12 | 64 of 378 (16.9%) |
-| national vs minimum-mortality | 0.857 | 0.661 | 2.5 | 12 | 64 of 378 (16.9%) |
-| GBD 2023 vs minimum-mortality | 0.997 | 0.979 | 0.0 | 2 | 4 of 378 (1.1%) |
-| national vs GBD 2023 (derived schedule), later frame | 0.835 | 0.626 | 2.0 | 7 | 32 of 171 (18.7%) |
-
-## A literally common open interval
-
-The GBD 2023 reference is common at every age below 95 years; for the open interval the four
-sub-interval values are averaged with each country-year's distribution of all-cause deaths above
-95. 0.28% of C70 to C72 deaths fall in that interval, and the
-country-year values span 7.860 to 8.074
-years. Replacing them with one fixed value for every country-year, either the schedule at exact
-age 97.5 years (8.136) or the pooled death-weighted mean
-(7.967), changes YLL per death by at most 0.0009 years
-and the age-standardised rate by at most 0.01 per 100 000. Country
-ordering identical under both: True.
-
-## Reference effect by cause
-
-Common frame of 26 countries (IS, LU excluded,
-having no retained perinatal stratum). Spearman ρ between mean age at death and the mean
-increase: 0.983. Cause ordering identical to the full-coverage frame:
-True.
-
-| Cause | Countries | Deaths | Mean age at death | Increase % | Range % |
-|---|---|---|---|---|---|
-| Perinatal conditions | 26 | 63 553 | 1.1 | 12.9 | 8.2 to 20.8 |
-| Transport accidents | 26 | 181 810 | 49.9 | 25.5 | 16.2 to 40.5 |
-| Intentional self-harm | 26 | 366 401 | 54.2 | 28.3 | 18.8 to 49.1 |
-| Chronic liver disease | 26 | 456 240 | 63.7 | 36.5 | 24.4 to 57.2 |
-| Malignant CNS neoplasms | 26 | 242 393 | 65.0 | 35.7 | 23.1 to 57.8 |
-| Lung cancer | 26 | 1 839 736 | 71.3 | 44.7 | 27.2 to 65.3 |
-| Ischaemic heart disease | 26 | 3 655 522 | 80.2 | 59.0 | 40.1 to 80.9 |
-| Cerebrovascular disease | 26 | 2 323 028 | 82.0 | 63.9 | 45.6 to 89.9 |
-| Dementia | 26 | 1 298 738 | 87.7 | 85.1 | 59.4 to 111.0 |

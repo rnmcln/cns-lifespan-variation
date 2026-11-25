@@ -1,9 +1,9 @@
-# Lifespan variation and premature mortality from malignant CNS neoplasms in Europe
+# Reference life tables and cross-country comparisons of years of life lost: malignant CNS neoplasms and lifespan variation in Europe
 
-Analysis code and derived data for a study of how mortality from malignant central nervous
-system neoplasms (ICD-10 C70 to C72) affects life expectancy and lifespan variation across 28
-European countries, and of how far cross-country comparisons of years of life lost depend on
-the reference life table used.
+Analysis code and derived data for a study of how far cross-country comparisons of years of life
+lost from malignant central nervous system neoplasms (ICD-10 C70 to C72) in 28 European countries
+depend on the reference life table, and of how these deaths affect life expectancy and lifespan
+variation.
 
 Aaron Lawson McLean, Christian Senft, Colin W. McLean.
 
@@ -19,7 +19,8 @@ Mortality Database supplies population exposures, all-cause deaths and period li
 these the pipeline computes, for each country-year and sex:
 
 - age-standardised mortality and years of life lost rates, 2013 European Standard Population;
-- years of life lost under three reference life tables, national and two common;
+- years of life lost under three reference life tables, national and two common, and rank
+  agreement between the resulting country orderings;
 - cause-deleted life tables, giving the change in life expectancy at birth and in life
   disparity when the cause is set to zero;
 - threshold ages, obtained numerically;
