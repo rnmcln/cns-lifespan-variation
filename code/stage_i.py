@@ -47,15 +47,18 @@ for (geo,yr),s in M.groupby(["geo","Year"]):
     eo=np.empty(21)
     eo[:20]=e_star(STARTS+np.clip(ax[:20]/WID,0,1)*WID)
     eo[20]=float((OW[(geo,yr)]*SUB_E).sum())
-    rows.append({"geo":geo,"year":yr,"deaths":d.sum(),
+    rows.append({"geo":geo,"year":yr,"deaths":d.sum(),"expo":float(expo.sum()),
        "ypd_off":float((d*eo).sum()/d.sum()),
        "asyr_off":float((np.divide(d*eo,expo,out=np.zeros_like(d),where=expo>0)*ESP).sum()*1e5)})
     diffs.append(eo-E_DER)
 D=pd.DataFrame(rows); DF=np.array(diffs)
 g=D.groupby("geo").apply(lambda z:pd.Series({"ypd_off":(z.ypd_off*z.deaths).sum()/z.deaths.sum(),
-   "asyr_off":z.asyr_off.mean()}),include_groups=False)
+   "asyr_off":np.average(z.asyr_off,weights=z.expo)}),include_groups=False)
 S=pd.read_csv("country_summary_all.csv"); Pp=S[(S.frame=="primary_2012_2018")&(S.sex=="T")].set_index("geo")
-bp=pd.read_csv("sensitivity_countryyear.csv").groupby("geo").asyr_bp.mean()
+# Annual standardised rates are averaged across years weighted by person-years of exposure,
+# the same convention as the national rates in stage_d.py.
+bp=pd.read_csv("sensitivity_countryyear.csv").groupby("geo").apply(
+    lambda z: np.average(z.asyr_bp, weights=z.expo), include_groups=False)
 g["ypd_nat"]=Pp.ypd_nat; g["ypd_der"]=Pp.ypd_gbd; g["asyr_nat"]=Pp.asyr_nat; g["asyr_der"]=Pp.asyr_gbd; g["asyr_bp"]=bp
 Q={}
 Q["off_e0"]=round(float(e_star(0)),2); Q["off_e95"]=round(float(e_star(95)),2)
@@ -77,7 +80,7 @@ Q["approx_err_max_yrs"]=round(float(np.abs(DF).max()),2)
 Q["approx_err_ypd_mean_pct"]=round(float(100*((g.ypd_der/g.ypd_off)-1).mean()),1)
 Q["approx_err_ypd_maxabs_pct"]=round(float(100*((g.ypd_der/g.ypd_off)-1).abs().max()),1)
 
-# ---- Additional file 2: derived vs official vs GBD 2019, per age group ----
+# ---- reference schedules by age group: derived vs official vs GBD 2019 ----
 AGES=[0,1]+list(range(5,100,5))
 off_exact=np.array([e_star(a) for a in AGES])
 g19=np.array([88.87,88.00,84.03,79.05,74.07,69.11,64.15,59.20,54.25,49.32,44.43,39.63,
@@ -91,7 +94,7 @@ AF=pd.DataFrame({"age_group":KEYS,"exact_age":AGES,
    "derived_from_published_outputs":np.round(E_DER,3),
    "derived_minus_official_mean":np.round(E_DER-mean_applied,3)})
 AF.to_csv("reference_schedules.csv",index=False)
-print("\nAdditional file 2 written")
+print("\nreference_schedules.csv written")
 print(AF.to_string(index=False))
 
 json.dump(Q,open("OFFICIAL.json","w"),indent=1); g.to_csv("official_reference_country.csv")

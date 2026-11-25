@@ -65,6 +65,10 @@
    "timeout": 900
   },
   {
+   "cmd": "python3 stage_r.py",
+   "timeout": 300
+  },
+  {
    "cmd": "python3 results_json.py",
    "timeout": 600
   },
@@ -123,6 +127,7 @@
   "open_interval_common.csv",
   "hmd_open_interval_deaths.csv",
   "generalisation_country.csv",
-  "generalisation_common.csv"
+  "generalisation_common.csv",
+  "DISCLOSURE.json"
  ]
 }

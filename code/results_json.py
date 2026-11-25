@@ -98,7 +98,7 @@ OFF=pd.read_csv("official_reference_country.csv").set_index("geo")
 Dq=pd.read_csv("sensitivity_countryyear.csv")
 gq=Dq.groupby("geo").apply(lambda z: pd.Series({
     "ypd_bp":(z.ypd_bp*z.deaths).sum()/z.deaths.sum(),
-    "asyr_bp":z.asyr_bp.mean(),"d_es":z.d_edag_es.mean()}),include_groups=False)
+    "asyr_bp":np.average(z.asyr_bp,weights=z.expo),"d_es":z.d_edag_es.mean()}),include_groups=False)
 gq.index=[NAME[i] for i in gq.index]
 T=T.merge(gq.reset_index().rename(columns={"index":"Country"}),on="Country")
 T["YPD_bp"]=T.ypd_bp.round(1); T["ASYR_bp"]=T.asyr_bp.round(0).astype(int)

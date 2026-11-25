@@ -1,0 +1,36 @@
+{
+ "frame_countries": 28,
+ "frame_years": [
+  2012,
+  2018
+ ],
+ "flagged_T": 46,
+ "flagged_countries_T": [
+  "IS",
+  "LU"
+ ],
+ "flagged_below20_pct_T": 97.8,
+ "flagged_M": 116,
+ "flagged_countries_M": [
+  "EE",
+  "IS",
+  "LU",
+  "NO",
+  "SI"
+ ],
+ "flagged_below20_pct_M": 91.4,
+ "flagged_F": 116,
+ "flagged_countries_F": [
+  "EE",
+  "IS",
+  "LU",
+  "NO",
+  "SI"
+ ],
+ "flagged_below20_pct_F": 91.4,
+ "flagged_countries_sexspec_extra": [
+  "EE",
+  "NO",
+  "SI"
+ ]
+}

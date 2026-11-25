@@ -33,7 +33,7 @@
  "rank_shift_max_gbd": 12,
  "rank_shift_ge2_bp": 19,
  "rank_shift_max_bp": 12,
- "rho_gbd_bp": 0.998,
+ "rho_gbd_bp": 0.997,
  "src_d_edag_hmd": 0.0575,
  "src_d_edag_es": 0.0588,
  "src_gain_hmd": 0.117,
@@ -61,6 +61,8 @@
   }
  },
  "threshold_identical_across_delta": true,
+ "threshold_countryyears_compared": 190,
+ "threshold_countryyears_identical": 190,
  "sym_vs_fwd_max_diff": 4.9e-05,
  "ident_max_resid": 5.929284840888727e-15,
  "var_total": 2.431,

@@ -1,10 +1,10 @@
 {
   "title": "Lifespan variation and premature mortality from malignant CNS neoplasms in Europe: analysis code",
-  "description": "<p>Analysis code and derived data for a study of the effect of mortality from malignant central nervous system neoplasms (ICD-10 C70-C72) on life expectancy and life disparity across 28 European countries over the common period 2012 to 2018, and of the dependence of cross-country comparisons of years of life lost on the reference life table.</p><p>The pipeline combines Eurostat cause-of-death data with Human Mortality Database exposures, all-cause deaths and period life tables. It computes age-standardised mortality and years of life lost rates, years of life lost under national and two common reference life tables, cause-deleted life tables giving the change in life expectancy at birth and in life disparity, numerically identified threshold ages, an exactly additive age decomposition of the life-disparity effect, and percentile intervals from 10,000 Poisson resampling replicates.</p><p>Human Mortality Database source files are not redistributable and are not included; an authenticated retrieval script and a manifest of series vintages and SHA-256 digests are provided instead. RESULTS_SUMMARY.md records the design and every headline result.</p>",
+  "description": "<p>Analysis code and derived data for a study of the effect of mortality from malignant central nervous system neoplasms (ICD-10 C70-C72) on life expectancy and life disparity across 28 European countries over the common period 2012 to 2018, and of the dependence of cross-country comparisons of years of life lost on the reference life table.</p><p>The pipeline combines Eurostat cause-of-death data with Human Mortality Database exposures, all-cause deaths and period life tables. It computes age-standardised mortality and years of life lost rates, years of life lost under national and two common reference life tables, cause-deleted life tables giving the change in life expectancy at birth and in life disparity, numerically identified threshold ages, an exactly additive age decomposition of the life-disparity effect, 95% Poisson perturbation intervals from 10,000 replicates, rank agreement between reference life tables, and the same reference comparison for eight further causes.</p><p>Human Mortality Database source files are not redistributable and are not included; an authenticated retrieval script and a manifest of series vintages and SHA-256 digests are provided instead. RESULTS_SUMMARY.md records the design and every headline result.</p>",
   "upload_type": "software",
   "license": "MIT",
   "access_right": "open",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "language": "eng",
   "creators": [
     {
@@ -14,7 +14,8 @@
     },
     {
       "name": "Senft, Christian",
-      "affiliation": "Department of Neurosurgery, Jena University Hospital, Friedrich Schiller University Jena"
+      "affiliation": "Department of Neurosurgery, Jena University Hospital, Friedrich Schiller University Jena",
+      "orcid": "0000-0003-1288-6913"
     },
     {
       "name": "McLean, Colin W.",

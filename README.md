@@ -24,11 +24,14 @@ these the pipeline computes, for each country-year and sex:
   disparity when the cause is set to zero;
 - threshold ages, obtained numerically;
 - an exactly additive decomposition of the life-disparity effect by age;
-- percentile intervals from 10 000 Poisson perturbation replicates;
+- 95% Poisson perturbation intervals from 10 000 replicates, describing the stability of the
+  estimates under perturbation of the cause-specific counts;
 - rank agreement between reference life tables, by rank correlation, absolute rank displacement
   and the number of pairwise country orderings that reverse;
 - the same comparison with one fixed open-interval reference value applied to every country-year,
-  so that the common reference is common at every age.
+  so that the common reference is common at every age;
+- the same comparison for eight further causes spanning the range of ages at death;
+- counts of Eurostat confidentiality-flagged age cells within the analysed frame.
 
 The primary analysis frame is the common period 2012 to 2018 for all 28 countries. Sensitivity
 frames cover a balanced 26-country panel, the 19 countries with complete coverage to 2021, all
@@ -51,31 +54,43 @@ Python 3.12.
 
 ```bash
 pip install -r requirements.txt
-printf 'HMD_USER=you@example.org\nHMD_PASS=...\n' > code/.hmdenv
-cd code
-python3 fetch_hmd.py          # retrieves the 140 Human Mortality Database files
-for s in a b c d e f g h i j k m p q; do python3 stage_$s.py; done
-python3 stage_n.py
+
+# every script reads and writes in one flat working directory
+mkdir work && cd work
+cp ../code/*.py .
+cp -r ../data/gbd gbd
+cp ../data/derived/hmd_vintages.csv .
+printf 'HMD_USER=you@example.org\nHMD_PASS=...\n' > .hmdenv
+
+python3 fetch_hmd.py          # retrieves the 140 Human Mortality Database files into raw/
+for s in a b c d e f g h i j k m p q r; do python3 stage_$s.py; done
 python3 results_json.py
+python3 stage_n.py
 python3 figs2.py
+python3 make_summary.py
 ```
+
+The outputs are written into `work/`; their committed copies are in `results/`, `data/derived/`,
+`figures/` and the repository root. To re-run only the stages that do not need the raw series,
+copy the contents of `data/derived/` and `results/` into the working directory first.
 
 `code/gate.json` declares the run order and the full list of expected outputs. A fixed seed
 (20260803) is used throughout and figure PDFs are written without a timestamp, so repeated runs
 on the same inputs produce byte-identical outputs.
 
-`data/derived/` and `results/` contain the outputs of the run that produced the published
-results, including the Eurostat extract, so `stage_a.py` need not be re-run against the live
-API; re-running it on 15 August 2026 reproduced the committed extract byte for byte. The Human
-Mortality Database series are not redistributable, so `hmd_all.csv` is absent and every stage
-that reads it requires a prior `fetch_hmd.py`. Stages `d`, `g`, `k`, `n`, `results_json.py` and
-the figure and summary scripts run from the shipped files alone; `b`, `c`, `e`, `f`, `h`, `i`,
-`j`, `m`, `p` and `q` need the raw series.
+`data/derived/` and `results/` contain the outputs of the run that produced the reported
+results, including the Eurostat extract. The Human Mortality Database series are not
+redistributable, so `hmd_all.csv` is absent and every stage that reads it requires a prior
+`fetch_hmd.py`. Stages `d`, `k`, `n` and `r` and the figure and summary scripts run from the
+shipped files alone; `b`, `c`, `e`, `f`, `g`, `h`, `i`, `j`, `m`, `p` and `q` need the raw series,
+and `results_json.py` reads `decomposition.csv`, which stage `e` writes from them.
 
-The full pipeline has been run end to end from the raw series and verified: all declared
-outputs are produced, are identical between two independent runs, and match the committed
-versions byte for byte. `stage_q.py` was added after that gate run and has been checked
-separately: it reproduces `hmd_open_interval_deaths.csv` byte for byte from the raw series.
+On 25 November 2026 the full pipeline was run twice from a clean working directory containing
+only the code, the GBD extracts, `hmd_vintages.csv` and the 140 raw series, whose SHA-256 digests
+matched the manifest. Stage `a` retrieved the Eurostat extract from the live API. Both runs
+completed, produced all 43 declared outputs, gave identical outputs, and matched the committed
+versions byte for byte. Figure output depends on the fonts installed (Arial, or a
+metric-compatible substitute such as Liberation Sans).
 
 ## Data sources and licensing
 

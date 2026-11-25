@@ -38,7 +38,9 @@ Primary frame: the common period 2012 to 2018 for all 28 countries,
 comprising 190 of 196 potentially eligible
 both-sex country-years, 242 586 C70 to C72 deaths and
 34 651 958 all-cause deaths. Six country-years fail the reconciliation
-rule, all in Iceland and Luxembourg.
+rule, all in Iceland and Luxembourg. Within the frame, Eurostat disclosure control leaves
+46 both-sex age cells without a value, all in Iceland and Luxembourg; the
+sex-specific extracts have 116 such cells in males and 116 in females.
 
 Cause-deleted life tables are built from mₓ multiplied by Rₓ, one minus the C70 to C72 share of
 all deaths in the age group, using the same function as the observed tables. Threshold ages are
@@ -46,8 +48,9 @@ obtained numerically by perturbing mₓ in each age group in turn and are identi
 boundaries, since the data are grouped in five-year intervals. The effect on e† is decomposed
 by age by cumulative removal, reported as the symmetric average of the forward and reverse
 orderings. Uncertainty is assessed by resampling age-specific death counts from Poisson
-distributions over 10 000 replicates; the resulting ranges are percentile intervals describing
-the stability of the estimates and are not confidence intervals.
+distributions over 10 000 replicates; the resulting 95% Poisson perturbation intervals describe
+the stability of the estimates under perturbation of the counts and are not confidence
+intervals.
 
 ## Principal results
 
@@ -57,7 +60,7 @@ the stability of the estimates and are not confidence intervals.
 | Reduction in life disparity e† | 0.0575 years, about 21 days (range 0.0401 to 0.0757) |
 | Observed e† for comparison | about 10.39 years |
 | Countries with a positive reduction in e† | 28 of 28 |
-| Countries whose 95% percentile interval excludes zero | 28 of 28 |
+| Countries whose 95% Poisson perturbation interval lies wholly above zero | 28 of 28 |
 | Median threshold boundary a† | 80.0 years |
 | Share of C70 to C72 deaths below a† | 68.0% to 90.0% |
 | Mean age at C70 to C72 death | 62.1 to 67.5 years |
@@ -76,22 +79,25 @@ Pooled across the frame, C70 to C72 accounts for 0.70% of all deaths and
 
 | Quantity | Value |
 |---|---|
-| Age-standardised YLL rate, national reference | 126.0 to 195.0 per 100 000 |
-| Age-standardised YLL rate, GBD 2023 reference | 169 to 269 per 100 000 |
+| Age-standardised YLL rate, national reference | 126 to 195 per 100 000 |
+| Age-standardised YLL rate, GBD 2023 reference | 167 to 269 per 100 000 |
 | Increase in YLL per death, GBD 2023 reference | 35.3% mean (23.1% to 57.8%) |
 | Increase in YLL per death, empirical minimum-mortality reference | 13.4% mean |
-| Countries moving two or more rank places, GBD reference | 17 of 28, largest shift 12 |
-| Countries moving two or more rank places, minimum-mortality reference | 19 of 28 |
-| Spearman correlation between the two common references | 0.998 |
+| Pairwise country orderings reversed, national vs GBD 2023 | 64 of 378 (16.9%) |
+| Spearman correlation, national vs GBD 2023 | 0.858 |
+| Spearman correlation between the two common references | 0.997 |
 
 Life expectancy at birth is 89.96 years in the official GBD 2023 schedule and
 84.76 years in the empirical minimum-mortality schedule. Ranks were computed from
 unrounded rates throughout.
 
-Across nine causes spanning mean ages at death from 1.1 to 87.7 years and
-10.4 million deaths, the reference-induced increase rises with the mean
-age at death, from 12.9% for perinatal conditions to 84.8% for
-dementia (Spearman ρ = 0.983, with one inversion).
+Across nine causes spanning mean ages at death from 1.1 to 87.7
+years and 10.4 million deaths, on the common frame of the
+26 countries available for every cause, the reference-induced increase
+rises with the mean age at death, from 12.9% for
+perinatal conditions to 85.1% for
+dementia (Spearman ρ = 0.983, with one
+inversion).
 
 ## Robustness
 
@@ -99,11 +105,11 @@ dementia (Spearman ρ = 0.983, with one inversion).
 |---|---|
 | Balanced panel, 26 countries with all seven years | gain 0.117, reduction in e† 0.0573, against 0.117 and 0.0575 in the full frame; ordering unchanged |
 | Later period, 19 countries 2012-2021 (190 country-years, 182 281 deaths) | reduction in e† 0.0568 against 0.0576 for the same countries in the primary window; positive in all 19; Spearman 0.9667 between windows |
-| Reference dependence in the later-period frame | 12 of 19 countries move two or more places; mean increase 35.5% |
+| Reference dependence in the later-period frame (schedule derived from published GBD 2023 outputs) | mean increase 35.5%; 32 of 171 pairwise orderings reversed (18.7%) |
 | Observation window, all countries | Spearman 0.977 against all available country-years and 0.982 excluding 2020 and 2021; largest shift 5 places |
 | Cause fraction formed with Eurostat all-cause deaths | reduction in e† 0.0588 against 0.0575; largest country difference 0.0056 |
 | Restricted to 18 countries with sources agreeing within 1% | reduction in e† 0.0573, positive in all 18 |
-| Threshold perturbation of 1%, 0.1% and 0.01% | identical band in every country-year |
+| Threshold perturbation of 1%, 0.1% and 0.01% | identical band in 190 of 190 country-years |
 | Decomposition ordering reversed | totals identical; signs agree in 99.97% of age cells; largest single difference 9.7e-05 years |
 | Open-interval age set to 96 or 100 years | country mean ages at death change by at most 0.0083 and 0.0138 years |
 | Open interval closed at the published remaining expectancy for exact age 95 | level of e† 10.334 against 10.386 years; mean reduction 0.0579 to 0.0582 against 0.0575, largest country difference 0.00143 years, positive in all 28; share of all-cause YLL 1.231% against 1.227% |
@@ -129,10 +135,11 @@ reconstruction exceeds the published value by a mean of 0.015
 years and at most 0.0535 years, and life disparity by
 0.052 years.
 
-That difference exceeds the cause-deletion effect being measured. It does not affect the
-reported results, because every reported quantity is either a difference between two tables
-built by the same procedure or a ratio in which the closure enters numerator and denominator
-alike. Recomputing with the open interval closed at the published value moves the mean
+That difference exceeds the cause-deletion effect being measured. The cause-deletion
+quantities are differences between two tables built by the same procedure, so the effect of
+the closure largely cancels in them; levels such as life expectancy at birth, e† itself, the
+age-standardised years of life lost rate and YLL per death depend on the closure directly.
+Recomputing with the open interval closed at the published value moves the mean
 reduction in e† from 0.0575 to between 0.0579 and
 0.0582 years, with a largest country difference of 0.00143
 years, and the reduction stays positive in all 28 countries. The
@@ -160,43 +167,53 @@ brain metastases to the primary site. Threshold ages are band boundaries rather 
 estimates. The primary frame ends in 2018; the later-period frame shows the direction and
 magnitude unchanged through 2021 where that comparison is possible.
 
-The resampling intervals describe instability arising from the size and age allocation of the
+The Poisson perturbation intervals describe instability arising from the size and age allocation of the
 cause-specific death counts. They do not represent uncertainty in coding practice, in
 reconciliation between the two data sources, or in the Human Mortality Database series.
 Resampling was performed for the primary frame only; results for other frames are point
 estimates.
 
+The cross-country rankings demonstrate that an ordering computed from the same deaths changes
+with the reference life table. They are not a comparison of national performance:
+certification and coding practice, completeness of registration and the attribution of deaths
+from brain metastases differ between these countries and all enter the rates.
+
 ## Rank agreement between reference life tables
 
-| Comparison | Spearman rho | Kendall tau-b | Median abs. shift | Max shift | Pairs reversed |
+| Comparison | Spearman ρ | Kendall τb | Median abs. shift | Max shift | Pairs reversed |
 |---|---|---|---|---|---|
 | national vs GBD 2023 | 0.858 | 0.661 | 2.5 | 12 | 64 of 378 (16.9%) |
-| national vs minimum-mortality | 0.857 | 0.656 | 2.5 | 12 | 65 of 378 (17.2%) |
-| GBD 2023 vs minimum-mortality | 0.998 | 0.984 | 0.0 | 1 | 3 of 378 (0.8%) |
-| national vs GBD 2023, later frame | 0.835 | 0.626 | 2.0 | 7 | 32 of 171 (18.7%) |
+| national vs minimum-mortality | 0.857 | 0.661 | 2.5 | 12 | 64 of 378 (16.9%) |
+| GBD 2023 vs minimum-mortality | 0.997 | 0.979 | 0.0 | 2 | 4 of 378 (1.1%) |
+| national vs GBD 2023 (derived schedule), later frame | 0.835 | 0.626 | 2.0 | 7 | 32 of 171 (18.7%) |
 
-## Literally common open interval
+## A literally common open interval
 
-Share of C70-C72 deaths in the 95+ interval: 0.28%.
-Country-year reference values span 7.860 to 8.074 years.
-Fixed at exact age 97.5 years: 8.136. Pooled death-weighted: 7.967.
-Largest change in YLL per death: 0.0009 years (fixed), 0.0001 (pooled).
-Largest change in the age-standardised rate: 0.010 per 100 000 (fixed).
-Country ordering identical under both: True.
+The GBD 2023 reference is common at every age below 95 years; for the open interval the four
+sub-interval values are averaged with each country-year's distribution of all-cause deaths above
+95. 0.28% of C70 to C72 deaths fall in that interval, and the
+country-year values span 7.860 to 8.074
+years. Replacing them with one fixed value for every country-year, either the schedule at exact
+age 97.5 years (8.136) or the pooled death-weighted mean
+(7.967), changes YLL per death by at most 0.0009 years
+and the age-standardised rate by at most 0.01 per 100 000. Country
+ordering identical under both: True.
 
 ## Reference effect by cause
 
-Common frame of 26 countries (IS, LU excluded, absent for perinatal conditions). Spearman rho between
-mean age at death and the mean increase: 0.983. Cause ordering identical to the full-coverage frame: True.
+Common frame of 26 countries (IS, LU excluded,
+having no retained perinatal stratum). Spearman ρ between mean age at death and the mean
+increase: 0.983. Cause ordering identical to the full-coverage frame:
+True.
 
 | Cause | Countries | Deaths | Mean age at death | Increase % | Range % |
 |---|---|---|---|---|---|
-| Perinatal conditions | 26 | 63553 | 1.1 | 12.9 | 8.2 to 20.8 |
-| Transport accidents | 26 | 181810 | 49.9 | 25.5 | 16.2 to 40.5 |
-| Intentional self-harm | 26 | 366401 | 54.2 | 28.3 | 18.8 to 49.1 |
-| Chronic liver disease | 26 | 456240 | 63.7 | 36.5 | 24.4 to 57.2 |
-| Malignant CNS neoplasms | 26 | 242393 | 65.0 | 35.7 | 23.1 to 57.8 |
-| Lung cancer | 26 | 1839736 | 71.3 | 44.7 | 27.2 to 65.3 |
-| Ischaemic heart disease | 26 | 3655522 | 80.2 | 59.0 | 40.1 to 80.9 |
-| Cerebrovascular disease | 26 | 2323028 | 82.0 | 63.9 | 45.6 to 89.9 |
-| Dementia | 26 | 1298738 | 87.7 | 85.1 | 59.4 to 111.0 |
+| Perinatal conditions | 26 | 63 553 | 1.1 | 12.9 | 8.2 to 20.8 |
+| Transport accidents | 26 | 181 810 | 49.9 | 25.5 | 16.2 to 40.5 |
+| Intentional self-harm | 26 | 366 401 | 54.2 | 28.3 | 18.8 to 49.1 |
+| Chronic liver disease | 26 | 456 240 | 63.7 | 36.5 | 24.4 to 57.2 |
+| Malignant CNS neoplasms | 26 | 242 393 | 65.0 | 35.7 | 23.1 to 57.8 |
+| Lung cancer | 26 | 1 839 736 | 71.3 | 44.7 | 27.2 to 65.3 |
+| Ischaemic heart disease | 26 | 3 655 522 | 80.2 | 59.0 | 40.1 to 80.9 |
+| Cerebrovascular disease | 26 | 2 323 028 | 82.0 | 63.9 | 45.6 to 89.9 |
+| Dementia | 26 | 1 298 738 | 87.7 | 85.1 | 59.4 to 111.0 |

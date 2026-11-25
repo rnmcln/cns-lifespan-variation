@@ -11,4 +11,4 @@ results; `derived/data_dictionary_countryyear.csv` defines its variables and uni
 
 `derived/hmd_file_manifest.csv` records the series vintage, file size and full
 SHA-256 digest of each of the 140 Human Mortality Database files used, so that a fresh
-retrieval can be checked against the versions that produced the published results.
+retrieval can be checked against the versions that produced the reported results.

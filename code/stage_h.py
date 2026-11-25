@@ -14,7 +14,7 @@ ok=R[(R.sex=="T")&(R.year.between(2012,2018))][["geo","sex","year"]].rename(colu
 M=H.merge(pc,on=["geo","Year","sex","k"],how="inner").merge(pa,on=["geo","Year","sex","k"],how="left")\
    .merge(ok,on=["geo","sex","Year"]).sort_values(["geo","Year","ord"])
 O={}
-# ---------- 1. European best-practice reference (coherent life table from min m_x) ----------
+# ---------- 1. empirical minimum-mortality reference (life table from the minimum m_x) ----------
 mn=M.groupby("ord").mx.min().values
 ax_med=M.groupby("ord").ax.median().values
 lt_bp=build_lt(mn,ax_med); lt_bp["ax"]=ax_med
@@ -31,7 +31,7 @@ for (geo,yr),s in M.groupby(["geo","Year"]):
     mx=s.mx.values; ax=s.ax.values; expo=s.expo.values
     lt=build_lt(mx,ax); lt["ax"]=ax; e_nat=e_within(lt["ex"],ax)
     Rh=1-np.divide(d,dh,out=np.zeros_like(d),where=dh>0)
-    r={"geo":geo,"year":yr,"deaths":d.sum(),
+    r={"geo":geo,"year":yr,"deaths":d.sum(),"expo":float(expo.sum()),
        "ypd_nat":float((d*e_nat).sum()/d.sum()),"ypd_gbd":float((d*E_GBD).sum()/d.sum()),
        "ypd_bp":float((d*E_BP).sum()/d.sum()),
        "asyr_bp":float((np.divide(d*E_BP,expo,out=np.zeros_like(d),where=expo>0)*ESP).sum()*1e5)}
@@ -50,9 +50,11 @@ for (geo,yr),s in M.groupby(["geo","Year"]):
     rows.append(r)
 D=pd.DataFrame(rows); CS=pd.concat(contribF)
 D.to_csv("sensitivity_countryyear.csv",index=False); CS.to_csv("contrib_symmetric.csv",index=False)
+# Annual standardised rates are averaged across years weighted by person-years of exposure,
+# the same convention as the national rates in stage_d.py.
 g=D.groupby("geo").apply(lambda s:pd.Series({
   "ypd_nat":np.average(s.ypd_nat,weights=s.deaths),"ypd_gbd":np.average(s.ypd_gbd,weights=s.deaths),
-  "ypd_bp":np.average(s.ypd_bp,weights=s.deaths),"asyr_bp":s.asyr_bp.mean(),
+  "ypd_bp":np.average(s.ypd_bp,weights=s.deaths),"asyr_bp":np.average(s.asyr_bp,weights=s.expo),
   "d_hmd":s.d_edag_hmd.mean(),"d_es":s.d_edag_es.mean(),
   "g_hmd":s.gain_hmd.mean(),"g_es":s.gain_es.mean()}),include_groups=False)
 S=pd.read_csv("country_summary_all.csv"); P=S[(S.frame=="primary_2012_2018")&(S.sex=="T")].set_index("geo")
@@ -76,14 +78,19 @@ O["src_lowdisc_n"]=len(lowdisc)
 O["src_lowdisc_d_edag"]=round(float(g.loc[list(lowdisc),"d_hmd"].mean()),4)
 O["src_lowdisc_positive"]=int((g.loc[list(lowdisc),"d_hmd"]>0).sum())
 # ---------- 4. threshold perturbation size ----------
-th={}
+th={}; per={}
 for dl in [0.01,0.001,0.0001]:
     v=[]
     for (geo,yr),s in M.groupby(["geo","Year"]):
         s=s.sort_values("ord"); a,_=threshold_age(s.mx.values,s.ax.values,delta=dl); v.append(a)
+    per[dl]=np.array(v)
     th[str(dl)]={"median":float(np.median(v)),"min":float(np.min(v)),"max":float(np.max(v))}
 O["threshold_by_delta"]=th
 O["threshold_identical_across_delta"]=bool(th["0.01"]==th["0.001"]==th["0.0001"])
+# the summary above compares medians and extremes only; this compares each country-year
+same=(per[0.01]==per[0.001])&(per[0.001]==per[0.0001])
+O["threshold_countryyears_compared"]=int(len(same))
+O["threshold_countryyears_identical"]=int(same.sum())
 # ---------- 5. symmetric vs forward profiles ----------
 O["sym_vs_fwd_max_diff"]=round(float((CS.sym-CS.fwd).abs().max()),6)
 # ---------- 6. formal variance decomposition (exact identity + Shapley split) ----------

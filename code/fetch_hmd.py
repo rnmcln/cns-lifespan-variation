@@ -10,7 +10,7 @@ MAP={"AT":"AUT","BE":"BEL","BG":"BGR","HR":"HRV","CZ":"CZE","DK":"DNK","EE":"EST
 "FR":"FRATNP","DE":"DEUTNP","EL":"GRC","HU":"HUN","IS":"ISL","IE":"IRL","IT":"ITA","LV":"LVA",
 "LT":"LTU","LU":"LUX","NL":"NLD","NO":"NOR","PL":"POL","PT":"PRT","SK":"SVK","SI":"SVN",
 "ES":"ESP","SE":"SWE","CH":"CHE","UK":"GBR_NP"}
-FILES=["Exposures_5x1","bltper_5x1","fltper_5x1","mltper_5x1"]
+FILES=["Deaths_5x1","Exposures_5x1","bltper_5x1","fltper_5x1","mltper_5x1"]
 os.makedirs("raw",exist_ok=True)
 manifest=[]
 import hashlib

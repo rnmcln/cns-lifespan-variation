@@ -5,12 +5,27 @@ from the results it describes.
 """
 import json
 
+import pandas as pd
+
 J = json.load(open("RESULTS.json"))
 K = json.load(open("SENS3.json"))
 CL = json.load(open("CLOSURE.json"))
 S = json.load(open("SENSITIVITY.json"))
+RK = json.load(open("RANKS.json"))
+D = json.load(open("DISCLOSURE.json"))
+GG = json.load(open("GENERALISATION.json"))
+GC = pd.read_csv("generalisation_common.csv").sort_values("mad")
 P, X, Q, G, R = J["panel"], J["sens"], J["off"], J["gen"], J["round"]
 sp = lambda n: f"{int(n):,}".replace(",", " ")
+RA = RK["rank_agreement"]
+RKN, RKO = RA["national vs GBD 2023"], RA["GBD 2023 vs minimum-mortality"]
+RANK_ROWS = "\n".join(
+    f"| {k} | {v['spearman_rho']} | {v['kendall_tau_b']} | {v['median_abs_shift']:.1f} | "
+    f"{v['max_abs_shift']} | {v['n_pairs_reversed']} of {v['n_pairs']} ({v['pct_pairs_reversed']}%) |"
+    for k, v in RA.items())
+CAUSE_ROWS = "\n".join(
+    f"| {r.cause} | {r.n_ctry} | {sp(r.deaths)} | {r.mad:.1f} | {r.infl_mean:.1f} | "
+    f"{r.infl_lo:.1f} to {r.infl_hi:.1f} |" for r in GC.itertuples())
 
 T = f"""# Results summary
 
@@ -52,7 +67,9 @@ Primary frame: the common period 2012 to 2018 for all {J['frame']['countries']} 
 comprising {J['frame']['country_years']} of {P['panel_potential']} potentially eligible
 both-sex country-years, {sp(J['frame']['deaths'])} C70 to C72 deaths and
 {sp(J['frame']['allcause_deaths'])} all-cause deaths. Six country-years fail the reconciliation
-rule, all in Iceland and Luxembourg.
+rule, all in Iceland and Luxembourg. Within the frame, Eurostat disclosure control leaves
+{D['flagged_T']} both-sex age cells without a value, all in Iceland and Luxembourg; the
+sex-specific extracts have {D['flagged_M']} such cells in males and {D['flagged_F']} in females.
 
 Cause-deleted life tables are built from mₓ multiplied by Rₓ, one minus the C70 to C72 share of
 all deaths in the age group, using the same function as the observed tables. Threshold ages are
@@ -60,8 +77,9 @@ obtained numerically by perturbing mₓ in each age group in turn and are identi
 boundaries, since the data are grouped in five-year intervals. The effect on e† is decomposed
 by age by cumulative removal, reported as the symmetric average of the forward and reverse
 orderings. Uncertainty is assessed by resampling age-specific death counts from Poisson
-distributions over 10 000 replicates; the resulting ranges are percentile intervals describing
-the stability of the estimates and are not confidence intervals.
+distributions over 10 000 replicates; the resulting 95% Poisson perturbation intervals describe
+the stability of the estimates under perturbation of the counts and are not confidence
+intervals.
 
 ## Principal results
 
@@ -71,7 +89,7 @@ the stability of the estimates and are not confidence intervals.
 | Reduction in life disparity e† | {J['d_edag']['mean']} years, about {R['ded_days']} days (range {J['d_edag']['lo']} to {J['d_edag']['hi']}) |
 | Observed e† for comparison | about {J['d_edag']['edag_mean']} years |
 | Countries with a positive reduction in e† | {J['d_edag']['positive']} of {J['frame']['countries']} |
-| Countries whose 95% percentile interval excludes zero | {J['d_edag']['ci_excl_zero']} of {J['frame']['countries']} |
+| Countries whose 95% Poisson perturbation interval lies wholly above zero | {J['d_edag']['ci_excl_zero']} of {J['frame']['countries']} |
 | Median threshold boundary a† | {J['threshold']['median']} years |
 | Share of C70 to C72 deaths below a† | {J['threshold']['below_lo']}% to {J['threshold']['below_hi']}% |
 | Mean age at C70 to C72 death | {J['threshold']['mad_lo']} to {J['threshold']['mad_hi']} years |
@@ -90,22 +108,25 @@ Pooled across the frame, C70 to C72 accounts for {R['deaths_pct']}% of all death
 
 | Quantity | Value |
 |---|---|
-| Age-standardised YLL rate, national reference | {J['asyr']['nat_lo']} to {J['asyr']['nat_hi']} per 100 000 |
+| Age-standardised YLL rate, national reference | {J['asyr']['nat_lo']:g} to {J['asyr']['nat_hi']:g} per 100 000 |
 | Age-standardised YLL rate, GBD 2023 reference | {Q['asyr_off_lo']} to {Q['asyr_off_hi']} per 100 000 |
 | Increase in YLL per death, GBD 2023 reference | {Q['off_pct_mean']}% mean ({Q['off_pct_lo']}% to {Q['off_pct_hi']}%) |
 | Increase in YLL per death, empirical minimum-mortality reference | {X['bp_pct_mean']}% mean |
-| Countries moving two or more rank places, GBD reference | {Q['rank_shift_ge2_off']} of {J['frame']['countries']}, largest shift {Q['rank_shift_max_off']} |
-| Countries moving two or more rank places, minimum-mortality reference | {X['rank_shift_ge2_bp']} of {J['frame']['countries']} |
-| Spearman correlation between the two common references | {Q['rho_off_bp']} |
+| Pairwise country orderings reversed, national vs GBD 2023 | {RKN['n_pairs_reversed']} of {RKN['n_pairs']} ({RKN['pct_pairs_reversed']}%) |
+| Spearman correlation, national vs GBD 2023 | {RKN['spearman_rho']} |
+| Spearman correlation between the two common references | {RKO['spearman_rho']} |
 
 Life expectancy at birth is {Q['off_e0']} years in the official GBD 2023 schedule and
 {X['bp_e0']} years in the empirical minimum-mortality schedule. Ranks were computed from
 unrounded rates throughout.
 
-Across nine causes spanning mean ages at death from {G['mad_lo']} to {G['mad_hi']} years and
-{G['total_deaths'] / 1e6:.1f} million deaths, the reference-induced increase rises with the mean
-age at death, from {G['min_infl']}% for {G['min_infl_cause'].lower()} to {G['max_infl']}% for
-{G['max_infl_cause'].lower()} (Spearman ρ = {G['spearman_mad_infl']}, with one inversion).
+Across nine causes spanning mean ages at death from {GG['common_mad_lo']} to {GG['common_mad_hi']}
+years and {GG['common_total_deaths'] / 1e6:.1f} million deaths, on the common frame of the
+{GG['n_common_countries']} countries available for every cause, the reference-induced increase
+rises with the mean age at death, from {GG['common_min_infl']}% for
+{GG['common_min_infl_cause'].lower()} to {GG['common_max_infl']}% for
+{GG['common_max_infl_cause'].lower()} (Spearman ρ = {GG['common_spearman_mad_infl']}, with one
+inversion).
 
 ## Robustness
 
@@ -113,11 +134,11 @@ age at death, from {G['min_infl']}% for {G['min_infl_cause'].lower()} to {G['max
 |---|---|
 | Balanced panel, {K['bal_n']} countries with all seven years | gain {K['bal_gain_e0']}, reduction in e† {K['bal_d_edag']}, against {K['full_gain_e0']} and {K['full_d_edag']} in the full frame; ordering unchanged |
 | Later period, {K['lat_n']} countries {K['lat_years']} ({K['lat_country_years']} country-years, {sp(K['lat_deaths'])} deaths) | reduction in e† {K['lat_d_edag']} against {K['latprim_d_edag']} for the same countries in the primary window; positive in all {K['lat_d_edag_positive']}; Spearman {K['lat_rho']} between windows |
-| Reference dependence in the later-period frame | {K['lat_ref_shift_ge2']} of {K['lat_n']} countries move two or more places; mean increase {K['lat_ref_pct_mean']}% |
+| Reference dependence in the later-period frame (schedule derived from published GBD 2023 outputs) | mean increase {K['lat_ref_pct_mean']}%; {K['lat_ref_pairs_reversed']} of {K['lat_ref_pairs']} pairwise orderings reversed ({K['lat_ref_pct_pairs_reversed']}%) |
 | Observation window, all countries | Spearman {J['frames']['rho_prim_max']} against all available country-years and {J['frames']['rho_prim_excl']} excluding 2020 and 2021; largest shift {J['frames']['max_shift']} places |
 | Cause fraction formed with Eurostat all-cause deaths | reduction in e† {X['src_d_edag_es']} against {X['src_d_edag_hmd']}; largest country difference {X['src_max_abs_diff_edag']} |
 | Restricted to {X['src_lowdisc_n']} countries with sources agreeing within 1% | reduction in e† {X['src_lowdisc_d_edag']}, positive in all {X['src_lowdisc_positive']} |
-| Threshold perturbation of 1%, 0.1% and 0.01% | identical band in every country-year |
+| Threshold perturbation of 1%, 0.1% and 0.01% | identical band in {X['threshold_countryyears_identical']} of {X['threshold_countryyears_compared']} country-years |
 | Decomposition ordering reversed | totals identical; signs agree in {S['rev_sign_agreement_pct']}% of age cells; largest single difference {S['rev_max_abs_diff']:.1e} years |
 | Open-interval age set to 96 or 100 years | country mean ages at death change by at most {S['openage_max_change_96']} and {S['openage_max_change_100']} years |
 | Open interval closed at the published remaining expectancy for exact age 95 | level of e† {CL['edag_alt_mean']} against {CL['edag_reported_mean']} years; mean reduction {CL['ded_alt_scaled']} to {CL['ded_alt_fixed']} against {CL['ded_reported']}, largest country difference {CL['ded_max_country_diff']} years, positive in all {CL['ded_positive_alt_fixed']}; share of all-cause YLL {CL['share_yll_alt_pct']}% against {CL['share_yll_reported_pct']}% |
@@ -143,10 +164,11 @@ reconstruction exceeds the published value by a mean of {CL['e0_recon_minus_publ
 years and at most {CL['e0_recon_minus_published_max']} years, and life disparity by
 {CL['edag_reported_mean'] - CL['edag_alt_mean']:.3f} years.
 
-That difference exceeds the cause-deletion effect being measured. It does not affect the
-reported results, because every reported quantity is either a difference between two tables
-built by the same procedure or a ratio in which the closure enters numerator and denominator
-alike. Recomputing with the open interval closed at the published value moves the mean
+That difference exceeds the cause-deletion effect being measured. The cause-deletion
+quantities are differences between two tables built by the same procedure, so the effect of
+the closure largely cancels in them; levels such as life expectancy at birth, e† itself, the
+age-standardised years of life lost rate and YLL per death depend on the closure directly.
+Recomputing with the open interval closed at the published value moves the mean
 reduction in e† from {CL['ded_reported']} to between {CL['ded_alt_scaled']} and
 {CL['ded_alt_fixed']} years, with a largest country difference of {CL['ded_max_country_diff']}
 years, and the reduction stays positive in all {CL['ded_positive_alt_fixed']} countries. The
@@ -174,11 +196,46 @@ brain metastases to the primary site. Threshold ages are band boundaries rather 
 estimates. The primary frame ends in 2018; the later-period frame shows the direction and
 magnitude unchanged through 2021 where that comparison is possible.
 
-The resampling intervals describe instability arising from the size and age allocation of the
+The Poisson perturbation intervals describe instability arising from the size and age allocation of the
 cause-specific death counts. They do not represent uncertainty in coding practice, in
 reconciliation between the two data sources, or in the Human Mortality Database series.
 Resampling was performed for the primary frame only; results for other frames are point
 estimates.
+
+The cross-country rankings demonstrate that an ordering computed from the same deaths changes
+with the reference life table. They are not a comparison of national performance:
+certification and coding practice, completeness of registration and the attribution of deaths
+from brain metastases differ between these countries and all enter the rates.
+
+## Rank agreement between reference life tables
+
+| Comparison | Spearman ρ | Kendall τb | Median abs. shift | Max shift | Pairs reversed |
+|---|---|---|---|---|---|
+{RANK_ROWS}
+| national vs GBD 2023 (derived schedule), later frame | {K['lat_ref_rho']} | {K['lat_ref_tau']} | {K['lat_ref_median_shift']:.1f} | {K['lat_ref_max_shift']} | {K['lat_ref_pairs_reversed']} of {K['lat_ref_pairs']} ({K['lat_ref_pct_pairs_reversed']}%) |
+
+## A literally common open interval
+
+The GBD 2023 reference is common at every age below 95 years; for the open interval the four
+sub-interval values are averaged with each country-year's distribution of all-cause deaths above
+95. {RK['open_share_deaths_pct']}% of C70 to C72 deaths fall in that interval, and the
+country-year values span {RK['e_open_countryyear_lo']:.3f} to {RK['e_open_countryyear_hi']:.3f}
+years. Replacing them with one fixed value for every country-year, either the schedule at exact
+age 97.5 years ({RK['e_open_fixed']:.3f}) or the pooled death-weighted mean
+({RK['e_open_pooled']:.3f}), changes YLL per death by at most {RK['ypd_maxabs_diff_fixed']} years
+and the age-standardised rate by at most {RK['asyr_maxabs_diff_fixed']:.2f} per 100 000. Country
+ordering identical under both: {RK['rank_identical_fixed'] and RK['rank_identical_pooled']}.
+
+## Reference effect by cause
+
+Common frame of {GG['n_common_countries']} countries ({', '.join(GG['common_excluded'])} excluded,
+having no retained perinatal stratum). Spearman ρ between mean age at death and the mean
+increase: {GG['common_spearman_mad_infl']}. Cause ordering identical to the full-coverage frame:
+{GG['common_order_matches_full']}.
+
+| Cause | Countries | Deaths | Mean age at death | Increase % | Range % |
+|---|---|---|---|---|---|
+{CAUSE_ROWS}
 """
 
 open("RESULTS_SUMMARY.md", "w").write(T)

@@ -156,7 +156,7 @@ for (geo, yr), s in M.groupby(["geo", "Year"]):
     y_cy, a_cy = summarise(e_cy)
     y_po, a_po = summarise(E_POOLED)
     y_fx, a_fx = summarise(E_FIXED)
-    rows.append(dict(geo=geo, year=yr, deaths=d.sum(), d_open=d[20],
+    rows.append(dict(geo=geo, year=yr, deaths=d.sum(), expo=float(expo.sum()), d_open=d[20],
                      e_open_countryyear=e_cy, e_open_pooled=E_POOLED, e_open_fixed=E_FIXED,
                      ypd_countryyear=y_cy, ypd_pooled=y_po, ypd_fixed=y_fx,
                      asyr_countryyear=a_cy, asyr_pooled=a_po, asyr_fixed=a_fx))
@@ -168,9 +168,10 @@ cty = D.groupby("geo").apply(lambda z: pd.Series({
     "ypd_countryyear": (z.ypd_countryyear * z.deaths).sum() / z.deaths.sum(),
     "ypd_pooled": (z.ypd_pooled * z.deaths).sum() / z.deaths.sum(),
     "ypd_fixed": (z.ypd_fixed * z.deaths).sum() / z.deaths.sum(),
-    "asyr_countryyear": z.asyr_countryyear.mean(),
-    "asyr_pooled": z.asyr_pooled.mean(),
-    "asyr_fixed": z.asyr_fixed.mean(),
+    # exposure-weighted across years, the same convention as the national rates
+    "asyr_countryyear": np.average(z.asyr_countryyear, weights=z.expo),
+    "asyr_pooled": np.average(z.asyr_pooled, weights=z.expo),
+    "asyr_fixed": np.average(z.asyr_fixed, weights=z.expo),
 }), include_groups=False)
 cty["ypd_nat"] = g.ypd_nat
 cty["asyr_nat"] = g.asyr_nat

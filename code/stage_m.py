@@ -1,10 +1,9 @@
 """Stage M: file manifest with complete digests.
 
-Rebuilds the Human Mortality Database file manifest with full 64-character
-SHA-256 digests for every retrieved file, including the Deaths_5x1 series used to weight
-the open interval, which the earlier manifest omitted.
+Builds the Human Mortality Database file manifest with full 64-character SHA-256 digests for
+every retrieved file, including the Deaths_5x1 series used to weight the open interval.
 
-Writes additional_file_1_hmd_manifest.csv.
+Writes hmd_file_manifest.csv.
 """
 import pandas as pd, numpy as np, hashlib, glob, os, re
 

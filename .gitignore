@@ -3,3 +3,5 @@ code/.hmdenv
 __pycache__/
 *.pyc
 .DS_Store
+work/
+.hmdenv
