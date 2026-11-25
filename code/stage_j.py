@@ -53,7 +53,7 @@ frame=pd.read_csv("results_countryyear.csv")
 frame=frame[(frame.sex=="T")&(frame.year.between(2012,2018))][["geo","year"]].rename(columns={"year":"Year"})
 MID=np.array([0.5,3.0]+[a+2.5 for a in range(5,95,5)]+[97.5])
 
-out=[]; CTY=[]
+out=[]; CTY=[]; AGE=[]
 for icd,name in CAUSES:
     A=pull(icd,AGES); A["k"]=A.age.map(AMAP); A=A[A.k.notna()]
     T=pull(icd,["TOTAL"]).rename(columns={"deaths":"tot"})[["geo","Year","tot"]]
@@ -71,13 +71,22 @@ for icd,name in CAUSES:
         lt=build_lt(s.mx.values,ax); e_nat=e_within(lt["ex"],ax)
         eo=np.empty(21); eo[:20]=e_star(STARTS+np.clip(ax[:20]/WID,0,1)*WID)
         eo[20]=float((OW[(geo,yr)]*SUB_E).sum())
-        recs.append((geo,yr,d.sum(),(d*e_nat).sum(),(d*eo).sum(),float(np.average(MID,weights=d))))
-    R=pd.DataFrame(recs,columns=["geo","Year","deaths","yll_nat","yll_off","mad"])
+        expo=s.expo.values
+        w=np.divide(ESP*1e5,expo,out=np.zeros_like(expo,dtype=float),where=expo>0)
+        recs.append((geo,yr,d.sum(),(d*e_nat).sum(),(d*eo).sum(),float(np.average(MID,weights=d)),
+                     float(expo.sum()),float((d*e_nat*w).sum()),float((d*eo*w).sum())))
+        # age-specific record, so that later stages can resample deaths without a second pull
+        for i in range(21):
+            AGE.append((icd,geo,yr,KEYS[i],d[i],expo[i],e_nat[i],eo[i]))
+    R=pd.DataFrame(recs,columns=["geo","Year","deaths","yll_nat","yll_off","mad","expo","asyr_nat","asyr_off"])
     if R.empty: print("  skipped",name); continue
     cty=R.groupby("geo").apply(lambda z:pd.Series({
         "ypd_nat":z.yll_nat.sum()/z.deaths.sum(),"ypd_off":z.yll_off.sum()/z.deaths.sum(),
         "deaths":z.deaths.sum(),
-        "mad":float(np.average(z.mad,weights=z.deaths))}),include_groups=False)
+        "mad":float(np.average(z.mad,weights=z.deaths)),
+        # annual standardised rates averaged across years with person-year weights
+        "asyr_nat":float(np.average(z.asyr_nat,weights=z.expo)),
+        "asyr_off":float(np.average(z.asyr_off,weights=z.expo))}),include_groups=False)
     infl=100*(cty.ypd_off/cty.ypd_nat-1)
     c2=cty.reset_index(); c2.insert(0,"cause",name); c2.insert(0,"icd",icd)
     c2["infl_pct"]=infl.values
@@ -92,6 +101,12 @@ for icd,name in CAUSES:
         out[-1]["infl_pooled"],out[-1]["infl_lo"],out[-1]["infl_hi"]))
 G=pd.DataFrame(out).sort_values("mad")
 G.to_csv("generalisation_causes.csv",index=False)
+AG=pd.DataFrame(AGE,columns=["icd","geo","year","age","deaths","expo","e_nat","e_off"])
+# Eurostat counts are open data and are shipped; exposures and national remaining expectancy are
+# computed from Human Mortality Database series and stay in an undistributed intermediate, like
+# hmd_all.csv
+AG[["icd","geo","year","age","deaths"]].to_csv("cause_age_deaths.csv",index=False)
+AG[["icd","geo","year","age","expo","e_nat","e_off"]].to_csv("cause_age_weights.csv",index=False)
 C=pd.concat(CTY,ignore_index=True)
 C.to_csv("generalisation_country.csv",index=False)
 

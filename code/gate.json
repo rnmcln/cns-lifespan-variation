@@ -69,6 +69,10 @@
    "timeout": 300
   },
   {
+   "cmd": "python3 stage_s.py",
+   "timeout": 900
+  },
+  {
    "cmd": "python3 results_json.py",
    "timeout": 600
   },
@@ -110,10 +114,10 @@
   "hmd_file_manifest.csv",
   "reference_schedules.csv",
   "data_dictionary_countryyear.csv",
-  "fig2_life_disparity.pdf",
-  "fig3_age_contributions.pdf",
+  "figS2_life_disparity.pdf",
+  "figS3_age_contributions.pdf",
   "fig1_reference_dependence.pdf",
-  "figS2_orderings.pdf",
+  "figS4_orderings.pdf",
   "figS1_reference_gradient.pdf",
   "CLOSURE.json",
   "closure_countryyear.csv",
@@ -128,6 +132,12 @@
   "hmd_open_interval_deaths.csv",
   "generalisation_country.csv",
   "generalisation_common.csv",
-  "DISCLOSURE.json"
+  "DISCLOSURE.json",
+  "fig2_reversal_gaps.pdf",
+  "fig3_cause_rank_sensitivity.pdf",
+  "REVERSALS.json",
+  "reversal_pairs.csv",
+  "rank_by_cause.csv",
+  "cause_age_deaths.csv"
  ]
 }

@@ -1,8 +1,11 @@
-"""Figures 1 to 3 and the two supplementary figures.
+"""Figures 1 to 3 and the four supplementary figures.
 
-Figure 1: years of life lost under national and common references. Figure 2: reduction in life
-disparity by country. Figure 3: age-specific contributions. Figure S1: the reference effect
-across nine causes. Figure S2: age contributions under both removal orderings, by country.
+Figure 1: years of life lost under national and common references. Figure 2: size of the gap
+between the two countries of every pair under each reference, with reversed pairs marked.
+Figure 3: rank sensitivity to the reference across nine causes. Figure S1: the reference effect
+on YLL per death across nine causes. Figure S2: reduction in life disparity by country.
+Figure S3: age-specific contributions. Figure S4: age contributions under both removal
+orderings, by country.
 
 Design: minimal ink, sans-serif type, thin rules, no gridlines, no enclosing boxes, no
 titles inside the plotting area, greyscale with a single muted accent. Vector PDF is the
@@ -90,7 +93,7 @@ ax.set_xticks([0, 0.02, 0.04, 0.06, 0.08, 0.10, 0.12])
 ax.set_xlabel("reduction in life disparity $e^{\\dagger}$ (years)")
 for s in ["left", "top", "right"]:
     ax.spines[s].set_visible(False)
-save(fig, "fig2_life_disparity")
+save(fig, "figS2_life_disparity")
 assert d.dhi.max() < xmax, "interval clipped"
 
 # ------------------------------------------------- Figure 3: age-specific contributions
@@ -110,7 +113,7 @@ ax.set_xticklabels([KEYS[i] for i in x[::2]], rotation=45, ha="right")
 ax.set_xlabel("age group (years)")
 ax.set_ylabel("contribution to the reduction\nin $e^{\\dagger}$ (years)")
 ax.set_xlim(-0.6, 20.6)
-save(fig, "fig3_age_contributions")
+save(fig, "figS3_age_contributions")
 
 # ------------------------------------------------------- Figure 1: reference dependence
 d = P.sort_values("asyr_nat")
@@ -159,7 +162,7 @@ for a in axes[-1, :]:
 fig.supxlabel("age group (years)", fontsize=7, color=INK)
 fig.supylabel("contribution to the reduction in $e^{\\dagger}$ (years)", fontsize=7, color=INK)
 fig.tight_layout()
-save(fig, "figS2_orderings")
+save(fig, "figS4_orderings")
 
 # ------------------- Figure S1: reference choice across nine causes
 # An aligned two-panel graphic table. Ordering the rows by mean age at death carries the age
@@ -218,5 +221,80 @@ axA.set_xlabel("mean age at death (years)", fontsize=7, color=INK)
 axB.set_xlabel("increase in YLL per death under the common reference (%)", fontsize=7,
                color=INK)
 save(fig, "figS1_reference_gradient", tight=False)
+
+# --------------------------- Figure 2: size of the gaps between countries in each pair
+# Each pair is oriented so that its gap under the national reference is positive; its gap under
+# the GBD 2023 reference then has the same sign if the ordering is kept and the opposite sign if
+# it reverses. Reversed pairs therefore lie below the horizontal rule.
+RP = pd.read_csv("reversal_pairs.csv")
+sgn = np.sign(RP.asyr_nat_1 - RP.asyr_nat_2)
+xg = RP.gap_nat_rel_pct
+yg = sgn * (RP.asyr_gbd_1 - RP.asyr_gbd_2) / ((RP.asyr_gbd_1 + RP.asyr_gbd_2) / 2) * 100
+rev = RP.reversed.values
+stab = rev & (RP.p_reversal_recurs.values >= 0.95)
+RV = json.load(open("REVERSALS.json"))["nat_vs_gbd"]
+fig, ax = plt.subplots(figsize=(120 * MM, 92 * MM))
+ax.axhline(0, color=RULE, lw=0.5, zorder=1)
+ax.scatter(xg[~rev], yg[~rev], s=5, facecolors="white", edgecolors=RULE, linewidths=0.45,
+           zorder=2)
+ax.scatter(xg[rev & ~stab], yg[rev & ~stab], s=6, facecolors="white", edgecolors=ACC,
+           linewidths=0.6, zorder=3)
+ax.scatter(xg[stab], yg[stab], s=6, facecolors=ACC, edgecolors=ACC, linewidths=0.6, zorder=4)
+xm = float(RP.loc[rev, "gap_nat_rel_pct"].max())
+ax.axvline(xm, color=FAINT, lw=0.5, ls=(0, (3, 2)), zorder=1)
+ax.set_xlim(0, float(np.ceil(xg.max() / 10) * 10))
+ylo = float(np.floor(yg.min() / 5) * 5)
+ax.set_ylim(ylo, float(np.ceil(yg.max() / 10) * 10))
+ax.set_xlabel("gap between the two countries under the national reference (% of pair mean)")
+ax.set_ylabel("gap under the GBD 2023 reference\n(% of pair mean; negative if reversed)")
+ax.text(xm + 0.8, ylo + 0.6, "largest gap reversed: %.1f%%" % xm, fontsize=6.2, color=RULE,
+        ha="left", va="bottom")
+# placed in the empty lower right of the panel, below the zero rule, where no pair falls
+ax.text(0.99, 1.2, "ordering kept: %d pairs (above the rule)" % (len(RP) - rev.sum()),
+        transform=ax.get_yaxis_transform(), fontsize=6.4, color=RULE, ha="right", va="bottom")
+assert not ((xg > 30) & (yg.between(0, 6))).any(), "label would overlie data"
+ax.text(xm + 0.8, -1.2, "ordering reversed: %d pairs, %d filled\n(reversal recurs in at least 95%%"
+        " of Poisson replicates)" % (rev.sum(), stab.sum()), fontsize=6.4, color=ACC,
+        ha="left", va="top", linespacing=1.15)
+assert stab.sum() == RV["rev_recur_ge95"] and rev.sum() == RV["n_pairs_reversed"]
+save(fig, "fig2_reversal_gaps")
+
+# ------------------------------- Figure 3: rank sensitivity across nine causes
+RC = pd.read_csv("rank_by_cause.csv").sort_values("mad").reset_index(drop=True)
+npair = RC.n * (RC.n - 1) / 2
+lo = 100 * RC.rep_n_reversed_lo / npair
+hi = 100 * RC.rep_n_reversed_hi / npair
+IS_CNS = (RC.icd == "C70-C72").values
+fig = plt.figure(figsize=(170 * MM, 70 * MM))
+gs = fig.add_gridspec(1, 2, width_ratios=[1.45, 1.0], wspace=0.55,
+                      left=0.175, right=0.90, bottom=0.21, top=0.965)
+axA, axB = fig.add_subplot(gs[0]), fig.add_subplot(gs[1])
+rows = np.arange(len(RC))
+for ax in (axA, axB):
+    ax.set_ylim(len(RC) - 0.5, -0.5)
+    ax.tick_params(axis="y", length=0)
+    for sp in ["top", "right", "left"]:
+        ax.spines[sp].set_visible(False)
+cols = [ACC if c else INK for c in IS_CNS]
+axA.hlines(rows, lo, hi, color=RULE, lw=0.6, zorder=2)
+axA.scatter(RC.pct_pairs_reversed, rows, s=13, facecolors=cols, edgecolors="none", zorder=3)
+axA.set_yticks(rows)
+axA.set_yticklabels(RC.cause, fontsize=6.6)
+for lab, c in zip(axA.get_yticklabels(), cols):
+    lab.set_color(c)
+axA.set_xlim(0, float(np.ceil(hi.max() / 5) * 5))
+axA.set_xticks(np.arange(0, np.ceil(hi.max() / 5) * 5 + 1, 5))
+axA.set_xlabel("country pairs reversed, national vs GBD 2023 (%)")
+for k in rows:
+    axA.text(1.02, k, "%.1f" % RC.pct_pairs_reversed[k], transform=axA.get_yaxis_transform(),
+             ha="left", va="center", fontsize=6.6, color=cols[k], clip_on=False)
+axB.scatter(RC.noise_ratio, rows, s=13, facecolors=cols, edgecolors="none", zorder=3)
+axB.set_yticks([])
+axB.set_xlim(0, float(np.ceil(RC.noise_ratio.max() * 10) / 10))
+axB.set_xlabel("spread of the reference effect relative\nto the spread of rates (ratio of SDs)")
+for k in rows:
+    axB.text(1.03, k, "%.2f" % RC.noise_ratio[k], transform=axB.get_yaxis_transform(),
+             ha="left", va="center", fontsize=6.6, color=cols[k], clip_on=False)
+save(fig, "fig3_cause_rank_sensitivity", tight=False)
 
 print("figures written")

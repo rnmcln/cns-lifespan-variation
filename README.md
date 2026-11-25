@@ -1,9 +1,10 @@
-# Reference life tables and cross-country comparisons of years of life lost: malignant CNS neoplasms and lifespan variation in Europe
+# Reference life tables and country rankings of years of life lost: malignant CNS neoplasms and eight comparison causes in Europe
 
-Analysis code and derived data for a study of how far cross-country comparisons of years of life
-lost from malignant central nervous system neoplasms (ICD-10 C70 to C72) in 28 European countries
-depend on the reference life table, and of how these deaths affect life expectancy and lifespan
-variation.
+Analysis code and derived data for a study of how far the choice of reference life table changes
+the ranking of countries by years of life lost when the recorded deaths are held fixed. The main
+case is malignant central nervous system neoplasms (ICD-10 C70 to C72) in 28 European countries;
+eight further causes show where rankings are most and least sensitive to the reference. A
+secondary analysis estimates how these deaths affect life expectancy and lifespan variation.
 
 Aaron Lawson McLean, Christian Senft, Colin W. McLean.
 
@@ -29,6 +30,11 @@ these the pipeline computes, for each country-year and sex:
   estimates under perturbation of the cause-specific counts;
 - rank agreement between reference life tables, by rank correlation, absolute rank displacement
   and the number of pairwise country orderings that reverse;
+- for every pair of countries, the gap between their rates under each reference, and the
+  proportion of 2 000 Poisson replicates of the deaths in which each reversal recurs;
+- rank agreement, reversal sizes and replicate recurrence for all nine causes on a common country
+  frame, with the ratio of the between-country spread of the reference effect to the spread of
+  the rates;
 - the same comparison with one fixed open-interval reference value applied to every country-year,
   so that the common reference is common at every age;
 - the same comparison for eight further causes spanning the range of ages at death;
@@ -64,7 +70,7 @@ cp ../data/derived/hmd_vintages.csv .
 printf 'HMD_USER=you@example.org\nHMD_PASS=...\n' > .hmdenv
 
 python3 fetch_hmd.py          # retrieves the 140 Human Mortality Database files into raw/
-for s in a b c d e f g h i j k m p q r; do python3 stage_$s.py; done
+for s in a b c d e f g h i j k m p q r s; do python3 stage_$s.py; done
 python3 results_json.py
 python3 stage_n.py
 python3 figs2.py
@@ -83,13 +89,13 @@ on the same inputs produce byte-identical outputs.
 results, including the Eurostat extract. The Human Mortality Database series are not
 redistributable, so `hmd_all.csv` is absent and every stage that reads it requires a prior
 `fetch_hmd.py`. Stages `d`, `k`, `n` and `r` and the figure and summary scripts run from the
-shipped files alone; `b`, `c`, `e`, `f`, `g`, `h`, `i`, `j`, `m`, `p` and `q` need the raw series,
+shipped files alone; `b`, `c`, `e`, `f`, `g`, `h`, `i`, `j`, `m`, `p`, `q` and `s` need the raw series,
 and `results_json.py` reads `decomposition.csv`, which stage `e` writes from them.
 
 On 25 November 2026 the full pipeline was run twice from a clean working directory containing
 only the code, the GBD extracts, `hmd_vintages.csv` and the 140 raw series, whose SHA-256 digests
-matched the manifest. Stage `a` retrieved the Eurostat extract from the live API. Both runs
-completed, produced all 43 declared outputs, gave identical outputs, and matched the committed
+matched the manifest. Stages `a` and `j` retrieved the Eurostat extracts from the live API. Both runs
+completed, produced all 49 declared outputs, gave identical outputs, and matched the committed
 versions byte for byte. Figure output depends on the fonts installed (Arial, or a
 metric-compatible substitute such as Liberation Sans).
 

@@ -12,3 +12,12 @@ results; `derived/data_dictionary_countryyear.csv` defines its variables and uni
 `derived/hmd_file_manifest.csv` records the series vintage, file size and full
 SHA-256 digest of each of the 140 Human Mortality Database files used, so that a fresh
 retrieval can be checked against the versions that produced the reported results.
+
+`derived/reversal_pairs.csv` lists every pair of the 28 countries with their age-standardised YLL
+rates under the national and GBD 2023 references, the gap between them as an absolute difference
+and as a percentage of the pair mean, whether the ordering reverses, and the proportion of
+Poisson replicates in which each ordering and the reversal recur. `derived/rank_by_cause.csv`
+gives the rank statistics for all nine causes on the common country frame.
+`derived/cause_age_deaths.csv` holds the Eurostat age-specific deaths for the nine causes; the
+matching exposures and remaining life expectancies are computed from Human Mortality Database
+series and are not distributed.
