@@ -7,6 +7,41 @@
  ],
  "check_max_absdiff_nat": 5.684341886080802e-14,
  "check_max_absdiff_off": 8.526512829121202e-14,
+ "asyr_change_gbd": {
+  "median_pct": 32.1,
+  "mean_pct": 35.8,
+  "lo_pct": 23.1,
+  "hi_pct": 57.4,
+  "lo_c": "FR",
+  "hi_c": "BG",
+  "q1_pct": 29.0,
+  "q3_pct": 43.7,
+  "spearman_with_e0": -0.943,
+  "median_abs": 50.0,
+  "lo_abs": 32.2,
+  "hi_abs": 95.5,
+  "top5": [
+   "BG",
+   "HU",
+   "SK",
+   "LV",
+   "HR"
+  ],
+  "top10_cee": 9,
+  "cee_median_pct": 48.5,
+  "other_median_pct": 30.2
+ },
+ "asyr_change_minmort": {
+  "median_pct": 9.8,
+  "mean_pct": 13.6,
+  "lo_pct": 3.2,
+  "hi_pct": 32.0,
+  "lo_c": "FR",
+  "hi_c": "BG",
+  "q1_pct": 8.5,
+  "q3_pct": 19.8,
+  "spearman_with_e0": -0.971
+ },
  "nat_vs_gbd": {
   "n": 28,
   "n_pairs": 378,
@@ -161,6 +196,7 @@
  "by_cause_rho_hi": 0.995,
  "by_cause_spearman_pctrev_noise_ratio": 0.494,
  "by_cause_spearman_pctrev_mad": -0.285,
+ "by_cause_spearman_asyrchg_mad": 0.983,
  "by_cause_top2_noise_ratio_causes": [
   "Malignant CNS neoplasms",
   "Lung cancer"

@@ -1,13 +1,13 @@
 cff-version: 1.2.0
 message: "If you use this software or the derived data, please cite the archived release."
-title: "Reference life tables and country rankings of years of life lost: malignant CNS neoplasms and eight comparison causes in Europe (analysis code)"
+title: "How reference life tables shape comparisons of premature mortality from malignant CNS tumours across Europe (analysis code)"
 abstract: >-
-  Analysis code and derived data for a study of how far the choice of reference life table
-  changes the ranking of countries by years of life lost when the recorded deaths are held fixed,
-  for malignant central nervous system neoplasms (ICD-10 C70-C72) in 28 European countries,
+  Analysis code and derived data for a study of how the choice between national and common
+  reference life tables changes age-standardised years-of-life-lost rates and country comparisons
+  for the same recorded deaths, for malignant central nervous system neoplasms (ICD-10 C70-C72) in 28 European countries,
   2012-2018, and eight comparison causes.
 type: software
-version: 1.4.0
+version: 1.5.0
 license: MIT
 doi: 10.5281/zenodo.21949530
 repository-code: "https://github.com/rnmcln/cns-lifespan-variation"

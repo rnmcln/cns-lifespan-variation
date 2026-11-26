@@ -14,11 +14,11 @@ are almost equal. This stage reports, for malignant CNS neoplasms:
 It then repeats the rank comparison for the nine causes of stage J on the common country frame,
 to show where the reference effect on country orderings is largest and smallest.
 
-Inputs : hmd_all.csv, eurostat_full.csv, results_countryyear.csv, official_reference_country.csv,
+Inputs : hmd_all.csv, country_summary_all.csv, eurostat_full.csv, results_countryyear.csv, official_reference_country.csv,
          gbd/tmrlt_gbd2023.csv, raw/*_Deaths_5x1.txt, cause_age_deaths.csv,
          cause_age_weights.csv (undistributed, computed from Human Mortality Database series),
          generalisation_country.csv
-Outputs: REVERSALS.json, reversal_pairs.csv, rank_by_cause.csv
+Outputs: REVERSALS.json, reversal_pairs.csv, rank_by_cause.csv, asyr_change_country.csv
 """
 import json
 
@@ -199,6 +199,35 @@ J["check_max_absdiff_off"] = float(np.abs(C.asyr_off - g.asyr_off).max())
 assert J["check_max_absdiff_nat"] < 1e-6 and J["check_max_absdiff_off"] < 1e-6
 
 names = list(g.index)
+
+# ---- change in each country's age-standardised YLL rate between references
+# The comparison of countries is made on this rate, so its change carries the main result; YLL per
+# death is reported separately and labelled as such.
+S_ = pd.read_csv("country_summary_all.csv")
+e0 = S_[(S_.frame == "primary_2012_2018") & (S_.sex == "T")].set_index("geo").e0.reindex(g.index)
+CH = pd.DataFrame({"asyr_nat": g.asyr_nat, "asyr_gbd": g.asyr_off, "asyr_minmort": g.asyr_bp,
+                   "e0_national": e0})
+CH["change_gbd_abs"] = CH.asyr_gbd - CH.asyr_nat
+CH["change_gbd_pct"] = 100 * (CH.asyr_gbd / CH.asyr_nat - 1)
+CH["change_minmort_pct"] = 100 * (CH.asyr_minmort / CH.asyr_nat - 1)
+CH.round(4).to_csv("asyr_change_country.csv")
+for tag, col in (("gbd", "change_gbd_pct"), ("minmort", "change_minmort_pct")):
+    c = CH[col]
+    J["asyr_change_" + tag] = {
+        "median_pct": round(float(c.median()), 1), "mean_pct": round(float(c.mean()), 1),
+        "lo_pct": round(float(c.min()), 1), "hi_pct": round(float(c.max()), 1),
+        "lo_c": c.idxmin(), "hi_c": c.idxmax(),
+        "q1_pct": round(float(c.quantile(0.25)), 1), "q3_pct": round(float(c.quantile(0.75)), 1),
+        "spearman_with_e0": round(float(stats.spearmanr(c, CH.e0_national).statistic), 3)}
+J["asyr_change_gbd"]["median_abs"] = round(float(CH.change_gbd_abs.median()), 1)
+J["asyr_change_gbd"]["lo_abs"] = round(float(CH.change_gbd_abs.min()), 1)
+J["asyr_change_gbd"]["hi_abs"] = round(float(CH.change_gbd_abs.max()), 1)
+CEE_ = {"BG", "HR", "CZ", "EE", "HU", "LV", "LT", "PL", "SK", "SI"}
+top = CH.change_gbd_pct.sort_values(ascending=False)
+J["asyr_change_gbd"]["top5"] = list(top.index[:5])
+J["asyr_change_gbd"]["top10_cee"] = int(sum(x in CEE_ for x in top.index[:10]))
+J["asyr_change_gbd"]["cee_median_pct"] = round(float(top[top.index.isin(CEE_)].median()), 1)
+J["asyr_change_gbd"]["other_median_pct"] = round(float(top[~top.index.isin(CEE_)].median()), 1)
 res = {}
 for lab, a, b in [("nat_vs_gbd", g.asyr_nat, g.asyr_off),
                   ("nat_vs_minmort", g.asyr_nat, g.asyr_bp),
@@ -319,6 +348,9 @@ for icd, cause, mad in order.itertuples(index=False):
         n_rev_both_ge10=r["n_rev_both_ge10"],
         all_gap_nat_rel_median=r["all_gap_a_rel_median"],
         infl_sd=round(float(infl.std(ddof=1)), 1),
+        asyr_chg_median=round(float(infl.median()), 1),
+        asyr_chg_lo=round(float(infl.min()), 1),
+        asyr_chg_hi=round(float(infl.max()), 1),
         sd_log_rate_nat=round(float(np.log(z.asyr_nat).std(ddof=1)), 3),
         sd_log_ratio=round(float(np.log(z.asyr_off / z.asyr_nat).std(ddof=1)), 3),
         rep_n_reversed_median=int(np.median(nrev_c)),
@@ -340,6 +372,8 @@ J["by_cause_spearman_pctrev_noise_ratio"] = round(float(
     stats.spearmanr(RC.pct_pairs_reversed, RC.noise_ratio).statistic), 3)
 J["by_cause_spearman_pctrev_mad"] = round(float(
     stats.spearmanr(RC.pct_pairs_reversed, RC.mad).statistic), 3)
+J["by_cause_spearman_asyrchg_mad"] = round(float(
+    stats.spearmanr(RC.asyr_chg_median, RC.mad).statistic), 3)
 two = RC.nlargest(2, "noise_ratio")
 rest = RC.drop(two.index)
 J["by_cause_top2_noise_ratio_causes"] = list(two.cause)

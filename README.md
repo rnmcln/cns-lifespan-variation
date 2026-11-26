@@ -1,9 +1,10 @@
-# Reference life tables and country rankings of years of life lost: malignant CNS neoplasms and eight comparison causes in Europe
+# How reference life tables shape comparisons of premature mortality from malignant CNS tumours across Europe
 
-Analysis code and derived data for a study of how far the choice of reference life table changes
-the ranking of countries by years of life lost when the recorded deaths are held fixed. The main
-case is malignant central nervous system neoplasms (ICD-10 C70 to C72) in 28 European countries;
-eight further causes show where rankings are most and least sensitive to the reference. A
+Analysis code and derived data for a study of how the choice between national and common
+reference life tables changes age-standardised years-of-life-lost rates and country comparisons
+for the same recorded deaths. The main case is malignant central nervous system neoplasms
+(ICD-10 C70 to C72) in 28 European countries; eight further causes show where comparisons are
+most and least sensitive to the reference. A
 secondary analysis estimates how these deaths affect life expectancy and lifespan variation.
 
 Aaron Lawson McLean, Christian Senft, Colin W. McLean.
@@ -28,6 +29,8 @@ these the pipeline computes, for each country-year and sex:
 - an exactly additive decomposition of the life-disparity effect by age;
 - 95% Poisson perturbation intervals from 10 000 replicates, describing the stability of the
   estimates under perturbation of the cause-specific counts;
+- the change in each country's age-standardised YLL rate between references, and its relation to
+  national life expectancy;
 - rank agreement between reference life tables, by rank correlation, absolute rank displacement
   and the number of pairwise country orderings that reverse;
 - for every pair of countries, the gap between their rates under each reference, and the
@@ -92,10 +95,10 @@ redistributable, so `hmd_all.csv` is absent and every stage that reads it requir
 shipped files alone; `b`, `c`, `e`, `f`, `g`, `h`, `i`, `j`, `m`, `p`, `q` and `s` need the raw series,
 and `results_json.py` reads `decomposition.csv`, which stage `e` writes from them.
 
-On 25 November 2026 the full pipeline was run twice from a clean working directory containing
+On 26 November 2026 the full pipeline was run twice from a clean working directory containing
 only the code, the GBD extracts, `hmd_vintages.csv` and the 140 raw series, whose SHA-256 digests
 matched the manifest. Stages `a` and `j` retrieved the Eurostat extracts from the live API. Both runs
-completed, produced all 49 declared outputs, gave identical outputs, and matched the committed
+completed, produced all 50 declared outputs, gave identical outputs, and matched the committed
 versions byte for byte. Figure output depends on the fonts installed (Arial, or a
 metric-compatible substitute such as Liberation Sans).
 

@@ -13,12 +13,13 @@ below are read directly from the analysis outputs in `results/` and `data/derive
 
 ## Question
 
-Years of life lost (YLL) depend on a reference life table: national period life tables or a
-common standard such as the Global Burden of Disease (GBD) theoretical minimum risk life table.
-The question is how far this choice changes the ranking of countries for the same cause of death
-when the recorded deaths are held fixed: how often two countries swap places, how far apart their
-rates are when they do, and whether the swaps are stable under random variation in the death
-counts. The main case is malignant central nervous system neoplasms (ICD-10 C70 to C72) in
+Years of life lost (YLL) depend on a reference life table. National period life tables measure
+YLL relative to the remaining life expectancy in each country; a common life table, such as the
+Global Burden of Disease (GBD) theoretical minimum risk life table, applies the same age-specific
+reference to all countries. The question is how much this choice changes age-standardised YLL
+rates and country comparisons for the same recorded deaths: how large the change in each
+country's rate is, which countries are most affected, and when the change is large enough to
+alter a comparison. The main case is malignant central nervous system neoplasms (ICD-10 C70 to C72) in
 28 European countries; eight further causes show where rankings are most
 and least sensitive to the reference.
 
@@ -71,6 +72,22 @@ Life expectancy at birth is 89.96 years in the official GBD 2023 schedule and
 84.76 years in the empirical minimum-mortality schedule. Ranks were computed from
 unrounded rates throughout.
 
+## Change in each country's age-standardised YLL rate
+
+The comparison of countries is made on the age-standardised rate, so its change carries the main
+result. Per country values are in `data/derived/asyr_change_country.csv`.
+
+| Quantity | GBD 2023 reference | Minimum-mortality reference |
+|---|---|---|
+| Median change in the rate, % | 32.1 (interquartile range 29.0 to 43.7) | 9.8 |
+| Range across countries, % | 23.1 (France) to 57.4 (Bulgaria) | 3.2 to 32.0 |
+| Spearman correlation of the change with national life expectancy at birth | −0.943 | −0.971 |
+
+Median absolute change under the GBD 2023 reference: 50.0 per 100 000 (range
+32.2 to 95.5). Central and Eastern European countries, median change
+48.5%; other countries, 30.2%. 9 of the 10
+largest changes are in Central and Eastern Europe.
+
 ## Rank agreement between reference life tables
 
 | Comparison | Spearman ρ | Kendall τ<sub>b</sub> | Median abs. shift | Max shift | Pairs reversed |
@@ -122,17 +139,17 @@ excluded, having no retained perinatal stratum). Causes ordered by mean age at d
 SDs: between-country SD of log(GBD rate / national rate) divided by the between-country SD of
 log(national rate).
 
-| Cause | Mean age at death | Spearman ρ | Pairs reversed % | Replicate range % | Stable reversals | SD log national rate | SD log reference effect | Ratio of SDs |
-|---|---|---|---|---|---|---|---|---|
-| Perinatal conditions | 1.1 | 0.985 | 3.4 | 1.8 to 5.5 | 0 | 0.286 | 0.035 | 0.12 |
-| Transport accidents | 49.9 | 0.992 | 2.2 | 1.5 to 4.3 | 2 | 0.397 | 0.057 | 0.14 |
-| Intentional self-harm | 54.2 | 0.978 | 4.9 | 3.7 to 6.2 | 4 | 0.385 | 0.068 | 0.18 |
-| Chronic liver disease | 63.7 | 0.987 | 2.8 | 1.5 to 3.7 | 1 | 0.582 | 0.063 | 0.11 |
-| Malignant CNS neoplasms | 65.0 | 0.845 | 17.8 | 13.2 to 19.1 | 13 | 0.109 | 0.071 | 0.65 |
-| Lung cancer | 71.3 | 0.904 | 11.4 | 10.2 to 12.9 | 25 | 0.205 | 0.074 | 0.36 |
-| Ischaemic heart disease | 80.2 | 0.995 | 1.8 | 1.5 to 2.5 | 4 | 0.584 | 0.090 | 0.15 |
-| Cerebrovascular disease | 82.0 | 0.992 | 2.2 | 1.8 to 2.8 | 4 | 0.500 | 0.071 | 0.14 |
-| Dementia | 87.7 | 0.992 | 2.5 | 1.8 to 3.7 | 2 | 1.489 | 0.082 | 0.06 |
+| Cause | Mean age at death | Median change in rate % | Spearman ρ | Pairs reversed % | Replicate range % | Stable reversals | SD log national rate | SD log reference effect | Ratio of SDs |
+|---|---|---|---|---|---|---|---|---|---|
+| Perinatal conditions | 1.1 | 11.1 | 0.985 | 3.4 | 1.8 to 5.5 | 0 | 0.286 | 0.035 | 0.12 |
+| Transport accidents | 49.9 | 22.7 | 0.992 | 2.2 | 1.5 to 4.3 | 2 | 0.397 | 0.057 | 0.14 |
+| Intentional self-harm | 54.2 | 26.1 | 0.978 | 4.9 | 3.7 to 6.2 | 4 | 0.385 | 0.068 | 0.18 |
+| Chronic liver disease | 63.7 | 33.9 | 0.987 | 2.8 | 1.5 to 3.7 | 1 | 0.582 | 0.063 | 0.11 |
+| Malignant CNS neoplasms | 65.0 | 32.1 | 0.845 | 17.8 | 13.2 to 19.1 | 13 | 0.109 | 0.071 | 0.65 |
+| Lung cancer | 71.3 | 41.4 | 0.904 | 11.4 | 10.2 to 12.9 | 25 | 0.205 | 0.074 | 0.36 |
+| Ischaemic heart disease | 80.2 | 57.4 | 0.995 | 1.8 | 1.5 to 2.5 | 4 | 0.584 | 0.090 | 0.15 |
+| Cerebrovascular disease | 82.0 | 62.6 | 0.992 | 2.2 | 1.8 to 2.8 | 4 | 0.500 | 0.071 | 0.14 |
+| Dementia | 87.7 | 85.7 | 0.992 | 2.5 | 1.8 to 3.7 | 2 | 1.489 | 0.082 | 0.06 |
 
 Reversed pairs whose rates differ by at least 10% under both references, summed over all nine
 causes: 0.

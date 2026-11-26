@@ -138,6 +138,7 @@
   "REVERSALS.json",
   "reversal_pairs.csv",
   "rank_by_cause.csv",
-  "cause_age_deaths.csv"
+  "cause_age_deaths.csv",
+  "asyr_change_country.csv"
  ]
 }

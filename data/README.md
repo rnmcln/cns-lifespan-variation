@@ -13,6 +13,10 @@ results; `derived/data_dictionary_countryyear.csv` defines its variables and uni
 SHA-256 digest of each of the 140 Human Mortality Database files used, so that a fresh
 retrieval can be checked against the versions that produced the reported results.
 
+`derived/asyr_change_country.csv` gives, for each country, the age-standardised YLL rate under the
+national, GBD 2023 and minimum-mortality references, the absolute and percentage change between
+them, and national life expectancy at birth.
+
 `derived/reversal_pairs.csv` lists every pair of the 28 countries with their age-standardised YLL
 rates under the national and GBD 2023 references, the gap between them as an absolute difference
 and as a percentage of the pair mean, whether the ordering reverses, and the proportion of

@@ -1,6 +1,7 @@
 """Figures 1 to 3 and the four supplementary figures.
 
-Figure 1: years of life lost under national and common references. Figure 2: size of the gap
+Figure 1: years of life lost under national and common references, with the percentage change in
+each country's rate. Figure 2: size of the gap
 between the two countries of every pair under each reference, with reversed pairs marked.
 Figure 3: rank sensitivity to the reference across nine causes. Figure S1: the reference effect
 on YLL per death across nine causes. Figure S2: reduction in life disparity by country.
@@ -138,6 +139,18 @@ ax.text(d.asyr_nat[top], len(d) - 0.35, "national\nlife table", ha="center", va=
         fontsize=6.2, color=INK, linespacing=1.1)
 ax.text(d.asyr_off[top], len(d) - 0.35, "GBD 2023\nreference", ha="center", va="bottom",
         fontsize=6.2, color=ACC, linespacing=1.1)
+# the percentage change in each country's rate, printed in a right-hand column so the size of the
+# shift is read directly rather than estimated from the length of the connector
+CHG = pd.read_csv("asyr_change_country.csv").set_index("geo")
+xr = float(d.asyr_off.max()) + 38
+for i, g in enumerate(d.index):
+    ax.text(xr, i, "+%.1f" % CHG.change_gbd_pct[g], ha="right", va="center", fontsize=6.6,
+            color=INK)
+ax.text(xr, len(d) - 0.35, "change\n(%)", ha="right", va="bottom", fontsize=6.2, color=RULE,
+        linespacing=1.1)
+ax.set_xlim(lo - 42, xr + 2)
+ax.spines["bottom"].set_bounds(100, 275)
+ax.set_xticks([100, 150, 200, 250])
 save(fig, "fig1_reference_dependence")
 
 # --------------------------------- Figure S2: contributions under both orderings

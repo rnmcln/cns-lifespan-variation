@@ -18,6 +18,7 @@ GC = pd.read_csv("generalisation_common.csv").sort_values("mad")
 RV = json.load(open("REVERSALS.json"))
 RC = pd.read_csv("rank_by_cause.csv").sort_values("mad")
 NV, BV, YV = RV["nat_vs_gbd"], RV["nat_vs_minmort"], RV["ypd_nat_vs_gbd"]
+CG, CM = RV["asyr_change_gbd"], RV["asyr_change_minmort"]
 NAME = {"AT": "Austria", "BE": "Belgium", "BG": "Bulgaria", "HR": "Croatia", "CZ": "Czechia",
         "DK": "Denmark", "EE": "Estonia", "FI": "Finland", "FR": "France", "DE": "Germany",
         "EL": "Greece", "HU": "Hungary", "IS": "Iceland", "IE": "Ireland", "IT": "Italy",
@@ -48,7 +49,7 @@ STABLE_ROWS = "\n".join(
     f"| {NAME[r['higher_nat']]} | {NAME[r['lower_nat']]} | {r['gap_nat_rel']} | {r['gap_gbd_rel']} | {100 * r['p_recur']:.1f} |"
     for r in NV["largest_stable_reversals"])
 RANKC_ROWS = "\n".join(
-    f"| {r.cause} | {r.mad:.1f} | {r.spearman_rho:.3f} | {r.pct_pairs_reversed:.1f} | "
+    f"| {r.cause} | {r.mad:.1f} | {r.asyr_chg_median:.1f} | {r.spearman_rho:.3f} | {r.pct_pairs_reversed:.1f} | "
     f"{100 * r.rep_n_reversed_lo / (r.n * (r.n - 1) / 2):.1f} to {100 * r.rep_n_reversed_hi / (r.n * (r.n - 1) / 2):.1f} | "
     f"{r.rev_recur_ge95} | {r.sd_log_rate_nat:.3f} | {r.sd_log_ratio:.3f} | {r.noise_ratio:.2f} |"
     for r in RC.itertuples())
@@ -71,12 +72,13 @@ below are read directly from the analysis outputs in `results/` and `data/derive
 
 ## Question
 
-Years of life lost (YLL) depend on a reference life table: national period life tables or a
-common standard such as the Global Burden of Disease (GBD) theoretical minimum risk life table.
-The question is how far this choice changes the ranking of countries for the same cause of death
-when the recorded deaths are held fixed: how often two countries swap places, how far apart their
-rates are when they do, and whether the swaps are stable under random variation in the death
-counts. The main case is malignant central nervous system neoplasms (ICD-10 C70 to C72) in
+Years of life lost (YLL) depend on a reference life table. National period life tables measure
+YLL relative to the remaining life expectancy in each country; a common life table, such as the
+Global Burden of Disease (GBD) theoretical minimum risk life table, applies the same age-specific
+reference to all countries. The question is how much this choice changes age-standardised YLL
+rates and country comparisons for the same recorded deaths: how large the change in each
+country's rate is, which countries are most affected, and when the change is large enough to
+alter a comparison. The main case is malignant central nervous system neoplasms (ICD-10 C70 to C72) in
 {J['frame']['countries']} European countries; eight further causes show where rankings are most
 and least sensitive to the reference.
 
@@ -129,6 +131,22 @@ Life expectancy at birth is {Q['off_e0']} years in the official GBD 2023 schedul
 {X['bp_e0']} years in the empirical minimum-mortality schedule. Ranks were computed from
 unrounded rates throughout.
 
+## Change in each country's age-standardised YLL rate
+
+The comparison of countries is made on the age-standardised rate, so its change carries the main
+result. Per country values are in `data/derived/asyr_change_country.csv`.
+
+| Quantity | GBD 2023 reference | Minimum-mortality reference |
+|---|---|---|
+| Median change in the rate, % | {CG['median_pct']} (interquartile range {CG['q1_pct']} to {CG['q3_pct']}) | {CM['median_pct']} |
+| Range across countries, % | {CG['lo_pct']} ({NAME[CG['lo_c']]}) to {CG['hi_pct']} ({NAME[CG['hi_c']]}) | {CM['lo_pct']} to {CM['hi_pct']} |
+| Spearman correlation of the change with national life expectancy at birth | {str(CG['spearman_with_e0']).replace('-', '−')} | {str(CM['spearman_with_e0']).replace('-', '−')} |
+
+Median absolute change under the GBD 2023 reference: {CG['median_abs']} per 100 000 (range
+{CG['lo_abs']} to {CG['hi_abs']}). Central and Eastern European countries, median change
+{CG['cee_median_pct']}%; other countries, {CG['other_median_pct']}%. {CG['top10_cee']} of the 10
+largest changes are in Central and Eastern Europe.
+
 ## Rank agreement between reference life tables
 
 | Comparison | Spearman ρ | Kendall τ<sub>b</sub> | Median abs. shift | Max shift | Pairs reversed |
@@ -172,8 +190,8 @@ excluded, having no retained perinatal stratum). Causes ordered by mean age at d
 SDs: between-country SD of log(GBD rate / national rate) divided by the between-country SD of
 log(national rate).
 
-| Cause | Mean age at death | Spearman ρ | Pairs reversed % | Replicate range % | Stable reversals | SD log national rate | SD log reference effect | Ratio of SDs |
-|---|---|---|---|---|---|---|---|---|
+| Cause | Mean age at death | Median change in rate % | Spearman ρ | Pairs reversed % | Replicate range % | Stable reversals | SD log national rate | SD log reference effect | Ratio of SDs |
+|---|---|---|---|---|---|---|---|---|---|
 {RANKC_ROWS}
 
 Reversed pairs whose rates differ by at least 10% under both references, summed over all nine
